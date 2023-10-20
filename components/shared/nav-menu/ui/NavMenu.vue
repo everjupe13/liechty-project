@@ -10,15 +10,15 @@ const DEFAULT_LINKS = [
     label: 'Main'
   },
   {
-    toLink: '/',
+    toLink: '/equipment',
     label: 'Equipment'
   },
   {
-    toLink: '/',
+    toLink: '/about',
     label: 'About'
   },
   {
-    toLink: '/',
+    toLink: '/system',
     label: 'How it works'
   },
   {

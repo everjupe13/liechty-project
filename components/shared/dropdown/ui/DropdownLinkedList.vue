@@ -47,7 +47,7 @@ const handleDropdownItemClick = (index: number) => {
       <AppCollapsable v-model="state.opened">
         <div class="max-w-[800px]">
           <div
-            class="prose pb-30 leading-normal text-20 md:pb-20"
+            class="prose pb-30 leading-normal text-20 md:pb-20 md:text-16"
             v-html="state.body"
           ></div>
         </div>

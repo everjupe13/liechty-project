@@ -11,7 +11,7 @@ const handleActiveDescriptionIdChange = (id: number) => {
 </script>
 
 <template>
-  <section class="border-b border-dark/20 pb-40">
+  <section class="border-b border-dark/20 pb-[140px]">
     <div class="container">
       <div class="mb-40 grid grid-cols-2 gap-x-40">
         <div class="h-[640px] w-full rounded-[14px] bg-gray"></div>

@@ -9,4 +9,3 @@ const props = defineProps<NavMenuItemType>()
     <NuxtLink :to="props.toLink">{{ props.label }}</NuxtLink>
   </li>
 </template>
-./NavMenu.types

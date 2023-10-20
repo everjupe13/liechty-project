@@ -1,5 +1,7 @@
 export { default as HomeApplicationsInfoSreen } from './ui/HomeApplicationsInfoSreen.vue'
+export { default as HomeDownloadScreen } from './ui/HomeDownloadScreen.vue'
 export { default as HomeFAQScreen } from './ui/HomeFAQScreen.vue'
+export { default as HomeFeedbackScreen } from './ui/HomeFeedbackScreen.vue'
 export { default as HomeHowWorksInfoScreen } from './ui/HomeHowWorksInfoScreen.vue'
 export { default as HomeHumidificationInfoScreen } from './ui/HomeHumidificationInfoScreen.vue'
 export { default as HomeTopBannerScreen } from './ui/HomeTopBannerScreen.vue'

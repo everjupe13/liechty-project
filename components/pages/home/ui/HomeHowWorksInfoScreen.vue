@@ -41,12 +41,14 @@ const Cards = [
 </script>
 
 <template>
-  <section class="border-b border-dark/20 py-[140px]">
+  <section class="border-b border-dark/20 pb-[140px] pt-70">
     <div class="container">
       <div class="mb-40">
         <h2 class="section-title">How it works?</h2>
       </div>
-      <div class="grid grid-cols-5 gap-x-20">
+      <div
+        class="grid grid-cols-5 gap-x-20 xl:gap-x-10 md:grid-cols-2 md:gap-10"
+      >
         <HomeHowWorksInfoCard
           v-for="card in Cards"
           :key="card.id"

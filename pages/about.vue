@@ -1,0 +1,20 @@
+<script lang="ts" setup>
+import { useHead } from 'nuxt/app'
+
+import { AboutInfoScreen, AboutTopBannerScreen } from '@/components/pages/about'
+import { BreadCrumbs } from '@/components/widgets/bread-crumbs'
+
+useHead({
+  title: 'About'
+})
+</script>
+
+<template>
+  <div>
+    <div class="container">
+      <BreadCrumbs :crumbs="[{ label: 'About Us' }]" class="mb-60 mt-30" />
+    </div>
+    <AboutTopBannerScreen />
+    <AboutInfoScreen />
+  </div>
+</template>

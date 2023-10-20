@@ -1,0 +1,20 @@
+@import 'core';
+@import 'vue-transition-animations';
+
+.scroll-x-hidden {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+    height: 0 !important;
+  }
+}
+
+.content {
+  p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  a {
+    @apply text-yellow underline decoration-yellow decoration-solid decoration-from-font  underline-offset-2 transition-all hover:underline-offset-4;
+  }
+}

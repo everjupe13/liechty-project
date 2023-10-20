@@ -5,8 +5,8 @@
     font-family: $family;
     src:
       url('#{$filePath}.woff') format('woff'),
-      url('#{$filePath}.woff2') format('woff2');
-    // url("#{$filePath}.ttf") format("truetype");
+      url('#{$filePath}.woff2') format('woff2'),
+      url("#{$filePath}.ttf") format("truetype");
 
     font-weight: $weight;
     font-style: $style;
@@ -14,11 +14,6 @@
   }
 }
 
-@include font(
-  'Value Sans Pro',
-  '/fonts/ValueSansPro/ValueSansPro-Regular',
-  400
-);
-@include font('Value Sans Pro', '/fonts/ValueSansPro/ValueSansPro-Medium', 500);
-@include font('Value Sans Pro', '/fonts/ValueSansPro/ValueSansPro-Bold', 700);
-@include font('Value Sans Pro', '/fonts/ValueSansPro/ValueSansPro-Black', 900);
+@include font('NT Somic', '/fonts/NT_somic/NTSomic-Regular', 400);
+@include font('NT Somic', '/fonts/NT_somic/NTSomic-Medium', 500);
+@include font('NT Somic', '/fonts/NT_somic/NTSomic-Bold', 700);

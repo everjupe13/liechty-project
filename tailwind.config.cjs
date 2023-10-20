@@ -81,7 +81,7 @@ module.exports = {
     spacing: object0to100px,
 
     fontFamily: {
-      sans: ['Value Sans Pro', ...fallbackSansSerifFonts],
+      sans: ['NT Somic', ...fallbackSansSerifFonts],
       inter: ['Inter', ...fallbackSansSerifFonts]
     }
   }

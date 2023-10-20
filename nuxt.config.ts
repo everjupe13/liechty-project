@@ -14,21 +14,18 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseUrl: 'http://185.18.55.254:8000/'
+      baseUrl: ''
     }
-  },
-
-  routeRules: {
-    '/product/**': { ssr: false }
   },
 
   modules: ['@nuxtjs/eslint-module', '@pinia/nuxt'],
 
   components: [
-    {
-      path: '~/components',
-      pathPrefix: false
-    }
+    // disabled auto-importing
+    // {
+    //   path: '~/components',
+    //   pathPrefix: false
+    // }
   ],
 
   alias: {

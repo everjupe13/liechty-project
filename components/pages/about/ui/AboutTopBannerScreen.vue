@@ -1,9 +1,10 @@
 <script lang="ts" setup>
+import { AppButton } from '@/components/shared/button'
 import { AppLogo } from '@/components/shared/logo'
 </script>
 
 <template>
-  <section class="">
+  <section>
     <div class="container">
       <div class="grid grid-cols-2 gap-x-80 pb-85">
         <div class="pr-20">
@@ -13,11 +14,7 @@ import { AppLogo } from '@/components/shared/logo'
           <h1 class="mb-20 leading-tight text-40">
             “We make the air cleaner and sweeter and your lungs healthier”
           </h1>
-          <button
-            class="button bg-white px-40 py-20 font-medium leading-none text-18"
-          >
-            Discover
-          </button>
+          <AppButton outlined>Discover</AppButton>
         </div>
       </div>
       <div>

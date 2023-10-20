@@ -41,10 +41,11 @@ export default defineNuxtConfig({
   css: [
     'vue-final-modal/style.css',
 
-    '~/assets/scss/index.scss',
     '~/assets/scss/tailwind.scss',
+    '~/assets/scss/index.scss',
     '~/assets/scss/fonts.scss',
-    '~/assets/scss/custom-scrollbar.scss'
+    '~/assets/scss/custom-scrollbar.scss',
+    '~/assets/scss/vue-transition-animations.scss'
   ],
   postcss: {
     plugins: {

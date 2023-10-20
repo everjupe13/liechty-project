@@ -3,42 +3,27 @@
 @tailwind utilities;
 
 @layer components {
-  .main-section-layout {
-    @apply relative z-[4] flex-grow;
-  }
-
-  .app-modal {
-    @apply fixed inset-[-40px] z-[9999] hidden bg-white p-55 pb-100 pt-50;
-  }
-
-  .app-modal-content {
-    @apply flex w-full flex-col;
-  }
-
-
-
   body {
     @apply text-dark-text;
   }
 
+  .main-section-layout {
+    @apply relative z-[4] flex-grow;
+  }
+
   .section-title {
-    @apply font-medium leading-none text-32;
+    @apply font-medium leading-none text-32 lg:text-24 xl:text-28;
   }
   .prose ul li,
   ul.unordered-list li {
-    @apply pl-20 relative leading-none mb-20 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-10 before:h-10 before:bg-blue before:rounded-full;
+    @apply pl-20 relative md:mb-10 leading-none mb-20 last:mb-0 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-10 before:h-10 before:bg-blue before:rounded-full;
+  }
+
+  .prose p {
+    @apply mb-10 last:mb-0;
   }
 
   ul.unordered-list-small li {
-    @apply pl-16 relative leading-none mb-12 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-6 before:h-6 before:bg-blue before:rounded-full;
-  }
-}
-
-@layer utilities {
-  .bg-waved-t {
-    @apply relative mt-60 bg-milky pt-40 before:absolute before:left-0 before:top-[-60px] before:block before:h-100 before:w-full before:bg-[url('@/assets/img/waves.svg')] before:bg-top;
-  }
-  .bg-waved-b {
-    @apply relative mb-60 bg-milky pb-40 after:absolute after:bottom-[-60px] after:left-0 after:block after:h-100 after:w-full after:bg-[url('@/assets/img/waves-b.svg')] after:bg-bottom;
+    @apply pl-16 relative leading-none mb-12 md:mb-9 last:mb-0 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-6 before:h-6 before:bg-blue before:rounded-full;
   }
 }

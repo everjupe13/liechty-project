@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { ModalsContainer } from 'vue-final-modal'
 
-import { AppFooter } from '@/components/features/footer'
-import { AppHeader } from '@/components/features/header'
+import { AppFooter } from '@/components/widgets/footer'
+import { AppHeader } from '@/components/widgets/header'
 
 const appWidth = ref()
 const setAppWidth = (width: number) => {

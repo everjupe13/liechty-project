@@ -28,6 +28,7 @@ import { DownloadCard } from '@/components/features/download-card'
           file-size="162 KB"
         />
         <DownloadCard
+          filled-card
           title="Booklet"
           excerpt="Dignissim aliquet ne."
           description="

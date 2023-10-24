@@ -5,6 +5,7 @@ type Props = {
   title?: string
   description?: string
   excerpt?: string
+  filledCard?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -40,7 +41,8 @@ const props = withDefaults(defineProps<Props>(), {
       </div>
     </div>
     <div
-      class="absolute left-0 right-0 top-[calc(100%+10px)] z-[2] h-full rounded-[20px] bg-blue p-30 text-white transition-all group-hover:top-0"
+      v-if="props.filledCard"
+      class="absolute left-0 right-0 top-0 z-[2] h-full rounded-[20px] bg-blue p-30 text-white transition-all"
     >
       <img
         class="pointer-events-none absolute bottom-0 left-0 z-[1] block select-none"

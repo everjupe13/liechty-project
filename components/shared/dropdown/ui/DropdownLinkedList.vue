@@ -69,9 +69,16 @@ const handleDropdownItemClick = (index: number) => {
       @apply absolute left-1/2 top-1/2 h-2 w-20 -translate-x-1/2 -translate-y-1/2 bg-dark/60;
     }
 
+    &:after {
+      @apply h-20 w-2;
+    }
+    &:before {
+      @apply h-2 w-20;
+    }
+
     &.--active {
       &:after {
-        @apply h-20 w-2;
+        @apply h-2 w-20;
       }
     }
   }

@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <section class="pb-[80px] pt-[140px]">
+  <section class="border-b border-dark/20 pb-[80px] pt-[140px]">
     <div class="container">
       <div class="flex justify-between gap-x-80 pb-40">
         <h2 class="section-title">In number</h2>

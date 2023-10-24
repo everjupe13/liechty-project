@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 import { useHead } from 'nuxt/app'
 
-import { AboutInfoScreen, AboutTopBannerScreen } from '@/components/pages/about'
+import {
+  AboutContactsScreen,
+  AboutEmployeesScreen,
+  AboutFeedbackScreen,
+  AboutInfoScreen,
+  AboutTopBannerScreen
+} from '@/components/pages/about'
 import { BreadCrumbs } from '@/components/widgets/bread-crumbs'
 
 useHead({
@@ -16,5 +22,8 @@ useHead({
     </div>
     <AboutTopBannerScreen />
     <AboutInfoScreen />
+    <AboutEmployeesScreen />
+    <AboutContactsScreen />
+    <AboutFeedbackScreen />
   </div>
 </template>

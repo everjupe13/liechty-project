@@ -37,6 +37,10 @@ export default defineNuxtConfig({
 
   css: [
     'vue-final-modal/style.css',
+    'swiper/css',
+    'swiper/css/free-mode',
+    'swiper/css/navigation',
+    'swiper/css/thumbs',
 
     '~/assets/scss/tailwind.scss',
     '~/assets/scss/index.scss',

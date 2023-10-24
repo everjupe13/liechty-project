@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps({
   index: { type: [Number, String], default: '' },
+  image: { type: String, default: '/images/home/applications/1.jpg' },
   title: { type: String, default: '' },
   description: { type: String, default: '' }
 })
@@ -15,7 +16,7 @@ const props = defineProps({
       class="absolute inset-0 z-[1] h-full w-full after:absolute after:inset-0 after:z-[2] after:block after:bg-gray-light after:opacity-90 after:transition-all after:duration-300 group-hover:after:bg-blue group-hover:after:opacity-40"
     >
       <img
-        src="/images/home/applications/1.jpg"
+        :src="props.image"
         alt=""
         class="relative z-[1] block h-full w-full object-cover"
       />

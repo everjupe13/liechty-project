@@ -7,23 +7,27 @@ const ApplicationCards = [
     id: 0,
     title: 'Houses',
     description:
-      'Protect & prolong lifetime of surfaces and furniture made of wood'
+      'Protect & prolong lifetime of surfaces and furniture made of wood',
+    image: '/images/home/applications/1.jpg'
   },
   {
     id: 1,
     title: 'Apartments',
-    description: 'Take care about your skin & immune system indoors'
+    description: 'Take care about your skin & immune system indoors',
+    image: '/images/home/applications/2.jpg'
   },
   {
     id: 2,
     title: 'Offices',
     description:
-      'Protect & prolong lifetime of surfaces and furniture made of wood'
+      'Protect & prolong lifetime of surfaces and furniture made of wood',
+    image: '/images/home/applications/3.jpg'
   },
   {
     id: 3,
     title: 'Industry',
-    description: 'Increase quality & lifetime of manufactured products'
+    description: 'Increase quality & lifetime of manufactured products',
+    image: '/images/home/applications/4.jpg'
   }
 ]
 </script>
@@ -43,6 +47,7 @@ const ApplicationCards = [
           :index="index + 1"
           :title="card.title"
           :description="card.description"
+          :image="card.image"
         />
       </div>
       <HomeApplicationsInfoBanner />

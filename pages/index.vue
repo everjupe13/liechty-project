@@ -2,7 +2,7 @@
 import { useHead } from 'nuxt/app'
 
 import {
-  HomeApplicationsInfoSreen,
+  HomeApplicationsInfoScreen,
   HomeDownloadScreen,
   HomeFAQScreen,
   HomeFeedbackScreen,
@@ -20,7 +20,7 @@ useHead({
   <div>
     <HomeTopBannerScreen />
     <HomeHumidificationInfoScreen />
-    <HomeApplicationsInfoSreen />
+    <HomeApplicationsInfoScreen />
     <HomeHowWorksInfoScreen />
     <HomeDownloadScreen />
     <HomeFAQScreen />

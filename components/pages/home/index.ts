@@ -1,4 +1,4 @@
-export { default as HomeApplicationsInfoSreen } from './ui/HomeApplicationsInfoSreen.vue'
+export { default as HomeApplicationsInfoScreen } from './ui/HomeApplicationsInfoScreen.vue'
 export { default as HomeDownloadScreen } from './ui/HomeDownloadScreen.vue'
 export { default as HomeFAQScreen } from './ui/HomeFAQScreen.vue'
 export { default as HomeFeedbackScreen } from './ui/HomeFeedbackScreen.vue'

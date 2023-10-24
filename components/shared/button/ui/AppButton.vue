@@ -48,10 +48,10 @@ const componentsClasses = computed(() => {
 
   &_outlined {
     &.app-btn_theme-default {
-      @apply border-dark text-dark;
+      @apply border-dark text-dark hover:bg-dark hover:text-white;
     }
     &.app-btn_theme-blue {
-      @apply border-blue text-blue;
+      @apply border-blue text-blue hover:bg-blue hover:text-white;
     }
   }
 }

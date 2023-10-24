@@ -1,3 +1,5 @@
+import type { NitroAppPlugin } from 'nitropack'
+
 // export default defineNitroPlugin(nitroApp => {
 // nitroApp.hooks.hook('render:html', (html, { event: _event }) => {
 // This will be an object representation of the html template.
@@ -13,4 +15,6 @@
 // })
 // })
 
-export default defineNitroPlugin(_nitroApp => {})
+// export default defineNitroPlugin(_nitroApp => {})
+
+export default <NitroAppPlugin>function (_nitroApp) {}

@@ -1,32 +1,39 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { AppButton } from '@/components/shared/button'
+</script>
 
 <template>
-  <section class="pb-50 pt-30">
+  <section class="pb-60 pt-30">
     <div class="container">
-      <div class="mb-40">
-        <h1 class="font-bold leading-none text-96">Classic line product</h1>
-      </div>
+      <div
+        class="relative overflow-hidden bg-gray px-80 py-80 pb-[160px] before:absolute before:-inset-90 before:z-[1] before:block before:bg-[url('@/assets/img/bg-mesh.svg')]"
+      >
+        <div class="z-[2]">
+          <div class="relative z-[2] mb-25 max-w-[640px] xl:mb-[160px]">
+            <h1 class="font-bold leading-none text-96 xl:text-82">
+              Classic line series (CL)
+            </h1>
+          </div>
 
-      <div class="max-w-[900px]">
-        <p class="leading-snug text-16 md:text-14">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget
-          mauris rhoncus, bibendum nibh id, auctor ipsum. Suspendisse tristique
-          justo et volutpat porttitor. Sed quis diam magna. Phasellus posuere
-          varius tortor at eleifend. Vestibulum id enim ac neque maximus ornare
-          et vel elit. Curabitur egestas nulla sed justo mollis, ut ultricies
-          ante dictum. Proin sagittis non sapien in interdum.
-          <br />
-          <br />
-          Integer nunc orci, scelerisque non eros eu, luctus imperdiet tellus.
-          Vestibulum eget sapien tristique, sagittis metus at, efficitur neque.
-          In blandit tempor magna at efficitur. Quisque ligula justo,
-          consectetur ullamcorper tincidunt ut, iaculis sed lorem. Donec blandit
-          vel velit ut aliquet. Aenean quis mattis mi, non dignissim nunc. Nam
-          rhoncus orci eu ligula tempus, ac tristique lectus feugiat. Donec
-          tempus risus ac feugiat venenatis. Etiam commodo vulputate ante. Duis
-          ultrices scelerisque mi sed volutpat. Donec tincidunt id ipsum ac
-          ullamcorper.
-        </p>
+          <div class="relative z-[2] max-w-[500px]">
+            <p class="mb-40 leading-snug text-24 xl:text-20">
+              Designed to improve microclimate in your
+              <br />
+              house, apartment or office
+            </p>
+            <AppButton outlined class="bg-gray">See How it Works</AppButton>
+          </div>
+
+          <div
+            class="pointer-events-none absolute bottom-0 right-0 z-[1] w-[790px] select-none"
+          >
+            <img
+              src="/images/equipment/top-banner.png"
+              alt="Liechty CL12 Manitoba"
+              class="pointer-events-none block w-full select-none"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>

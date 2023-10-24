@@ -13,7 +13,7 @@ import { FeedbackForm } from '@/components/features/feedback'
       </div>
     </div>
     <div class="absolute bottom-0 right-0 top-0 z-[1]">
-      <img src="@/assets/img/bg-mesh-angeled.svg" alt="" />
+      <img src="@/assets/img/bg-mesh-angeled.svg" alt="" class="block h-full" />
     </div>
   </section>
 </template>

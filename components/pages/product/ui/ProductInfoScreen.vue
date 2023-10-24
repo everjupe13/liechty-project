@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 
 import { AppButton } from '@/components/shared/button'
+
+import ProductGalleryView from './ProductGalleryView.vue'
 // import { formatToCost } from '@/utils/cost'
 
 const activeDescriptionTabId = ref(0)
@@ -14,7 +16,9 @@ const handleActiveDescriptionIdChange = (id: number) => {
   <section class="border-b border-dark/20 pb-[140px]">
     <div class="container">
       <div class="mb-40 grid grid-cols-2 gap-x-40">
-        <div class="h-[640px] w-full rounded-[14px] bg-gray"></div>
+        <div class="h-[640px] w-full rounded-[14px] bg-gray">
+          <ProductGalleryView />
+        </div>
         <div>
           <div class="mb-75 flex h-full flex-col">
             <div class="flex-grow-0">

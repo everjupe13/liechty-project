@@ -80,7 +80,7 @@ const uuid = ref(randomID())
 .label {
   @apply absolute left-0 top-0 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-focus:top-0 peer-focus:-translate-y-0;
   @apply leading-none text-dark/50 text-14 peer-placeholder-shown:text-20 peer-hover:text-dark peer-focus:text-14;
-  @apply transition-all;
+  @apply pointer-events-none transition-all;
 }
 
 .input {

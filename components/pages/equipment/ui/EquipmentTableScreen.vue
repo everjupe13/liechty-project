@@ -1,4 +1,17 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { watch } from 'vue'
+
+import { useCategories } from '@/api/categories'
+
+const { categories } = useCategories()
+watch(
+  categories,
+  newValue => {
+    console.log(categories, newValue)
+  },
+  { deep: true }
+)
+</script>
 
 <template>
   <section class="pb-[140px] pt-[120px]">
@@ -28,34 +41,6 @@
             </tr>
           </thead>
           <tbody class="bg-white">
-            <tr class="border-b border-gray last:border-transparent">
-              <th
-                scope="row"
-                class="border-r border-gray px-24 py-18 pl-0 font-normal text-dark/50"
-              >
-                Areas of application
-              </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">
-                house / apartment / office
-              </td>
-              <td class="px-24 py-18 text-dark/70">
-                house / apartment / office
-              </td>
-            </tr>
-            <tr class="border-b border-gray last:border-transparent">
-              <th
-                scope="row"
-                class="border-r border-gray px-24 py-18 pl-0 font-normal text-dark/50"
-              >
-                Areas of application
-              </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">
-                house / apartment / office
-              </td>
-              <td class="px-24 py-18 text-dark/70">
-                house / apartment / office
-              </td>
-            </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
                 scope="row"

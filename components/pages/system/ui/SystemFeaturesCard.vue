@@ -1,4 +1,14 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+type Props = {
+  title?: string
+  description?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  title: '',
+  description: ''
+})
+</script>
 
 <template>
   <article>
@@ -11,11 +21,9 @@
         alt=""
       />
     </div>
-    <h3 class="mb-8 leading-normal text-20">Hygiene</h3>
-    <div class="leading-normal text-16">
-      Microbes from the air quickly infest even pre-distilled water in household
-      humidifiers. In direct spray humidification, the water does not come into
-      contact with the air until atomization&
+    <h3 class="mb-8 leading-normal text-20 md:text-18">{{ props.title }}</h3>
+    <div class="leading-normal text-dark-text/70 text-16 md:text-14">
+      {{ props.description }}
     </div>
   </article>
 </template>

@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
   <article
-    class="transiton-all group relative min-h-[300px] overflow-hidden rounded-[20px] border border-dark/20 bg-white p-35 duration-300 hover:border-blue lg:p-20"
+    class="group relative min-h-[300px] overflow-hidden rounded-[20px] border border-dark/20 bg-white p-35 transition-all duration-300 hover:border-blue lg:min-h-max lg:p-20"
     :title="props.title"
   >
     <div class="mb-40 flex justify-between">
@@ -26,12 +26,12 @@ const props = defineProps({
 
     <div>
       <h3
-        class="mb-5 leading-normal transition-all duration-300 text-20 group-hover:text-blue"
+        class="mb-5 leading-normal transition-all duration-300 text-20 group-hover:text-blue md:text-18"
       >
         {{ props.title }}
       </h3>
       <p
-        class="leading leading-normal text-dark/70 transition-all duration-300 text-16"
+        class="leading leading-normal text-dark/70 transition-all duration-300 text-16 md:text-14"
       >
         {{ props.description }}
       </p>

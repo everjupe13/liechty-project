@@ -1,3 +1,4 @@
+export { default as ChevronRightArrowIcon } from './ChevronRightArrowIcon.vue'
 export { default as DownloadArrowIcon } from './DownloadArrowIcon.vue'
 export { default as LinkArrowIcon } from './LinkArrowIcon.vue'
 export { default as NavigationArrowLeftIcon } from './NavigationArrowLeftIcon.vue'

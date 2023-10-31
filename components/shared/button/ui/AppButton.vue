@@ -22,7 +22,7 @@ const componentsClasses = computed(() => {
 </script>
 
 <template>
-  <button class="app-btn" :class="componentsClasses">
+  <button class="app-btn group" :class="componentsClasses">
     <slot></slot>
   </button>
 </template>
@@ -38,10 +38,18 @@ const componentsClasses = computed(() => {
     &.app-btn {
       &_theme-default {
         @apply border-dark bg-dark text-white;
+
+        svg {
+          @apply text-white;
+        }
       }
 
       &_theme-blue {
         @apply border-blue bg-blue text-white;
+
+        svg {
+          @apply text-white;
+        }
       }
     }
   }
@@ -49,9 +57,29 @@ const componentsClasses = computed(() => {
   &_outlined {
     &.app-btn_theme-default {
       @apply border-dark text-dark hover:bg-dark hover:text-white;
+
+      &:hover {
+        svg {
+          @apply text-white;
+        }
+      }
+
+      svg {
+        @apply text-dark;
+      }
     }
     &.app-btn_theme-blue {
       @apply border-blue text-blue hover:bg-blue hover:text-white;
+
+      &:hover {
+        svg {
+          @apply text-white;
+        }
+      }
+
+      svg {
+        @apply text-blue;
+      }
     }
   }
 }

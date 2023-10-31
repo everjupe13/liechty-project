@@ -3,14 +3,12 @@ export type CategoryType = {
   products: [
     {
       id: number
-      features: [
-        {
-          id: number
-          label: string
-          value: string
-          product: number
-        }
-      ]
+      features: {
+        id: number
+        label: string
+        value: string
+        product: number
+      }[]
       image: string
       vendor_code: string
       name: string

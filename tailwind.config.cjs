@@ -16,6 +16,7 @@ const fallbackSansSerifFonts = [
 
 module.exports = {
   plugins: [
+    require('@tailwindcss/typography'),
     plugin(({ addUtilities }) => {
       const typographyWithOnlySizes = {}
       for (let i = 8; i <= 100; i += 2) {

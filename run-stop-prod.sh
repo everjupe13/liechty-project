@@ -1,4 +1,7 @@
 #!/bin/sh
 
-docker stop amigold-animals-container
-docker rmi -f amigold-animals
+IMAGE_NAME=liechty_front
+CONTAINER_NAME=liechty_front_container
+
+docker stop $CONTAINER_NAME
+docker rmi -f $IMAGE_NAME

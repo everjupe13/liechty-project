@@ -31,6 +31,7 @@
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/lodash-es": "^4.17.8",
     "@types/node": "^18.17.3",
     "@types/uuid": "^9.0.2",

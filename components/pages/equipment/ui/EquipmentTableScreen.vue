@@ -2,12 +2,23 @@
 import { watch } from 'vue'
 
 import { useCategories } from '@/api/categories'
+import { useModels } from '@/api/models'
+
+import EquipmentCategoryCard from './EquipmentCategoryCard.vue'
 
 const { categories } = useCategories()
+const { models } = useModels()
 watch(
   categories,
   newValue => {
     console.log(categories, newValue)
+  },
+  { deep: true }
+)
+watch(
+  categories,
+  newValue => {
+    console.log(models, newValue)
   },
   { deep: true }
 )
@@ -20,9 +31,15 @@ watch(
         <h2 class="section-title">Models</h2>
       </div>
 
-      <div class="mb-80 grid grid-cols-2 gap-x-20">
-        <div class="h-[410px] bg-[#F5F6F8]"></div>
-        <div class="h-[410px] bg-[#F5F6F8]"></div>
+      <div class="mb-80 grid grid-cols-2 gap-20">
+        <EquipmentCategoryCard
+          v-for="category in categories.flatMap(category => category.products)"
+          :key="category?.id"
+          :image="category?.image"
+          :name="category?.name"
+          :slug="category?.slug"
+          :description="category?.description"
+        />
       </div>
 
       <div class="rounded-[20px] border border-gray px-40 py-20">

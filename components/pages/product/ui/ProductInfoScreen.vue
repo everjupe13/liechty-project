@@ -1,17 +1,12 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
 import { useModal } from 'vue-final-modal'
 
 import { AppButton } from '@/components/shared/button'
 import { PurchaseDetails } from '@/components/widgets/dialog'
 
 import ProductGalleryView from './ProductGalleryView.vue'
+import ProductInfoTabs from './ProductInfoTabs.vue'
 // import { formatToCost } from '@/utils/cost'
-
-const activeDescriptionTabId = ref(0)
-const handleActiveDescriptionIdChange = (id: number) => {
-  activeDescriptionTabId.value = id
-}
 
 const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
   component: PurchaseDetails,
@@ -47,9 +42,6 @@ const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
                 </span>
               </div>
               <div class="mb-40 flex gap-x-10">
-                <AppButton outlined @click="openFeedbackModal">
-                  Add to bag
-                </AppButton>
                 <AppButton theme="blue" @click="openFeedbackModal">
                   Buy now
                 </AppButton>
@@ -80,76 +72,7 @@ const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
         </div>
       </div>
       <div class="rounded-[14px] border border-dark/20 p-40">
-        <div
-          class="mb-40 flex max-w-max items-center rounded-full border border-dark"
-        >
-          <AppButton
-            outlined
-            :theme="activeDescriptionTabId === 0 ? 'blue' : 'default'"
-            :class="activeDescriptionTabId !== 0 ? '!border-transparent' : ''"
-            class="m-[-1px]"
-            @click="handleActiveDescriptionIdChange(0)"
-          >
-            Description
-          </AppButton>
-          <AppButton
-            outlined
-            :theme="activeDescriptionTabId === 1 ? 'blue' : 'default'"
-            :class="activeDescriptionTabId !== 1 ? '!border-transparent' : ''"
-            class="m-[-1px]"
-            @click="handleActiveDescriptionIdChange(1)"
-          >
-            Features
-          </AppButton>
-        </div>
-        <div class="max-w-[880px]">
-          <div class="mb-28">
-            <div class="mb-10 font-bold text-16">
-              Elit leo luctus pellentesque cursus.
-            </div>
-            <div class="text-dark/80 text-16">
-              Lorem ipsum dolor sit amet consectetur. Viverra et vitae porttitor
-              eu ornare mauris arcu ultricies integer. Eget congue ac enim
-              consequat dignissim sit sit. Urna egestas tristique etiam semper
-              varius et convallis. Eu pellentesque praesent tortor pellentesque
-              rhoncus pulvinar. Elit leo luctus pellentesque cursus vitae amet
-              eget pharetra.
-            </div>
-          </div>
-          <div class="mb-28">
-            <div class="mb-10 font-bold text-16">
-              Urna dignissim cras gravida dictum risus.
-            </div>
-            <div class="text-dark/80 text-16">
-              Volutpat sagittis egestas bibendum tincidunt enim. Eget tristique
-              morbi massa posuere. Viverra pretium eu enim fusce sem. Suscipit
-              accumsan risus diam duis sit eget id. Pellentesque enim viverra
-              dignissim donec sit id risus pulvinar. Lectus sagittis convallis
-              fusce mi sagittis augue sed morbi volutpat. Vel elit velit leo
-              fermentum elementum.
-            </div>
-          </div>
-          <div class="mb-28">
-            <div class="mb-10 font-bold text-16">Tellus sodales tortor.</div>
-            <div class="text-dark/80 text-16">
-              Urna dignissim cras gravida dictum risus. Urna ac nec faucibus
-              nulla mauris. Ullamcorper urna duis ultrices metus porta malesuada
-              gravida volutpat et. Congue felis pellentesque consectetur viverra
-              accumsan. Lorem ultricies eu in purus risus accumsan. Orci
-              hendrerit dictum rutrum eros porttitor porta. Tellus sodales
-              tortor vitae amet vulputate lectus nisl feugiat lobortis. Egestas
-              nunc ac ut suspendisse commodo volutpat enim tincidunt.
-            </div>
-          </div>
-          <div class="mb-28">
-            <div class="mb-10 font-bold text-16">Ultricies eu in purus.</div>
-            <div class="text-dark/80 text-16">
-              Dui odio pellentesque mi at elit faucibus ultrices faucibus. Orci
-              nullam vitae etiam morbi porta egestas ut enim. Amet senectus
-              bibendum donec egestas dolor suspendisse aliquam sit sapien.
-            </div>
-          </div>
-        </div>
+        <ProductInfoTabs :tabs="[]" />
       </div>
     </div>
   </section>

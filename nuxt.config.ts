@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseUrl: ''
+      baseUrl: 'http://79.132.139.251:8080/'
     }
   },
 

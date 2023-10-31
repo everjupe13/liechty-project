@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { useModal } from 'vue-final-modal'
 
 import { AppButton } from '@/components/shared/button'
+import { PurchaseDetails } from '@/components/widgets/dialog'
 
 import ProductGalleryView from './ProductGalleryView.vue'
 // import { formatToCost } from '@/utils/cost'
@@ -10,32 +12,47 @@ const activeDescriptionTabId = ref(0)
 const handleActiveDescriptionIdChange = (id: number) => {
   activeDescriptionTabId.value = id
 }
+
+const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
+  component: PurchaseDetails,
+  attrs: {
+    onConfirm() {
+      closeFeedbackModal()
+    }
+  }
+})
 </script>
 
 <template>
-  <section class="border-b border-dark/20 pb-[140px]">
+  <section
+    class="border-b border-dark/20 pb-[140px] xl:py-80 lg:py-60 md:py-40"
+  >
     <div class="container">
-      <div class="mb-40 grid grid-cols-2 gap-x-40">
+      <div class="mb-40 grid grid-cols-2 gap-x-40 lg:grid-cols-1 lg:gap-y-20">
         <div class="h-[640px] w-full rounded-[14px] bg-gray">
           <ProductGalleryView />
         </div>
         <div>
           <div class="mb-75 flex h-full flex-col">
             <div class="flex-grow-0">
-              <h2 class="mb-20 font-bold leading-tight text-48">
+              <h2 class="mb-20 font-bold leading-tight text-48 lg:text-28">
                 Central block
               </h2>
               <div class="mb-20 flex items-center gap-x-15">
                 <p class="leading-none text-24">$ 12 000,00</p>
                 <span
-                  class="rounded-full bg-blue/20 px-14 py-7 font-medium leading-none text-blue"
+                  class="min-h-30 flex cursor-default items-center justify-center rounded-full bg-blue/20 px-14 py-6 pb-8 font-medium leading-none text-blue"
                 >
                   available
                 </span>
               </div>
               <div class="mb-40 flex gap-x-10">
-                <AppButton outlined>Add to bag</AppButton>
-                <AppButton theme="blue">Buy now</AppButton>
+                <AppButton outlined @click="openFeedbackModal">
+                  Add to bag
+                </AppButton>
+                <AppButton theme="blue" @click="openFeedbackModal">
+                  Buy now
+                </AppButton>
               </div>
             </div>
             <div class="flex-grow rounded-[14px] border border-dark/20 p-24">

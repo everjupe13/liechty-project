@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
+
+import { DownloadArrowIcon } from '@/components/shared/icons'
+
 type Props = {
   fileLink?: string
   fileSize?: string
@@ -6,6 +10,7 @@ type Props = {
   description?: string
   excerpt?: string
   filledCard?: boolean
+  designType?: 'default' | 'white'
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -13,31 +18,52 @@ const props = withDefaults(defineProps<Props>(), {
   fileSize: '0 КБ',
   title: '',
   description: '',
-  excerpt: ''
+  excerpt: '',
+  designType: 'default'
 })
+
+const designTypeStyles = computed(() =>
+  props.designType === 'default'
+    ? 'download-card_default'
+    : 'download-card_white'
+)
+const isDownloadIconHovered = computed(() => props.designType === 'white')
 </script>
 
 <template>
   <article
-    class="group relative min-h-[420px] overflow-hidden rounded-[20px] bg-gray-light p-20"
+    class="group relative min-h-[420px] overflow-hidden rounded-[20px] p-20 transition-all lg:min-h-[320px]"
+    :class="designTypeStyles"
   >
     <div class="relative z-[1] flex h-full flex-col">
       <div>
-        <h3 class="mb-8 leading-normal text-20">{{ props.title }}</h3>
-        <p class="leading-normal text-16">{{ props.excerpt }}</p>
+        <h3
+          class="download-card__title mb-8 leading-normal transition-all text-20 lg:text-18"
+        >
+          {{ props.title }}
+        </h3>
+        <p class="leading-normal text-16 md:text-14">{{ props.excerpt }}</p>
       </div>
       <div class="mt-auto flex cursor-pointer items-center gap-x-10">
         <a href="/plug-pdf.pdf" download class="flex items-center gap-x-10">
           <span class="inline-flex items-center justify-center">
-            <img
-              src="@/assets/img/icons/download-icon.svg"
-              class="block"
-              alt=""
+            <DownloadArrowIcon
+              :svg-classes="`block transition-all${
+                isDownloadIconHovered ? ' group-hover:text-blue' : ''
+              }`"
             />
           </span>
-          <span class="inline-flex text-20">PDF</span>
+          <span
+            class="download-card__file inline-flex text-20 lg:text-18 md:text-16"
+          >
+            PDF
+          </span>
         </a>
-        <div class="text-dark/40 text-18">{{ props.fileSize }}</div>
+        <div
+          class="download-card__size text-dark/40 transition-all text-18 lg:text-16 md:text-14"
+        >
+          {{ props.fileSize }}
+        </div>
       </div>
     </div>
     <div
@@ -49,9 +75,9 @@ const props = withDefaults(defineProps<Props>(), {
         src="@/assets/img/icons/home/downloads-card-bg-pattern.svg"
       />
       <div class="z-2 relative">
-        <p class="mb-15 text-20">Download the files</p>
+        <p class="mb-15 text-20 lg:text-18">Download the files</p>
         <div class="max-w-[300px]">
-          <p class="text-16">
+          <p class="text-16 md:text-14">
             Lorem ipsum dolor sit amet consectetur. Nunc mauris scelerisque
             sapien magna blandit nulla vitae.
             <br />
@@ -72,3 +98,26 @@ const props = withDefaults(defineProps<Props>(), {
     </div>
   </article>
 </template>
+
+<style lang="scss">
+.download-card {
+  &_default {
+    @apply border border-transparent bg-gray-light;
+  }
+  &_white {
+    @apply border border-white bg-white hover:border-blue;
+
+    &:hover {
+      .download-card__title {
+        @apply text-blue;
+      }
+      .download-card__file {
+        @apply text-blue;
+      }
+      .download-card__size {
+        @apply text-dark;
+      }
+    }
+  }
+}
+</style>

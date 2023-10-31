@@ -27,3 +27,13 @@
     @apply pl-16 relative leading-none mb-12 md:mb-9 last:mb-0 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-6 before:h-6 before:bg-blue before:rounded-full;
   }
 }
+
+@layer utilities {
+  .scroll-x-hidden {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+      height: 0 !important;
+    }
+  }
+}

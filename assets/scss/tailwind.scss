@@ -14,12 +14,12 @@
   .section-title {
     @apply font-medium leading-none text-32 lg:text-24 xl:text-28;
   }
-  .prose ul li,
+  .prosed ul li,
   ul.unordered-list li {
     @apply pl-20 relative md:mb-10 leading-none mb-20 last:mb-0 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-10 before:h-10 before:bg-blue before:rounded-full;
   }
 
-  .prose p {
+  .prosed p {
     @apply mb-10 last:mb-0;
   }
 

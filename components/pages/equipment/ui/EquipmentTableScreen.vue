@@ -1,22 +1,13 @@
 <script lang="ts" setup>
 import { watch } from 'vue'
 
-import { useCategories } from '@/api/categories'
 import { useModels } from '@/api/models'
 
 import EquipmentCategoryCard from './EquipmentCategoryCard.vue'
 
-const { categories } = useCategories()
 const { models } = useModels()
 watch(
-  categories,
-  newValue => {
-    console.log(categories, newValue)
-  },
-  { deep: true }
-)
-watch(
-  categories,
+  models,
   newValue => {
     console.log(models, newValue)
   },
@@ -33,12 +24,15 @@ watch(
 
       <div class="mb-80 grid grid-cols-2 gap-20">
         <EquipmentCategoryCard
-          v-for="category in categories.flatMap(category => category.products)"
-          :key="category?.id"
-          :image="category?.image"
-          :name="category?.name"
-          :slug="category?.slug"
-          :description="category?.description"
+          v-for="model in models"
+          :key="model?.id"
+          :image="
+            model?.images.find(image => image.is_main)?.image ||
+            model?.images[0]?.image
+          "
+          :name="model?.name"
+          :slug="model?.slug"
+          :description="model?.short_description"
         />
       </div>
 

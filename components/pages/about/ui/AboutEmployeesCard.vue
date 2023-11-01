@@ -9,7 +9,7 @@ const props = defineProps<Props>()
 
 <template>
   <article :title="props.name">
-    <div class="mb-20 flex aspect-square items-center justify-center">
+    <div class="mb-20 flex aspect-square items-center justify-center md:mb-10">
       <img :src="props.image" alt="" />
     </div>
     <div>

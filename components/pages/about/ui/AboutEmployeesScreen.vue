@@ -30,12 +30,12 @@ const EmployeesData = [
 </script>
 
 <template>
-  <section class="pb-[80px] pt-[140px]">
+  <section class="pb-[80px] pt-[140px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40 md:mb-30">
         <h2 class="section-title text-blue">Board of directors</h2>
       </div>
-      <div class="grid grid-cols-4 gap-20">
+      <div class="grid grid-cols-4 gap-20 md:grid-cols-1 md:gap-40">
         <AboutEmployeesCard
           v-for="employee in EmployeesData"
           :key="employee.id"

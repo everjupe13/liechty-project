@@ -4,9 +4,10 @@ import { useHttpRequest } from '@/api/shared/http'
 export const useModels = () => {
   const models = ref<ModelType[]>([])
 
-  const fetchModels = () => {
+  const fetchModels = async () => {
     try {
-      const { data, error } = useHttpRequest<ModelType[]>(`/api/data/models`)
+      const { data, error } =
+        await useHttpRequest<ModelType[]>(`/api/data/models`)
 
       if (!error.value) {
         models.value = data.value || []

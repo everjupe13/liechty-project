@@ -1,4 +1,6 @@
-type ProductType = {
+import { CategoryType } from '@/api/categories/types'
+
+export type ProductType = {
   id: number
   features: {
     id: number
@@ -30,9 +32,10 @@ export type ModelType = {
     is_main: boolean
     model: number
   }[]
-  products: ProductType[]
+  categories: CategoryType[]
   is_active: true
   name: string
   slug: string
   description: string
+  short_description: string
 }

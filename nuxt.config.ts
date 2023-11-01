@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   //   autoImport: false
   // },
 
+  ssr: false,
+
   devtools: { enabled: false },
 
   experimental: {
@@ -14,7 +16,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseUrl: 'http://79.132.139.251:8080/'
+      baseUrl: 'https://liechty.li'
     }
   },
 

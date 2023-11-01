@@ -2,7 +2,6 @@
 import { useHead } from 'nuxt/app'
 
 import {
-  SystemAreasInfoScreen,
   SystemDiagramScreen,
   SystemDownloadScreen,
   SystemFeaturesScreen,
@@ -26,7 +25,6 @@ useHead({
     <SystemDiagramScreen />
     <SystemFeaturesScreen />
     <SystemDownloadScreen />
-    <SystemAreasInfoScreen />
     <SystemFeedbackScreen />
   </div>
 </template>

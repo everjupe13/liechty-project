@@ -17,27 +17,23 @@ import AboutContactsMap from './AboutContactsMap.vue'
         <div class="mb-85 flex flex-col gap-y-40 md:mb-20 md:gap-y-20">
           <AboutContactsArticle>
             <template #title>Central office</template>
-            <template #content>+ 1 123-456-7890</template>
-          </AboutContactsArticle>
-          <AboutContactsArticle>
-            <template #title>Sales departaments</template>
-            <template #content>+ 1 123-456-7890</template>
+            <template #content>+ 1 204-800-1014</template>
           </AboutContactsArticle>
           <AboutContactsArticle>
             <template #title>Contact mail</template>
-            <template #content>liechty@info.com</template>
+            <template #content>info@liechty-humidity.com</template>
           </AboutContactsArticle>
         </div>
         <div class="flex flex-col gap-y-40 md:gap-y-20">
           <AboutContactsArticle>
             <template #title>Office</template>
             <template #content>
-              139 Flatbush Ave, Brooklyn, NY 11217, USA
+              1260 Clarence Avenue, Winnipeg, Manitoba R3T 1T2
             </template>
           </AboutContactsArticle>
           <AboutContactsArticle>
             <template #title>Work schedule</template>
-            <template #content>12am to 12pm</template>
+            <template #content>9am to 5pm</template>
           </AboutContactsArticle>
         </div>
       </div>

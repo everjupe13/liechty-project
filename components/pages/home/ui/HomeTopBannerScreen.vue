@@ -27,7 +27,9 @@ import { AppButton } from '@/components/shared/button'
           <br />
           house, apartment or office
         </p>
-        <AppButton outlined class="bg-gray">See How it Works</AppButton>
+        <AppButton outlined class="bg-gray" @click="$router.push('/system')">
+          See How it Works
+        </AppButton>
       </div>
 
       <div

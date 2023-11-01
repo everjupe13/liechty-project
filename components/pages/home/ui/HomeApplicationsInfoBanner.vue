@@ -17,7 +17,9 @@ import { AppButton } from '@/components/shared/button'
           user safety.
         </p>
       </div>
-      <AppButton outlined>Explore</AppButton>
+      <AppButton outlined @click="$router.push('/equipment')">
+        Explore
+      </AppButton>
     </div>
     <div
       class="pointer-events-none absolute bottom-0 right-0 z-[1] w-full max-w-[1100px] xl:right-[-180px] xl:h-full lg:hidden"

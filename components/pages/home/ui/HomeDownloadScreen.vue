@@ -12,31 +12,22 @@ import { DownloadCard } from '@/components/features/download-card'
       </div>
       <div class="grid grid-cols-3 gap-x-20 md:grid-cols-1 md:gap-10">
         <DownloadCard
-          title="Booklet"
-          excerpt="Dignissim aliquet ne."
-          description="
-            Lorem ipsum dolor sit amet consectetur. Nunc mauris scelerisque sapien magna blandit nulla vitae. <br/><br/>
-            Eleifend malesuada parturient pellentesque euismod proin ut. Tincidunt netus ultricies feugiat fusce. Arcu at purus et morbi vitae quisque amet id.
-          "
+          title="Main catalogue"
+          excerpt="Here you may find all technical information & description for Liechty products."
+          description="Here you may find all technical information & description for Liechty products."
           file-size="162 KB"
         />
         <DownloadCard
           title="Booklet"
-          excerpt="Dignissim aliquet ne."
-          description="
-            Lorem ipsum dolor sit amet consectetur. Nunc mauris scelerisque sapien magna blandit nulla vitae. <br/><br/>
-            Eleifend malesuada parturient pellentesque euismod proin ut. Tincidunt netus ultricies feugiat fusce. Arcu at purus et morbi vitae quisque amet id.
-          "
+          excerpt="Our booklet for an overview of Liechty developments."
+          description="Our booklet for an overview of Liechty developments."
           file-size="162 KB"
         />
         <DownloadCard
           filled-card
           title="Booklet"
           excerpt="Dignissim aliquet ne."
-          description="
-            Lorem ipsum dolor sit amet consectetur. Nunc mauris scelerisque sapien magna blandit nulla vitae. <br/><br/>
-            Eleifend malesuada parturient pellentesque euismod proin ut. Tincidunt netus ultricies feugiat fusce. Arcu at purus et morbi vitae quisque amet id.
-          "
+          description="To request all other documentation about our products, please contact us using the contact details or leave a request in the form below."
           file-size="162 KB"
         />
       </div>

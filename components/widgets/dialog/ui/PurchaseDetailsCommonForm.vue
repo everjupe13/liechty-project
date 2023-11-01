@@ -46,7 +46,7 @@ const checkClientValidation = () => {
 
 const handleFormSubmit = () => {
   const isValid = checkClientValidation()
-  if (!isValid) {
+  if (isValid) {
     emit('submit')
   }
 }

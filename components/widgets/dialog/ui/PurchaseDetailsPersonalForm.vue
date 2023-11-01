@@ -44,27 +44,27 @@ const rules = {
 
   companyName: {
     requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : false
+      customerType.value === 1 ? !!value : true
     )
   },
   inn: {
     requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : false
+      customerType.value === 1 ? !!value : true
     )
   },
   bank: {
     requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : false
+      customerType.value === 1 ? !!value : true
     )
   },
   placeRegistration: {
     requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : false
+      customerType.value === 1 ? !!value : true
     )
   },
   typeTaxation: {
     requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : false
+      customerType.value === 1 ? !!value : true
     )
   }
 }

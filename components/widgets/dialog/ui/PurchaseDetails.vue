@@ -3,9 +3,18 @@ import { VueFinalModal } from 'vue-final-modal'
 
 import PurchaseDetailsCommonForm from './PurchaseDetailsCommonForm.vue'
 import PurchaseDetailsPersonalForm from './PurchaseDetailsPersonalForm.vue'
+import PurchaseDetailsSuccess from './PurchaseDetailsSuccess.vue'
+
+const emit = defineEmits<{
+  (e: 'confirm'): void
+}>()
 
 const currentFormId = ref(0)
 const handleFormSubmit = () => {
+  if (currentFormId.value > 1) {
+    emit('confirm')
+  }
+
   currentFormId.value += 1
 }
 
@@ -25,15 +34,29 @@ const handleBackForm = () => {
       @submit.prevent
     >
       <div class="h-full w-full">
-        <PurchaseDetailsPersonalForm
-          v-if="currentFormId === 0"
-          @submit="handleFormSubmit"
-        />
-        <PurchaseDetailsCommonForm
-          v-else
-          @submit="handleFormSubmit"
-          @back-nav="handleBackForm"
-        />
+        <template v-if="currentFormId === 0">
+          <KeepAlive>
+            <PurchaseDetailsPersonalForm @submit="handleFormSubmit" />
+          </KeepAlive>
+        </template>
+
+        <template v-else-if="currentFormId === 1">
+          <KeepAlive>
+            <PurchaseDetailsCommonForm
+              @submit="handleFormSubmit"
+              @back-nav="handleBackForm"
+            />
+          </KeepAlive>
+        </template>
+
+        <template v-else>
+          <KeepAlive>
+            <PurchaseDetailsSuccess
+              @submit="handleFormSubmit"
+              @back-nav="handleBackForm"
+            />
+          </KeepAlive>
+        </template>
       </div>
     </form>
   </VueFinalModal>

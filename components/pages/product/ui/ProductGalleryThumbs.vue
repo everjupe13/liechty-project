@@ -11,10 +11,23 @@ const emit = defineEmits<{
 const onSwiper = (swiper: typeof ISwiper) => {
   emit('swiper', swiper)
 }
+
+type Props = {
+  gallery: {
+    id: number
+    image: string
+    imageThumb: string
+    is_main: boolean
+    model: number
+  }[]
+}
+
+const props = defineProps<Props>()
 </script>
 
 <template>
   <Swiper
+    v-if="props.gallery && props.gallery.length > 0"
     :space-between="20"
     :slides-per-view="10"
     :free-mode="true"
@@ -24,26 +37,10 @@ const onSwiper = (swiper: typeof ISwiper) => {
     class="h-full"
     @swiper="onSwiper"
   >
-    <SwiperSlide>
+    <SwiperSlide v-for="image in props.gallery" :key="image.id">
       <div class="flex h-45 w-45 items-center justify-center">
         <img
-          src="/images/product/p.png"
-          class="block h-full w-full select-none object-scale-down"
-        />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div class="flex h-45 w-45 items-center justify-center">
-        <img
-          src="/images/product/p.png"
-          class="object-scale block h-full w-full select-none object-scale-down"
-        />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide>
-      <div class="flex h-45 w-45 items-center justify-center">
-        <img
-          src="/images/product/p.png"
+          :src="image.image"
           class="block h-full w-full select-none object-scale-down"
         />
       </div>

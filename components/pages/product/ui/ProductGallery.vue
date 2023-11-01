@@ -7,37 +7,33 @@ import { ComponentPublicInstance } from 'vue'
 const modules = [FreeMode, Thumbs]
 type Props = {
   thumbsSwiper: (ComponentPublicInstance & typeof ISwiper) | null
+  gallery: {
+    id: number
+    image: string
+    imageThumb: string
+    is_main: boolean
+    model: number
+  }[]
 }
 const props = defineProps<Props>()
 </script>
 
 <template>
   <Swiper
+    v-if="props.gallery && props.gallery.length > 0"
     :thumbs="{ swiper: props.thumbsSwiper as typeof ISwiper }"
     :modules="modules"
     :space-between="5"
     class="h-full"
   >
-    <SwiperSlide class="flex items-center justify-center">
+    <SwiperSlide
+      v-for="image in props.gallery"
+      :key="image.id"
+      class="flex items-center justify-center"
+    >
       <div class="flex h-full items-center justify-center">
         <img
-          src="/images/product/p.png"
-          class="block h-full w-full select-none object-scale-down"
-        />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide class="flex items-center justify-center">
-      <div class="flex h-full items-center justify-center">
-        <img
-          src="/images/product/p.png"
-          class="block h-full w-full select-none object-scale-down"
-        />
-      </div>
-    </SwiperSlide>
-    <SwiperSlide class="flex items-center justify-center">
-      <div class="flex h-full items-center justify-center">
-        <img
-          src="/images/product/p.png"
+          :src="image.image"
           class="block h-full w-full select-none object-scale-down"
         />
       </div>

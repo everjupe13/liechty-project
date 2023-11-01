@@ -32,7 +32,7 @@ const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
       <template v-if="props.data">
         <div class="mb-40 grid grid-cols-2 gap-x-40 lg:grid-cols-1 lg:gap-y-20">
           <div class="h-[640px] w-full rounded-[14px] bg-gray md:h-[420px]">
-            <ProductGalleryView />
+            <ProductGalleryView :gallery="props.data.images" />
           </div>
           <div>
             <div class="mb-75 flex h-full flex-col">

@@ -9,7 +9,7 @@ const { openModalMenu } = useModalMenu()
 <template>
   <header
     id="header"
-    class="group flex h-85 items-center border-b border-dark/20 md:h-50"
+    class="group flex h-85 items-center border-b border-dark/20 xl:h-60 md:h-50"
   >
     <div class="container">
       <div class="flex items-center justify-between">

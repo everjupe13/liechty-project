@@ -29,9 +29,9 @@ const componentsClasses = computed(() => {
 
 <style lang="scss">
 .app-btn {
-  @apply flex items-center justify-center px-40 py-20;
+  @apply flex items-center justify-center px-40 py-20 md:px-25 md:py-13;
   @apply rounded-full border border-transparent;
-  @apply font-medium leading-none text-18;
+  @apply font-medium leading-none text-18 md:text-16;
   @apply transition-all duration-300 active:translate-y-2 disabled:opacity-50;
 
   &:not(.app-btn_outlined) {

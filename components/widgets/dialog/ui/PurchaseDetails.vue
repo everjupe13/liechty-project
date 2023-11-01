@@ -3,6 +3,10 @@
 // import { email, required } from '@vuelidate/validators'
 import { VueFinalModal } from 'vue-final-modal'
 
+// import { AppButton } from '@/components/shared/button'
+// import { AppInput } from '@/components/shared/input'
+import PurchaseDetailsUserInfo from './PurchaseDetailsUserInfo.vue'
+
 // const emit = defineEmits<{
 //   (e: 'confirm'): void
 // }>()
@@ -72,9 +76,13 @@ import { VueFinalModal } from 'vue-final-modal'
 <template>
   <VueFinalModal
     class="flex items-center justify-center"
-    content-class="px-40 py-50 bg-white rounded-[14px] h-[80vh] max-w-[80vw] w-full md:px-20 md:py-50 md:rounded-[12px] md:mx-10"
+    content-class="px-40 py-50 bg-white rounded-[14px] h-[80vh] max-w-[60vw] w-full md:px-20 md:py-50 md:rounded-[12px] md:mx-10"
   >
-    <form></form>
+    <form class="flex h-full flex-col items-center overflow-y-scroll p-10">
+      <div class="w-full">
+        <PurchaseDetailsUserInfo />
+      </div>
+    </form>
   </VueFinalModal>
 </template>
 

@@ -1,5 +1,7 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script lang="ts" setup>
+import { AppCollapsable } from '@/components/shared/dropdown'
+
 function useEvents(context: (e: any, value: any) => void) {
   const handleChange = (e: Event) => {
     context('update:modelValue', (e.target as HTMLTextAreaElement).value)
@@ -37,6 +39,10 @@ interface Props {
     | 'range'
     | 'color'
     | 'search'
+  validationMessage?: string
+  validatable?: boolean
+  isValid?: boolean
+  isDirty?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -44,12 +50,19 @@ const props = withDefaults(defineProps<Props>(), {
   modelValue: undefined,
   inputWrapperClasses: '',
   placeholder: '',
-  state: ''
+  state: '',
+  validationMessage: '',
+  isValid: undefined,
+  isDirty: undefined
 })
 const emits = defineEmits(['change', 'input', 'update:modelValue'])
 const { handleChange, handleInput } = useEvents(emits)
 
 const uuid = ref(randomID())
+const validationFn = computed(() => props.modelValue.length > 0)
+const isValidationMessageShown = computed(() => {
+  return props.isValid === undefined ? validationFn.value : !props.isValid
+})
 </script>
 
 <template>
@@ -58,21 +71,31 @@ const uuid = ref(randomID())
       class="group relative border-b border-dark/20 focus-within:border-dark/60 hover:border-dark/60"
       :class="[props.inputWrapperClasses]"
     >
-      <input
-        :id="uuid"
-        class="input peer"
-        :value="props.modelValue"
-        :disabled="props.disabled"
-        :placeholder="props.placeholder"
-        :readonly="props.readonly"
-        :type="props.type"
-        @input="handleInput"
-        @change="handleChange"
-      />
-      <label class="label" :for="uuid">
-        {{ placeholder }}
-      </label>
+      <div class="relative w-full flex-grow">
+        <input
+          :id="uuid"
+          class="input peer"
+          :value="props.modelValue"
+          :disabled="props.disabled"
+          :placeholder="props.placeholder"
+          :readonly="props.readonly"
+          :type="props.type"
+          @input="handleInput"
+          @change="handleChange"
+        />
+        <label class="label" :for="uuid">
+          {{ placeholder }}
+        </label>
+      </div>
     </div>
+    <AppCollapsable
+      v-if="props.isValid !== undefined"
+      v-model="isValidationMessageShown"
+    >
+      <div class="validation-message py-7 pb-0 text-red/70">
+        {{ validationMessage }}
+      </div>
+    </AppCollapsable>
   </div>
 </template>
 

@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const DefaultTab = { id: -1, label: 'Diagram', isActive: false, description: 0 }
 const activeTabId = ref(
-  props.tabs && props.tabs.length > 0 ? props.tabs[0] : DefaultTab.id
+  props.tabs && props.tabs.length > 0 ? props.tabs[0].id : DefaultTab.id
 )
 const computedTabs = computed(() => [...props.tabs, DefaultTab])
 const handleActiveIdChange = (id: number) => {
@@ -28,14 +28,16 @@ const handleActiveIdChange = (id: number) => {
 <template>
   <div>
     <div
-      class="mb-40 flex max-w-max items-center rounded-full border border-dark bg-black/10"
+      class="mb-40 flex max-w-max items-center gap-5 rounded-full bg-black/10 md:flex-wrap md:bg-transparent"
     >
       <AppButton
         v-for="tab in computedTabs"
         :key="tab.id"
         :theme="activeTabId === tab.id ? 'blue' : 'default'"
         :class="
-          activeTabId !== tab.id ? '!bg-transparent hover:!border-blue' : ''
+          activeTabId !== tab.id
+            ? '!border-transparent !bg-transparent !text-dark hover:!border-blue'
+            : ''
         "
         class="m-[-1px]"
         @click="handleActiveIdChange(tab.id)"
@@ -44,7 +46,11 @@ const handleActiveIdChange = (id: number) => {
       </AppButton>
     </div>
     <div>
-      <div v-if="activeTabId !== DefaultTab.id" class="prose max-w-[880px]" />
+      <div
+        v-if="activeTabId !== DefaultTab.id"
+        class="prose max-w-[880px]"
+        v-html="props.tabs.find(tab => tab.id === activeTabId)?.description"
+      />
       <DiagramConfig v-else />
     </div>
   </div>

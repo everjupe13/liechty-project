@@ -12,12 +12,12 @@ const setThumbsSwiper = (swiper: typeof ISwiper) => {
 </script>
 
 <template>
-  <div class="flex h-full gap-x-20 p-30">
+  <div class="flex h-full gap-x-10 p-10 py-20">
     <ProductGalleryThumbs
-      class="w-50 flex-shrink-0"
+      class="w-50 flex-shrink-0 md:hidden"
       @swiper="setThumbsSwiper"
     />
     <ProductGallery :thumbs-swiper="thumbsSwiper" />
-    <div class="w-50 flex-shrink-0 basis-[50px]"></div>
+    <div class="w-50 flex-shrink-0 basis-[50px] md:hidden"></div>
   </div>
 </template>

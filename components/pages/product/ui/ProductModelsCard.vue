@@ -25,6 +25,20 @@ const onSwiper = (swiper: typeof ISwiper) => {
 
 const swiperRef: Ref<typeof ISwiper | null> = ref(null)
 const swiperActiveIndex = ref(0)
+
+type Props = {
+  image?: string
+  name?: string
+  vendor_code?: string
+  description?: string
+  features?: {
+    id: number
+    label: string
+    value: string
+    product: number
+  }[]
+}
+const props = defineProps<Props>()
 </script>
 
 <template>
@@ -39,19 +53,9 @@ const swiperActiveIndex = ref(0)
         @swiper="onSwiper"
         @slide-change="onSlideChange"
       >
-        <SwiperSlide>
+        <SwiperSlide v-for="(imageUrl, index) in [props.image]" :key="index">
           <div class="h-full w-full">
-            <img src="/images/product/nozzle.png" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="h-full w-full">
-            <img src="/images/product/nozzle.png" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div class="h-full w-full">
-            <img src="/images/product/nozzle.png" />
+            <img :src="imageUrl" />
           </div>
         </SwiperSlide>
       </Swiper>
@@ -59,46 +63,26 @@ const swiperActiveIndex = ref(0)
     <div>
       <div class="mb-20">
         <h2 class="mb-10 font-bold leading-tight text-18">
-          Гибкая стальная трубка 3мм длиной 10 см для установки PNS / PNM в GRM8
+          {{ props.name }}
         </h2>
-        <p class="font-medium leading-none text-blue text-12">M8mf Ext 10</p>
+        <p class="font-medium leading-none text-blue text-12">
+          {{ props.vendor_code }}
+        </p>
       </div>
       <div class="mb-20">
-        <p
-          class="mb-4 font-bold uppercase leading-none text-dark-text/60 text-8 lg:text-12"
-        >
-          Описание
-        </p>
         <p class="leading-snug text-14">
-          Удлинитель M8mf Ext 10 длиной 10 см вкручивается в резьбовое
-          соединение M8 для направления наконечников форсунок PNS/PNM в разные
-          стороны.
+          {{ props.description }}
         </p>
       </div>
       <div>
-        <p
-          class="mb-4 font-bold uppercase leading-none text-dark-text/60 text-8 lg:text-12"
-        >
-          Характеристики
-        </p>
         <ul class="flex flex-col overflow-hidden rounded-[8px]">
           <li
+            v-for="feature in props.features"
+            :key="feature.id"
             class="flex h-22 items-center justify-between bg-gray px-12 leading-none text-12 odd:bg-white"
           >
-            <p>размер (Ø х Д), мм:</p>
-            <p>?</p>
-          </li>
-          <li
-            class="flex h-22 items-center justify-between bg-gray px-12 leading-none text-12 odd:bg-white"
-          >
-            <p>соединения:</p>
-            <p>?</p>
-          </li>
-          <li
-            class="flex h-22 items-center justify-between bg-gray px-12 leading-none text-12 odd:bg-white"
-          >
-            <p>материал:</p>
-            <p>нержавеющая сталь</p>
+            <p>{{ feature.label }}</p>
+            <p>{{ feature.value }}</p>
           </li>
         </ul>
       </div>

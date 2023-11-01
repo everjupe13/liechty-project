@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="border-b border-dark/20 pb-[140px] pt-70">
+  <section
+    class="border-b border-dark/20 pb-[140px] pt-70 xl:py-80 lg:py-60 md:py-40"
+  >
     <div class="container">
       <div class="mb-40">
         <h2 class="section-title">Features</h2>
@@ -10,11 +12,11 @@
         class="grid grid-cols-6 gap-x-20 xl:gap-x-10 md:grid-cols-2 md:gap-10"
       >
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15"
+          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
           title="Wired & wireless control units"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25"
+            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/1.svg"
@@ -31,11 +33,11 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15"
+          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
           title="Double RO purification"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25"
+            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/2.svg"
@@ -52,11 +54,11 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15"
+          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
           title="Noiseless operation"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25"
+            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/3.svg"
@@ -73,11 +75,11 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15"
+          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
           title="Water circulation with UV re-sterilization"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25"
+            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/4.svg"
@@ -94,11 +96,11 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15"
+          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
           title="Volumetric UV sterilization"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25"
+            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/5.svg"
@@ -115,11 +117,11 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15"
+          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
           title="Service at place of use"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25"
+            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/6.svg"

@@ -1,5 +1,7 @@
 <template>
-  <section class="border-b border-dark/20 pb-80 pt-[140px] lg:pt-[100px]">
+  <section
+    class="border-b border-dark/20 pb-80 pt-[140px] xl:py-80 lg:py-60 lg:pt-[100px] md:py-40"
+  >
     <div class="container">
       <div
         class="grid grid-cols-3 gap-x-60 lg:grid-cols-2 lg:gap-30 md:grid-cols-1"

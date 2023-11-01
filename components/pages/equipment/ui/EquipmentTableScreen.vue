@@ -1,28 +1,19 @@
 <script lang="ts" setup>
-import { watch } from 'vue'
-
 import { useModels } from '@/api/models'
 
 import EquipmentCategoryCard from './EquipmentCategoryCard.vue'
 
 const { models } = useModels()
-watch(
-  models,
-  newValue => {
-    console.log(models, newValue)
-  },
-  { deep: true }
-)
 </script>
 
 <template>
-  <section class="pb-[140px] pt-[120px]">
+  <section class="pb-[140px] pt-[120px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
         <h2 class="section-title">Models</h2>
       </div>
 
-      <div class="mb-80 grid grid-cols-2 gap-20">
+      <div class="mb-80 grid grid-cols-2 gap-20 lg:grid-cols-1 md:mb-40">
         <EquipmentCategoryCard
           v-for="model in models"
           :key="model?.id"
@@ -36,9 +27,11 @@ watch(
         />
       </div>
 
-      <div class="rounded-[20px] border border-gray px-40 py-20">
+      <div
+        class="scroll-x-hidden rounded-[20px] border border-gray px-40 py-20 md:overflow-x-scroll md:px-10 md:py-5"
+      >
         <table
-          class="w-full table-fixed border-collapse overflow-hidden rounded-[20px] text-left text-18"
+          class="w-full table-fixed border-collapse overflow-hidden rounded-[20px] text-left text-18 md:w-[200%]"
         >
           <thead class="border-b border-gray font-bold">
             <tr>

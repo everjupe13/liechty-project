@@ -77,15 +77,7 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
       <div class="z-2 relative">
         <p class="mb-15 text-20 lg:text-18">Download the files</p>
         <div class="max-w-[300px]">
-          <p class="text-16 md:text-14">
-            Lorem ipsum dolor sit amet consectetur. Nunc mauris scelerisque
-            sapien magna blandit nulla vitae.
-            <br />
-            <br />
-            Eleifend malesuada parturient pellentesque euismod proin ut.
-            Tincidunt netus ultricies feugiat fusce. Arcu at purus et morbi
-            vitae quisque amet id.
-          </p>
+          <p class="text-16 md:text-14">{{ props.description }}</p>
         </div>
       </div>
       <a

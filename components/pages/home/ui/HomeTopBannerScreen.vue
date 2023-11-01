@@ -4,11 +4,15 @@ import { AppButton } from '@/components/shared/button'
 
 <template>
   <section
-    class="relative overflow-hidden bg-gray py-80 pb-[140px] before:absolute before:-inset-90 before:z-[1] before:block before:bg-[url('@/assets/img/bg-mesh.svg')] xl:pb-[100px]"
+    class="relative overflow-hidden bg-gray pb-[140px] pt-80 before:absolute before:-inset-90 before:z-[1] before:block before:bg-[url('@/assets/img/bg-mesh.svg')] before:bg-cover xl:pb-80 xl:pt-60 lg:pb-60 lg:pt-40 md:py-40"
   >
     <div class="container z-[2]">
-      <div class="relative z-[2] mb-[230px] max-w-[940px] xl:mb-[160px]">
-        <h1 class="font-bold leading-none text-96 xl:text-82">
+      <div
+        class="relative z-[2] mb-[230px] max-w-[940px] xl:mb-[160px] md:mb-[120px]"
+      >
+        <h1
+          class="font-bold leading-none text-96 xl:text-82 lg:text-60 md:text-40"
+        >
           Air humidification
           <br />
           system
@@ -16,7 +20,9 @@ import { AppButton } from '@/components/shared/button'
       </div>
 
       <div class="relative z-[2] max-w-[500px]">
-        <p class="mb-40 leading-snug text-24 xl:text-20">
+        <p
+          class="mb-40 leading-snug text-24 xl:text-20 lg:text-18 md:mb-20 md:text-16"
+        >
           Designed to improve microclimate in your
           <br />
           house, apartment or office
@@ -25,7 +31,7 @@ import { AppButton } from '@/components/shared/button'
       </div>
 
       <div
-        class="pointer-events-none absolute bottom-[-280px] left-[450px] z-[1] w-[1080px] select-none xl:bottom-[-240px] xl:w-[860px] lg:left-[400px]"
+        class="pointer-events-none absolute bottom-[-280px] left-[450px] z-[1] w-[1080px] select-none xl:bottom-[-240px] xl:w-[860px] lg:left-[400px] md:hidden"
       >
         <img
           src="/images/home/top-banner.png"

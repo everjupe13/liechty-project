@@ -33,7 +33,7 @@ const ApplicationCards = [
 </script>
 
 <template>
-  <section class="pb-70 pt-[140px]">
+  <section class="pb-70 pt-[140px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-75 lg:mb-50 md:mb-30">
         <h2 class="section-title">Applications</h2>

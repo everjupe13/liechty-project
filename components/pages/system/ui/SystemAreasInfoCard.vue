@@ -19,7 +19,7 @@ const props = defineProps({
       </div>
       <a href="/" class="flex items-center justify-center px-7 pb-5 pt-2">
         <LinkArrowIcon
-          class="h-30 w-30 transition-all duration-300 group-hover:text-blue"
+          class="hidden h-30 w-30 transition-all duration-300 group-hover:text-blue"
         />
       </a>
     </div>

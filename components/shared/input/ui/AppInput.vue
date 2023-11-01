@@ -79,14 +79,14 @@ const uuid = ref(randomID())
 <style lang="scss" scoped>
 .label {
   @apply absolute left-0 top-0 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-focus:top-0 peer-focus:-translate-y-0;
-  @apply leading-none text-dark/50 text-14 peer-placeholder-shown:text-20 peer-hover:text-dark peer-focus:text-14;
+  @apply leading-none text-dark/50 text-14 peer-placeholder-shown:text-20 peer-hover:text-dark peer-focus:text-14 md:text-12 md:peer-placeholder-shown:text-14 md:peer-focus:text-12;
   @apply pointer-events-none transition-all;
 }
 
 .input {
   @apply block w-full pb-18 pt-18;
   @apply bg-transparent;
-  @apply leading-none outline-none text-20 placeholder:opacity-0;
+  @apply leading-none outline-none text-20 placeholder:opacity-0 md:text-14;
   @apply transition-all;
 }
 </style>

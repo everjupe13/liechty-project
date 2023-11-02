@@ -20,9 +20,13 @@ type Props = {
     is_main: boolean
     model: number
   }[]
+  activeSlideIndex?: number | undefined
 }
 
 const props = defineProps<Props>()
+const bindClasses = (index: number) => {
+  return index === props.activeSlideIndex ? 'opacity-100' : 'opacity-20'
+}
 </script>
 
 <template>
@@ -31,17 +35,17 @@ const props = defineProps<Props>()
     :space-between="20"
     :slides-per-view="10"
     :free-mode="true"
-    :watch-slides-progress="true"
     :modules="modules"
     :direction="'vertical'"
     class="h-full"
     @swiper="onSwiper"
   >
-    <SwiperSlide v-for="image in props.gallery" :key="image.id">
+    <SwiperSlide v-for="(image, index) in props.gallery" :key="image.id">
       <div class="flex h-45 w-45 items-center justify-center">
         <img
           :src="image.image"
-          class="block h-full w-full select-none object-scale-down"
+          class="block h-full w-full select-none object-scale-down transition-all"
+          :class="bindClasses(index)"
         />
       </div>
     </SwiperSlide>
@@ -52,13 +56,13 @@ const props = defineProps<Props>()
 .swiper {
   overflow: visible !important;
 
-  .swiper-slide {
-    @apply opacity-20;
-    transition: opacity 0.25s ease;
-  }
+  // .swiper-slide {
+  //   @apply opacity-20;
+  //   transition: opacity 0.25s ease;
+  // }
 
-  .swiper-slide-active {
-    @apply opacity-100;
-  }
+  // .swiper-slide-active {
+  //   @apply opacity-100;
+  // }
 }
 </style>

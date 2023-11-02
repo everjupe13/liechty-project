@@ -4,6 +4,8 @@ import { FreeMode, Thumbs } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { ComponentPublicInstance } from 'vue'
 
+import { ProductGalleryExpose } from './ProductGallery.types'
+
 const modules = [FreeMode, Thumbs]
 type Props = {
   thumbsSwiper: (ComponentPublicInstance & typeof ISwiper) | null
@@ -16,6 +18,19 @@ type Props = {
   }[]
 }
 const props = defineProps<Props>()
+
+const swiperRef: Ref<typeof ISwiper | null> = ref(null)
+const swiperActiveIndex = ref(0)
+const onSlideChange = (swiper: typeof ISwiper) => {
+  swiperActiveIndex.value = swiper.activeIndex
+}
+const onSwiper = (swiper: typeof ISwiper) => {
+  swiperRef.value = swiper
+}
+
+defineExpose<ProductGalleryExpose>({
+  swiperActiveIndex
+})
 </script>
 
 <template>
@@ -25,6 +40,8 @@ const props = defineProps<Props>()
     :modules="modules"
     :space-between="5"
     class="h-full"
+    @swiper="onSwiper"
+    @slide-change="onSlideChange"
   >
     <SwiperSlide
       v-for="image in props.gallery"

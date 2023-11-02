@@ -57,7 +57,10 @@ const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
               <div
                 class="flex-grow rounded-[14px] border border-dark/20 p-24 md:p-15"
               >
-                <div class="prose" v-html="props.data.description"></div>
+                <div
+                  class="prosed leading-normal text-16 md:text-14"
+                  v-html="props.data.description"
+                ></div>
               </div>
             </div>
           </div>

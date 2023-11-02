@@ -70,9 +70,7 @@ const props = defineProps<Props>()
         </p>
       </div>
       <div class="mb-20">
-        <p class="leading-snug text-14">
-          {{ props.description }}
-        </p>
+        <p class="leading-snug text-14" v-html="props.description"></p>
       </div>
       <div>
         <ul class="flex flex-col overflow-hidden rounded-[8px]">

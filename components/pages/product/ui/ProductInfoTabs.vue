@@ -48,7 +48,7 @@ const handleActiveIdChange = (id: number) => {
     <div>
       <div
         v-if="activeTabId !== DefaultTab.id"
-        class="prose max-w-[880px]"
+        class="prosed max-w-[880px] leading-normal text-16 md:text-14"
         v-html="props.tabs.find(tab => tab.id === activeTabId)?.description"
       />
       <DiagramConfig v-else />

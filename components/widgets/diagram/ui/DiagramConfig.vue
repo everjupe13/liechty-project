@@ -9,7 +9,8 @@ const currentTab = computed(
   () =>
     DiagramData.find(data => data.id === currentTabId.value) || {
       title: '',
-      description: ''
+      description: '',
+      image: ''
     }
 )
 const handleTabChange = (id: number) => {
@@ -28,7 +29,9 @@ const handleTabChange = (id: number) => {
         @change="handleTabChange"
       />
     </div>
-    <div class="lg:row-start-1 lg:row-end-2"><DiagramCanvas /></div>
+    <div class="lg:row-start-1 lg:row-end-2">
+      <DiagramCanvas :image="currentTab.image" />
+    </div>
     <DiagramDescription
       :title="currentTab.title"
       :description="currentTab.description"

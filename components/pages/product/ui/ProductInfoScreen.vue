@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-import { useModal } from 'vue-final-modal'
-
 import { ModelType } from '@/api/models/types'
 import { AppButton } from '@/components/shared/button'
-import { PurchaseDetails } from '@/components/widgets/dialog'
+import { usePurchaseDetailsModal } from '@/components/widgets/dialog'
 
 import ProductGalleryView from './ProductGalleryView.vue'
 import ProductInfoTabs from './ProductInfoTabs.vue'
@@ -14,14 +12,7 @@ type Props = {
 }
 const props = defineProps<Props>()
 
-const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
-  component: PurchaseDetails,
-  attrs: {
-    onConfirm() {
-      closeFeedbackModal()
-    }
-  }
-})
+const { open: openFeedbackModal } = usePurchaseDetailsModal()
 </script>
 
 <template>

@@ -1,10 +1,6 @@
 <script lang="ts" setup>
 import { useVuelidate } from '@vuelidate/core'
-import {
-  email as emailValidator,
-  helpers,
-  required
-} from '@vuelidate/validators'
+import { email as emailValidator, required } from '@vuelidate/validators'
 
 import { AppButton } from '@/components/shared/button'
 import { AppInput } from '@/components/shared/input'
@@ -17,61 +13,44 @@ const formData = reactive({
   name: '',
   secondName: '',
   surname: '',
-  country: '',
-  region: '',
-  address: '',
-  zipCode: '',
   phone: '',
   email: '',
 
   companyName: '',
-  inn: '',
-  bank: '',
-  placeRegistration: '',
-  typeTaxation: ''
+  companyPosition: '',
+  fax: '',
+
+  country: '',
+  city: '',
+  address: '',
+  zipCode: '',
+
+  shippingCounty: '',
+  shippingCity: '',
+  shippingAddress: '',
+  shippingZipCode: ''
 })
 
 const rules = {
   name: { required },
-  secondName: { required },
+  secondName: {},
   surname: { required },
-  country: { required },
-  region: { required },
-  address: { required },
-  zipCode: { required },
   phone: { required },
   email: { required, emailValidator },
 
-  companyName: {
-    requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : true
-    )
-  },
-  inn: {
-    requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : true
-    )
-  },
-  bank: {
-    requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : true
-    )
-  },
-  placeRegistration: {
-    requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : true
-    )
-  },
-  typeTaxation: {
-    requiredIf: helpers.withMessage('Value is required', value =>
-      customerType.value === 1 ? !!value : true
-    )
-  }
-}
+  companyName: {},
+  companyPosition: {},
+  fax: {},
 
-const customerType = ref(0)
-const handleCustomerTypeChange = (id: number) => {
-  customerType.value = id
+  country: { required },
+  city: { required },
+  address: { required },
+  zipCode: { required },
+
+  shippingCounty: { required },
+  shippingCity: { required },
+  shippingAddress: { required },
+  shippingZipCode: { required }
 }
 
 const v$ = useVuelidate(rules, formData)
@@ -84,10 +63,10 @@ const inputPropsMapper = (props: { [x: string]: any }) => {
 }
 
 const checkClientValidation = () => {
-  if (v$.value.$invalid) {
-    v$.value.$validate()
-    return false
-  }
+  // if (v$.value.$invalid) {
+  //   v$.value.$validate()
+  //   return false
+  // }
 
   return true
 }
@@ -101,133 +80,154 @@ const handleFormSubmit = () => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center p-10">
-    <div class="w-full">
-      <h3 class="mb-20 text-26">Personal Info</h3>
-      <div class="mb-20 flex gap-x-10">
-        <div
-          class="flex cursor-pointer items-center justify-center rounded-full border px-20 py-13 font-medium transition-all text-16"
-          :class="
-            customerType === 0
-              ? 'border-blue bg-blue text-white'
-              : 'border-dark bg-transparent text-black'
-          "
-          @click="handleCustomerTypeChange(0)"
-        >
-          Individual
+  <div>
+    <div class="mb-70 md:mb-40">
+      <h3 class="mb-25 font-bold text-24 md:mb-15 md:text-18">
+        General Information
+      </h3>
+      <div class="mb-55 grid grid-cols-2 gap-x-20 md:mb-0 md:grid-cols-1">
+        <div>
+          <AppInput
+            v-model="v$.name.$model"
+            v-bind="inputPropsMapper(v$.name)"
+            class="mb-15"
+            placeholder="Name*"
+          />
+          <AppInput
+            v-model="v$.surname.$model"
+            v-bind="inputPropsMapper(v$.surname)"
+            class="mb-15"
+            placeholder="Surname*"
+          />
+          <AppInput
+            v-model="v$.email.$model"
+            v-bind="inputPropsMapper(v$.email)"
+            class="mb-15"
+            placeholder="Email"
+          />
         </div>
-        <div
-          class="flex cursor-pointer items-center justify-center rounded-full border px-20 py-13 font-medium transition-all text-16"
-          :class="
-            customerType === 1
-              ? 'border-blue bg-blue text-white'
-              : 'border-dark bg-transparent text-black'
-          "
-          @click="handleCustomerTypeChange(1)"
-        >
-          Legal Entity
+        <div>
+          <AppInput
+            v-model="v$.secondName.$model"
+            v-bind="inputPropsMapper(v$.secondName)"
+            class="mb-15"
+            placeholder="Last Name"
+          />
+          <AppInput
+            v-model="v$.phone.$model"
+            v-bind="inputPropsMapper(v$.phone)"
+            class="mb-15"
+            placeholder="Mobile Number*"
+          />
         </div>
       </div>
-      <div class="mb-40 max-w-[550px]">
-        <AppInput
-          v-model="v$.name.$model"
-          v-bind="inputPropsMapper(v$.name)"
-          class="mb-15"
-          placeholder="Name"
-        />
-        <AppInput
-          v-model="v$.secondName.$model"
-          v-bind="inputPropsMapper(v$.secondName)"
-          class="mb-15"
-          placeholder="Second Name"
-        />
-        <AppInput
-          v-model="v$.surname.$model"
-          v-bind="inputPropsMapper(v$.surname)"
-          class="mb-15"
-          placeholder="Surname"
-        />
-        <AppInput
-          v-model="v$.country.$model"
-          v-bind="inputPropsMapper(v$.country)"
-          class="mb-15"
-          placeholder="Country"
-        />
-        <AppInput
-          v-model="v$.region.$model"
-          v-bind="inputPropsMapper(v$.region)"
-          class="mb-15"
-          placeholder="Region"
-        />
-        <AppInput
-          v-model="v$.address.$model"
-          v-bind="inputPropsMapper(v$.address)"
-          class="mb-15"
-          placeholder="Address"
-        />
-        <AppInput
-          v-model="v$.zipCode.$model"
-          v-bind="inputPropsMapper(v$.zipCode)"
-          class="mb-15"
-          placeholder="Zip code"
-        />
-        <AppInput
-          v-model="v$.phone.$model"
-          v-bind="inputPropsMapper(v$.phone)"
-          class="mb-15"
-          placeholder="Phone"
-        />
-        <AppInput
-          v-model="v$.email.$model"
-          v-bind="inputPropsMapper(v$.email)"
-          class="mb-15"
-          placeholder="Email"
-        />
-        <KeepAlive>
-          <template v-if="customerType === 1">
-            <AppInput
-              v-model="v$.companyName.$model"
-              v-bind="inputPropsMapper(v$.companyName)"
-              class="mb-15"
-              placeholder="Company Name"
-            />
-            <AppInput
-              v-model="v$.inn.$model"
-              v-bind="inputPropsMapper(v$.inn)"
-              class="mb-15"
-              placeholder="INN"
-            />
-            <AppInput
-              v-model="v$.bank.$model"
-              v-bind="inputPropsMapper(v$.bank)"
-              class="mb-15"
-              placeholder="Bank Info"
-            />
-            <AppInput
-              v-model="v$.placeRegistration.$model"
-              v-bind="inputPropsMapper(v$.placeRegistration)"
-              class="mb-15"
-              placeholder="Place of Registration"
-            />
-            <AppInput
-              v-model="v$.typeTaxation.$model"
-              v-bind="inputPropsMapper(v$.typeTaxation)"
-              class="mb-15"
-              placeholder="Type of Taxation"
-            />
-          </template>
-        </KeepAlive>
+      <div class="grid grid-cols-2 gap-x-20 md:grid-cols-1">
+        <div>
+          <AppInput
+            v-model="v$.companyName.$model"
+            v-bind="inputPropsMapper(v$.companyName)"
+            class="mb-15"
+            placeholder="Company Name"
+          />
+          <AppInput
+            v-model="v$.fax.$model"
+            v-bind="inputPropsMapper(v$.fax)"
+            class="mb-15"
+            placeholder="Fax"
+          />
+        </div>
+
+        <div>
+          <AppInput
+            v-model="v$.companyPosition.$model"
+            v-bind="inputPropsMapper(v$.companyPosition)"
+            class="mb-15"
+            placeholder="Company Position"
+          />
+        </div>
       </div>
-      <div>
-        <AppButton
-          type="submit"
-          class="ml-auto"
-          theme="blue"
-          @click="handleFormSubmit"
-        >
-          Next
-        </AppButton>
+    </div>
+    <div class="mb-70 md:mb-40">
+      <h3 class="mb-25 font-bold text-24 md:mb-15 md:text-18">
+        Mailing address
+      </h3>
+      <div class="grid grid-cols-2 gap-x-20 md:mb-0 md:grid-cols-1">
+        <div>
+          <AppInput
+            v-model="v$.country.$model"
+            v-bind="inputPropsMapper(v$.country)"
+            class="mb-15"
+            placeholder="Country*"
+          />
+          <AppInput
+            v-model="v$.address.$model"
+            v-bind="inputPropsMapper(v$.address)"
+            class="mb-15"
+            placeholder="Address*"
+          />
+        </div>
+        <div>
+          <AppInput
+            v-model="v$.city.$model"
+            v-bind="inputPropsMapper(v$.city)"
+            class="mb-15"
+            placeholder="City*"
+          />
+          <AppInput
+            v-model="v$.zipCode.$model"
+            v-bind="inputPropsMapper(v$.zipCode)"
+            class="mb-15"
+            placeholder="ZIP/Postal Code*"
+          />
+        </div>
       </div>
+    </div>
+    <div class="mb-[120px] md:mb-60">
+      <h3 class="mb-25 font-bold text-24 md:mb-15 md:text-18">
+        Shipping address
+      </h3>
+      <div class="grid grid-cols-2 gap-x-20 md:mb-0 md:grid-cols-1">
+        <div>
+          <AppInput
+            v-model="v$.shippingCounty.$model"
+            v-bind="inputPropsMapper(v$.shippingCounty)"
+            class="mb-15"
+            placeholder="Country*"
+          />
+          <AppInput
+            v-model="v$.shippingAddress.$model"
+            v-bind="inputPropsMapper(v$.shippingAddress)"
+            class="mb-15"
+            placeholder="Address*"
+          />
+        </div>
+        <div>
+          <AppInput
+            v-model="v$.shippingCity.$model"
+            v-bind="inputPropsMapper(v$.city)"
+            class="mb-15"
+            placeholder="City*"
+          />
+          <AppInput
+            v-model="v$.shippingZipCode.$model"
+            v-bind="inputPropsMapper(v$.shippingZipCode)"
+            class="mb-15"
+            placeholder="ZIP/Postal Code*"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center">
+      <AppButton
+        type="submit"
+        outlined
+        class="w-full max-w-[415px]"
+        theme="blue"
+        @click="handleFormSubmit"
+      >
+        Next step
+      </AppButton>
     </div>
   </div>
 </template>

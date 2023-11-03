@@ -1,27 +1,49 @@
 <script lang="ts" setup>
 import { AppButton } from '@/components/shared/button'
 
-const emit = defineEmits<{
-  (e: 'submit'): void
-}>()
+// const emit = defineEmits<{
+//   (e: 'submit'): void
+// }>()
 
-const handleFormSubmit = () => {
-  emit('submit')
-}
+// const handleFormSubmit = () => {
+//   emit('submit')
+// }
 </script>
 
 <template>
-  <div class="flex h-full flex-col items-center p-10">
-    <div class="flex h-full w-full flex-col">
-      <h3 class="mb-20 text-26">Thanks</h3>
-      <div class="mb-40 max-w-[550px]">
-        Our manager will contact you soon. Please await.
+  <div>
+    <div class="mb-[200px]">
+      <div class="mb-35">
+        <h2 class="mb-35 font-bold leading-none text-36 md:text-24">
+          Thank you for placing your order!
+        </h2>
       </div>
-      <div class="mt-auto flex items-center justify-between">
-        <AppButton type="submit" theme="blue" @click="handleFormSubmit">
-          Close
-        </AppButton>
+      <div class="max-w-[650px] text-[#838383] text-16 md:text-14">
+        <p class="mb-14">
+          Our managers will contact you to control your application, make the
+          final payment and answer your questions!
+        </p>
+        <p class="mb-14">
+          You will also be informed in writing about the warranty conditions and
+          maintenance of our central modules.
+        </p>
+        <p>
+          For all other questions, write to us by email:
+          <a href="mailto:info@liechty.li" class="text-blue">info@liechty.li</a>
+        </p>
       </div>
+    </div>
+
+    <div class="flex items-center justify-center">
+      <AppButton
+        type="submit"
+        outlined
+        class="w-full max-w-[415px]"
+        theme="blue"
+        @click="$router.push('/')"
+      >
+        Go to Homepage
+      </AppButton>
     </div>
   </div>
 </template>

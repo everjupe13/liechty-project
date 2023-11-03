@@ -1,8 +1,10 @@
 <script lang="ts" setup>
 import { VueFinalModal } from 'vue-final-modal'
 
+import PurchaseDetailsCloseButton from './PurchaseDetailsCloseButton.vue'
 import PurchaseDetailsCommonForm from './PurchaseDetailsCommonForm.vue'
 import PurchaseDetailsPersonalForm from './PurchaseDetailsPersonalForm.vue'
+import PurchaseDetailsPreorderHeader from './PurchaseDetailsPreorderHeader.vue'
 import PurchaseDetailsSuccess from './PurchaseDetailsSuccess.vue'
 
 const emit = defineEmits<{
@@ -26,36 +28,46 @@ const handleBackForm = () => {
 
 <template>
   <VueFinalModal
-    class="flex items-center justify-center"
-    content-class="px-40 py-50 bg-white rounded-[14px] h-[80vh] max-w-[60vw] w-full md:px-20 md:py-50 md:rounded-[12px] md:mx-10"
+    class="flex"
+    content-class="overflow-y-scroll h-full w-full flex justify-center pointer-events-none"
   >
     <form
-      class="flex h-full flex-col items-center overflow-y-scroll p-10"
+      class="overflow-y-scrollmd:mx-16 md:my-00 pointer-events-auto my-40 flex w-[1000px] flex-col items-center"
       @submit.prevent
     >
-      <div class="h-full w-full">
-        <template v-if="currentFormId === 0">
-          <KeepAlive>
-            <PurchaseDetailsPersonalForm @submit="handleFormSubmit" />
-          </KeepAlive>
-        </template>
+      <div
+        class="relative w-full rounded-[20px] bg-white px-100 py-100 md:rounded-[14px] md:px-20 md:py-50"
+      >
+        <template v-if="currentFormId !== 2">
+          <PurchaseDetailsCloseButton
+            class="absolute right-25 top-25"
+            @click="emit('confirm')"
+          />
+          <PurchaseDetailsPreorderHeader class="mb-50" />
 
-        <template v-else-if="currentFormId === 1">
-          <KeepAlive>
-            <PurchaseDetailsCommonForm
-              @submit="handleFormSubmit"
-              @back-nav="handleBackForm"
-            />
-          </KeepAlive>
+          <div class="h-full w-full">
+            <KeepAlive v-if="currentFormId === 0">
+              <PurchaseDetailsPersonalForm @submit="handleFormSubmit" />
+            </KeepAlive>
+
+            <KeepAlive v-else-if="currentFormId === 1">
+              <PurchaseDetailsCommonForm
+                @submit="handleFormSubmit"
+                @back-nav="handleBackForm"
+              />
+            </KeepAlive>
+          </div>
         </template>
 
         <template v-else>
-          <KeepAlive>
-            <PurchaseDetailsSuccess
-              @submit="handleFormSubmit"
-              @back-nav="handleBackForm"
-            />
-          </KeepAlive>
+          <PurchaseDetailsCloseButton
+            class="absolute right-25 top-25"
+            @click="$router.push('/')"
+          />
+          <PurchaseDetailsSuccess
+            @submit="handleFormSubmit"
+            @back-nav="handleBackForm"
+          />
         </template>
       </div>
     </form>

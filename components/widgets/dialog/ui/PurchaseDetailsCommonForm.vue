@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { useVuelidate } from '@vuelidate/core'
-import { required } from '@vuelidate/validators'
 
 import { AppButton } from '@/components/shared/button'
 import { AppInput } from '@/components/shared/input'
@@ -11,19 +10,31 @@ const emit = defineEmits<{
 }>()
 
 const formData = reactive({
-  roomArea: '',
-  numberZone: '',
-  averageTemperatureInside: '',
-  averageTemperatureOutside: '',
-  climatType: ''
+  typePlace: '',
+  roomsNumber: '',
+  floorsNumber: '',
+  totalArea: '',
+  humidity: '',
+  winterHumidity: '',
+  winterTemperature: '',
+  summerHumidity: '',
+  summerTemperature: '',
+
+  comment: ''
 })
 
 const rules = {
-  roomArea: { required },
-  numberZone: { required },
-  averageTemperatureInside: { required },
-  averageTemperatureOutside: { required },
-  climatType: { required }
+  typePlace: {},
+  roomsNumber: {},
+  floorsNumber: {},
+  totalArea: {},
+  humidity: {},
+  winterHumidity: {},
+  winterTemperature: {},
+  summerHumidity: {},
+  summerTemperature: {},
+
+  comment: {}
 }
 
 const v$ = useVuelidate(rules, formData)
@@ -50,54 +61,106 @@ const handleFormSubmit = () => {
     emit('submit')
   }
 }
-
-const handleFormBack = () => {
-  emit('back-nav')
-}
 </script>
 
 <template>
-  <div class="flex h-full flex-col items-center p-10">
-    <div class="flex h-full w-full flex-col">
-      <h3 class="mb-20 text-26">Common info</h3>
-      <div class="mb-40 max-w-[550px]">
+  <div>
+    <div class="mb-70 md:mb-40">
+      <h3 class="mb-25 font-bold text-24 md:mb-15 md:text-18">
+        Humidification area information
+      </h3>
+      <div class="mb-55 grid grid-cols-2 gap-x-20 md:mb-0 md:grid-cols-1">
+        <div>
+          <AppInput
+            v-model="v$.typePlace.$model"
+            v-bind="inputPropsMapper(v$.typePlace)"
+            class="mb-15"
+            placeholder="Type of place for humidification*"
+          />
+          <AppInput
+            v-model="v$.roomsNumber.$model"
+            v-bind="inputPropsMapper(v$.roomsNumber)"
+            class="mb-15"
+            placeholder="Number of Rooms"
+          />
+          <AppInput
+            v-model="v$.floorsNumber.$model"
+            v-bind="inputPropsMapper(v$.floorsNumber)"
+            class="mb-15"
+            placeholder="Number of floors"
+          />
+        </div>
+        <div>
+          <AppInput
+            v-model="v$.totalArea.$model"
+            v-bind="inputPropsMapper(v$.totalArea)"
+            class="mb-15"
+            placeholder="Total area, m2"
+          />
+          <AppInput
+            v-model="v$.humidity.$model"
+            v-bind="inputPropsMapper(v$.humidity)"
+            class="mb-15"
+            placeholder="Average humidity outside"
+          />
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-x-20 md:grid-cols-1">
+        <div>
+          <AppInput
+            v-model="v$.winterHumidity.$model"
+            v-bind="inputPropsMapper(v$.winterHumidity)"
+            class="mb-15"
+            placeholder="Average outdoor humidity in winter"
+          />
+          <AppInput
+            v-model="v$.winterTemperature.$model"
+            v-bind="inputPropsMapper(v$.winterTemperature)"
+            class="mb-15"
+            placeholder="Average temperature in winter"
+          />
+        </div>
+
+        <div>
+          <AppInput
+            v-model="v$.summerHumidity.$model"
+            v-bind="inputPropsMapper(v$.summerHumidity)"
+            class="mb-15"
+            placeholder="Average outdoor humidity in summer"
+          />
+          <AppInput
+            v-model="v$.summerTemperature.$model"
+            v-bind="inputPropsMapper(v$.summerTemperature)"
+            class="mb-15"
+            placeholder="Average temperature in summer"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mb-[120px] md:mb-60">
+      <h3 class="mb-25 font-bold text-24 md:mb-15 md:text-18">
+        Additional information
+      </h3>
+      <div>
         <AppInput
-          v-model="v$.roomArea.$model"
-          v-bind="inputPropsMapper(v$.roomArea)"
+          v-model="v$.comment.$model"
+          v-bind="inputPropsMapper(v$.comment)"
           class="mb-15"
-          placeholder="Room Area"
-        />
-        <AppInput
-          v-model="v$.numberZone.$model"
-          v-bind="inputPropsMapper(v$.numberZone)"
-          class="mb-15"
-          placeholder="Number of Zones"
-        />
-        <AppInput
-          v-model="v$.averageTemperatureInside.$model"
-          v-bind="inputPropsMapper(v$.averageTemperatureInside)"
-          class="mb-15"
-          placeholder="Average Temperature Inside"
-        />
-        <AppInput
-          v-model="v$.averageTemperatureOutside.$model"
-          v-bind="inputPropsMapper(v$.averageTemperatureOutside)"
-          class="mb-15"
-          placeholder="Average Temperature Outside"
-        />
-        <AppInput
-          v-model="v$.climatType.$model"
-          v-bind="inputPropsMapper(v$.climatType)"
-          class="mb-15"
-          placeholder="Climate Type"
+          placeholder="Your comment or questions"
         />
       </div>
-      <div class="mt-auto flex items-center justify-between">
-        <AppButton type="button" @click="handleFormBack">Back</AppButton>
-        <AppButton type="submit" theme="blue" @click="handleFormSubmit">
-          Submit
-        </AppButton>
-      </div>
+    </div>
+
+    <div class="flex items-center justify-center">
+      <AppButton
+        type="submit"
+        outlined
+        class="w-full max-w-[415px]"
+        theme="blue"
+        @click="handleFormSubmit"
+      >
+        Submit
+      </AppButton>
     </div>
   </div>
 </template>

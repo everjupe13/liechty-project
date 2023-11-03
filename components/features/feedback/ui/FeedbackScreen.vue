@@ -13,12 +13,12 @@ import FeedbackForm from './FeedbackForm.vue'
       </div>
     </div>
     <div
-      class="absolute bottom-0 left-0 right-0 top-0 z-[1] xl:-right-40 md:hidden"
+      class="absolute bottom-0 left-[60%] right-0 top-0 z-[1] xl:-right-40 md:hidden"
     >
       <img
-        src="@/assets/img/bg-mesh-angeled.svg"
+        src="@/assets/img/bg-mesh-square.svg"
         alt=""
-        class="block h-full w-full object-cover"
+        class="block h-full w-full"
       />
     </div>
   </section>

@@ -49,8 +49,8 @@ const { open: openFeedbackModal, close: closeFeedbackModal } = useModal({
                   </span>
                 </div>
                 <div class="mb-40 flex gap-x-10 md:mb-20">
-                  <AppButton theme="blue" @click="openFeedbackModal">
-                    Buy now
+                  <AppButton theme="blue" outlined @click="openFeedbackModal">
+                    Pre-order
                   </AppButton>
                 </div>
               </div>

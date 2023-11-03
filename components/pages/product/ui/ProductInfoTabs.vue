@@ -28,7 +28,7 @@ const handleActiveIdChange = (id: number) => {
 <template>
   <div>
     <div
-      class="mb-40 flex max-w-max items-center gap-5 rounded-full bg-black/10 md:flex-wrap md:bg-transparent"
+      class="mb-40 flex max-w-max items-center gap-5 rounded-full bg-black/5 md:flex-wrap md:bg-transparent"
     >
       <AppButton
         v-for="tab in computedTabs"

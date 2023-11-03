@@ -22,9 +22,8 @@ const FAQList = [
   {
     opened: false,
     label: 'How does your system operate?',
-    body: `<p>First of all, inlet water is purified by unique multi-stage purification system. Secondly it is pressurized by silent HP pump to the hoseline.<p>
-      <p>Finally, it is atomized by miniature nozzles directly into premises, instantly incresing RH level and providing freshness.</p> 
-      <p>The systems is controlled by control units (either wired or wireless) with built-in humidity sensors of high accuracy.</p> `
+    body: `<p>Firstly, the inlet water is purified by our unique multi-stage purification system. Next, it is pressurized by a quiet high-pressure pump into the hoseline. Finally, it is atomized by miniature nozzles directly into the premises, rapidly increasing the RH level and providing freshness.</p>
+      <p>The system is controlled by control units, which can be either wired or wireless, and features built-in humidity sensors with high accuracy.</p>`
   },
   {
     opened: false,

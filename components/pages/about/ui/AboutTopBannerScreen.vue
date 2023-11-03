@@ -14,7 +14,9 @@ import { AppLogo } from '@/components/shared/logo'
           <h1 class="mb-20 leading-tight text-40 xl:text-32 md:text-24">
             “We make the air cleaner and sweeter and your lungs healthier”
           </h1>
-          <AppButton outlined>Discover</AppButton>
+          <AppButton outlined @click="$router.push('/equipment')">
+            Discover
+          </AppButton>
         </div>
       </div>
       <div>

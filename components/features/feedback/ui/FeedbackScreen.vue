@@ -8,7 +8,7 @@ import FeedbackForm from './FeedbackForm.vue'
       <div class="mb-40">
         <h2 class="section-title">Any questions? Write us</h2>
       </div>
-      <div class="max-w-[800px] xl:max-w-[60%] md:max-w-full">
+      <div class="max-w-[750px] xl:max-w-[57%] md:max-w-full">
         <FeedbackForm />
       </div>
     </div>

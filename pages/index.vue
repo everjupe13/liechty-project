@@ -12,7 +12,7 @@ import {
 } from '@/components/pages/home'
 
 useHead({
-  title: 'Home'
+  title: 'Liechty - Air humidification system'
 })
 </script>
 

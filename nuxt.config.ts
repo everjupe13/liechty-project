@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   //   autoImport: false
   // },
 
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.svg' }]
+    }
+  },
+
   ssr: false,
 
   devtools: { enabled: false },

@@ -10,7 +10,7 @@ import {
 import { BreadCrumbs } from '@/components/widgets/bread-crumbs'
 
 useHead({
-  title: 'Product'
+  title: 'Liechty - Air humidification system'
 })
 </script>
 

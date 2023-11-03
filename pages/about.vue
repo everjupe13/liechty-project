@@ -11,7 +11,7 @@ import {
 import { BreadCrumbs } from '@/components/widgets/bread-crumbs'
 
 useHead({
-  title: 'About'
+  title: 'Liechty - Air humidification system'
 })
 </script>
 
@@ -23,7 +23,7 @@ useHead({
     <AboutTopBannerScreen />
     <AboutInfoScreen />
     <AboutEmployeesScreen />
-    <AboutContactsScreen />
+    <AboutContactsScreen id="contacts-screen" />
     <AboutFeedbackScreen />
   </div>
 </template>

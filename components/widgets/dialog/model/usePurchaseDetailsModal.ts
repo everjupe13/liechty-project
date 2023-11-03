@@ -23,13 +23,8 @@ export const usePurchaseDetailsModal = () => {
   const { open: openModal, close: closeModal } = useModal({
     component: PurchaseDetails,
     attrs: {
-      onConfirm() {
-        closeModalMenu()
-        navigateTo('/')
-      },
-      onClosed() {
-        closeModalMenu()
-      }
+      onConfirm: () => confirmModalMenu(),
+      onClosed: () => closeModalMenu()
     }
   })
 
@@ -41,6 +36,11 @@ export const usePurchaseDetailsModal = () => {
   const closeModalMenu = () => {
     setFalse()
     closeModal()
+  }
+
+  const confirmModalMenu = () => {
+    closeModalMenu()
+    navigateTo('/')
   }
 
   return { open: openModalMenu, close: closeModalMenu }

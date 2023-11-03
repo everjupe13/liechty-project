@@ -36,7 +36,7 @@ const handleDropdownItemClick = (index: number) => {
         @click="handleDropdownItemClick(idx)"
       >
         <h3
-          class="flex-grow leading-normal transition text-24 group-hover:text-blue xl:text-18"
+          class="flex-grow leading-normal transition text-20 group-hover:text-blue xl:text-18"
           v-html="state.label"
         ></h3>
         <div
@@ -47,7 +47,7 @@ const handleDropdownItemClick = (index: number) => {
       <AppCollapsable v-model="state.opened">
         <div class="max-w-[800px]">
           <div
-            class="prosed pb-30 leading-normal text-20 xl:text-16 md:pb-20 md:text-16"
+            class="prosed pb-30 leading-normal text-18 xl:text-16 md:pb-20 md:text-16"
             v-html="state.body"
           ></div>
         </div>

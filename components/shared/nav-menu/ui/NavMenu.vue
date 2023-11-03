@@ -22,8 +22,9 @@ const DEFAULT_LINKS = [
     label: 'How it works'
   },
   {
-    toLink: '/',
-    label: 'Contacts'
+    toLink: '/about#contacts-screen',
+    label: 'Contacts',
+    linkClasses: 'router-link-active_not-styled'
   }
 ]
 
@@ -43,6 +44,7 @@ const computedLinks = computed(() =>
       :key="link.label"
       :label="link.label"
       :to-link="link.toLink"
+      :link-classes="link?.linkClasses"
     />
   </ul>
 </template>

@@ -25,6 +25,7 @@ export const usePurchaseDetailsModal = () => {
     attrs: {
       onConfirm() {
         closeModalMenu()
+        navigateTo('/')
       },
       onClosed() {
         closeModalMenu()

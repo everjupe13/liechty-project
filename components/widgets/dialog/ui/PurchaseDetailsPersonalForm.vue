@@ -63,10 +63,10 @@ const inputPropsMapper = (props: { [x: string]: any }) => {
 }
 
 const checkClientValidation = () => {
-  // if (v$.value.$invalid) {
-  //   v$.value.$validate()
-  //   return false
-  // }
+  if (v$.value.$invalid) {
+    v$.value.$validate()
+    return false
+  }
 
   return true
 }

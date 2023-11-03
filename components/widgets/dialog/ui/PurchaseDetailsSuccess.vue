@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { AppButton } from '@/components/shared/button'
 
-// const emit = defineEmits<{
-//   (e: 'submit'): void
-// }>()
+const emit = defineEmits<{
+  (e: 'submit'): void
+}>()
 
-// const handleFormSubmit = () => {
-//   emit('submit')
-// }
+const handleFormSubmit = () => {
+  emit('submit')
+}
 </script>
 
 <template>
@@ -40,7 +40,7 @@ import { AppButton } from '@/components/shared/button'
         outlined
         class="w-full max-w-[415px]"
         theme="blue"
-        @click="$router.push('/')"
+        @click="handleFormSubmit"
       >
         Go to Homepage
       </AppButton>

@@ -10,16 +10,25 @@ type Props = {
     label: string
     description: string
   }[]
+  technicalData?: {
+    id: number
+    title: string
+    text: string
+  }[]
 }
 const props = withDefaults(defineProps<Props>(), {
-  tabs: () => []
+  tabs: () => [],
+  technicalData: () => []
 })
 
-const DefaultTab = { id: -1, label: 'Diagram', isActive: false, description: 0 }
+const DefaultTabs = [
+  { id: -1, label: 'Technical data', isActive: false, description: 0 },
+  { id: -2, label: 'Diagram', isActive: false, description: 0 }
+]
 const activeTabId = ref(
-  props.tabs && props.tabs.length > 0 ? props.tabs[0].id : DefaultTab.id
+  props.tabs && props.tabs.length > 0 ? props.tabs[0].id : DefaultTabs[1].id
 )
-const computedTabs = computed(() => [...props.tabs, DefaultTab])
+const computedTabs = computed(() => [...props.tabs, ...DefaultTabs])
 const handleActiveIdChange = (id: number) => {
   activeTabId.value = id
 }
@@ -47,11 +56,25 @@ const handleActiveIdChange = (id: number) => {
     </div>
     <div>
       <div
-        v-if="activeTabId !== DefaultTab.id"
+        v-if="!DefaultTabs.some(tab => tab.id === activeTabId)"
         class="prosed max-w-[880px] leading-normal text-16 md:text-14"
         v-html="props.tabs.find(tab => tab.id === activeTabId)?.description"
       />
-      <DiagramConfig v-else />
+      <template v-if="DefaultTabs[0].id === activeTabId">
+        <div>
+          <ul class="flex flex-col overflow-hidden rounded-[8px]">
+            <li
+              v-for="data in props.technicalData"
+              :key="data.id"
+              class="flex h-22 items-center justify-between bg-gray px-12 leading-none text-16 odd:bg-white md:text-14"
+            >
+              <p>{{ data.title }}</p>
+              <p>{{ data.text }}</p>
+            </li>
+          </ul>
+        </div>
+      </template>
+      <DiagramConfig v-else-if="DefaultTabs[1].id === activeTabId" />
     </div>
   </div>
 </template>

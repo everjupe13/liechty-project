@@ -20,43 +20,66 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
     class="border-b border-dark/20 pb-[140px] xl:py-80 lg:py-60 md:py-40"
   >
     <div class="container">
-      <template v-if="props.data">
-        <div class="mb-40 grid grid-cols-2 gap-x-40 lg:grid-cols-1 lg:gap-y-20">
-          <div class="h-[640px] w-full rounded-[14px] bg-gray md:h-[420px]">
-            <ProductGalleryView :gallery="props.data.images" />
-          </div>
-          <div>
-            <div class="mb-75 flex h-full flex-col">
-              <div class="flex-grow-0">
-                <h2 class="mb-20 font-bold leading-tight text-48 lg:text-28">
+      <div class="mb-40 grid grid-cols-2 gap-x-40 lg:grid-cols-1 lg:gap-y-20">
+        <div
+          class="h-[640px] w-full rounded-[14px] bg-gray md:h-[420px]"
+          :class="{ 'animate-pulse': !props.data }"
+        >
+          <ProductGalleryView v-if="props.data" :gallery="props.data.images" />
+        </div>
+        <div>
+          <div class="mb-75 flex h-full flex-col">
+            <div class="flex-grow-0">
+              <h2
+                class="mb-20 font-bold leading-tight text-48 lg:text-28"
+                :class="{
+                  'h-52 animate-pulse rounded-[5px] bg-gray-light': !props.data
+                }"
+              >
+                <template v-if="props.data">
                   {{ props.data.name }}
-                </h2>
-                <div class="mb-20 flex items-center gap-x-15">
-                  <p class="leading-none text-24">$ 12 000,00</p>
+                </template>
+              </h2>
+              <div class="mb-20 flex items-center gap-x-15">
+                <p
+                  class="leading-none text-24"
+                  :class="{ 'h-26 animate-pulse bg-gray-light': !props.data }"
+                >
+                  <template v-if="props.data">$ 12 000,00</template>
+                </p>
+                <template v-if="props.data">
                   <span
                     class="min-h-30 flex cursor-default items-center justify-center rounded-full bg-blue/20 px-14 py-6 pb-8 font-medium leading-none text-blue"
                   >
                     available
                   </span>
-                </div>
-                <div class="mb-40 flex gap-x-10 md:mb-20">
+                </template>
+              </div>
+              <div class="mb-40 flex gap-x-10 md:mb-20">
+                <template v-if="props.data">
                   <AppButton theme="blue" outlined @click="openFeedbackModal">
                     Pre-order
                   </AppButton>
-                </div>
+                </template>
               </div>
+            </div>
+            <div
+              class="flex-grow rounded-[14px] border border-dark/20 p-24 md:p-15"
+            >
               <div
-                class="flex-grow rounded-[14px] border border-dark/20 p-24 md:p-15"
-              >
-                <div
-                  class="prosed leading-normal text-16 md:text-14"
-                  v-html="props.data.description"
-                ></div>
-              </div>
+                v-if="props.data"
+                class="prosed leading-normal text-16 md:text-14"
+                v-html="props.data.description"
+              ></div>
             </div>
           </div>
         </div>
-        <div class="rounded-[14px] border border-dark/20 p-40 md:p-15">
+      </div>
+      <div
+        class="rounded-[14px] border border-dark/20 p-40 md:p-15"
+        :class="{ 'h-[400px] animate-pulse bg-gray-light': !props.data }"
+      >
+        <template v-if="props.data">
           <ProductInfoTabs
             :tabs="
               props.data.tabs.map(tab => ({
@@ -65,9 +88,10 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
                 description: tab.text
               }))
             "
+            :technical-data="props.data.technical_data"
           />
-        </div>
-      </template>
+        </template>
+      </div>
     </div>
   </section>
 </template>

@@ -38,4 +38,10 @@ export type ModelType = {
   slug: string
   description: string
   short_description: string
+  scheme: number
+  technical_data: {
+    id: number
+    title: string
+    text: string
+  }[]
 }

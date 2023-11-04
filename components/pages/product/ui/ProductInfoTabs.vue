@@ -15,6 +15,7 @@ type Props = {
     title: string
     text: string
   }[]
+  scheme?: number
 }
 const props = withDefaults(defineProps<Props>(), {
   tabs: () => [],
@@ -74,7 +75,10 @@ const handleActiveIdChange = (id: number) => {
           </ul>
         </div>
       </template>
-      <DiagramConfig v-else-if="DefaultTabs[1].id === activeTabId" />
+      <DiagramConfig
+        v-else-if="DefaultTabs[1].id === activeTabId"
+        :diagram-type="props.scheme"
+      />
     </div>
   </div>
 </template>

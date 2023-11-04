@@ -92,7 +92,9 @@ const isVisible = computed(
           @slide-change="onSlideChange"
         >
           <template #container-start>
-            <div class="mb-40 flex items-center justify-between">
+            <div
+              class="mb-40 flex items-center justify-between md:flex-col md:gap-y-20"
+            >
               <h2 class="section-title">{{ category.name }}</h2>
               <template v-if="!swiperRef?.isLocked || true">
                 <ProductModelsSwiperControls />

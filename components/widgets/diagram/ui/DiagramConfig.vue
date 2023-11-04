@@ -1,13 +1,36 @@
 <script setup lang="ts">
-import { DiagramData } from '../model/mock-data'
+import { computed, getCurrentInstance, ref } from 'vue'
+
+import { DIAGRAMS, DIAGRAMS_TYPES } from '../model/constants'
 import DiagramCanvas from './DiagramCanvas.vue'
 import DiagramControls from './DiagramControls.vue'
 import DiagramDescription from './DiagramDescription.vue'
 
-const currentTabId = ref(DiagramData[0]?.id || -1)
+type Props = {
+  diagramType?: keyof typeof DIAGRAMS
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  diagramType: DIAGRAMS_TYPES.FIRST
+})
+
+const instance = getCurrentInstance()
+
+watch(
+  () => props.diagramType,
+  () => {
+    if (props.diagramType) {
+      currentTabId.value = usedDiagramData.value[0]?.id
+      instance?.proxy?.$forceUpdate()
+    }
+  }
+)
+
+const usedDiagramData = computed(() => DIAGRAMS[props.diagramType])
+const currentTabId = ref(usedDiagramData.value[0]?.id || -1)
 const currentTab = computed(
   () =>
-    DiagramData.find(data => data.id === currentTabId.value) || {
+    usedDiagramData.value.find(data => data.id === currentTabId.value) || {
       title: '',
       description: '',
       image: ''
@@ -24,7 +47,7 @@ const handleTabChange = (id: number) => {
   >
     <div class="lg:row-start-2 lg:row-end-3 lg:-mx-16">
       <DiagramControls
-        :items="DiagramData.map(data => ({ name: data.name, id: data.id }))"
+        :items="usedDiagramData.map(data => ({ name: data.name, id: data.id }))"
         :active-id="currentTabId"
         @change="handleTabChange"
       />

@@ -89,6 +89,7 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
               }))
             "
             :technical-data="props.data.technical_data"
+            :scheme="props.data.scheme"
           />
         </template>
       </div>

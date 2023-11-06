@@ -22,10 +22,10 @@ useHead({
       <BreadCrumbs :crumbs="[{ label: 'About Us' }]" class="mb-60 mt-30" />
     </div>
     <AboutTopBannerScreen />
-    <AboutInfoScreen />
+    <AboutInfoScreen class="border-b border-dark/20" />
     <AboutEmployeesScreen />
     <AboutOurBrandScreen />
-    <AboutContactsScreen id="contacts-screen" />
+    <AboutContactsScreen id="contacts-screen" class="border-t border-dark/20" />
     <AboutFeedbackScreen />
   </div>
 </template>

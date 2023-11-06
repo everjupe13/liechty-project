@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <section class="py-80 xl:py-60 lg:py-40 md:py-30">
+  <section class="py-80 pb-[140px] xl:py-60 lg:py-40 md:py-30">
     <div class="container">
       <div class="mb-40 md:mb-30">
         <h2 class="section-title">Our Brand</h2>
@@ -42,9 +42,6 @@
               John Buhler assembled a team of European engineers, opening a
               development office in Liechtenstein. The headquarters and front
               office of the new brand remains in Canada.
-            </p>
-            <p class="leading-snug text-16 md:text-14">
-              Translated with www.DeepL.com/Translator (free version)
             </p>
           </div>
         </div>

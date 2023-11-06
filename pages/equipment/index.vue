@@ -4,6 +4,7 @@ import { useHead } from 'nuxt/app'
 import {
   EquipmentAboutScreen,
   EquipmentFeaturesScreen,
+  EquipmentFeedbackScreen,
   EquipmentTableScreen,
   EquipmentTopBannerScreen
 } from '@/components/pages/equipment'
@@ -24,8 +25,9 @@ useHead({
     </div>
 
     <EquipmentTopBannerScreen />
-    <EquipmentAboutScreen />
-    <EquipmentFeaturesScreen />
-    <EquipmentTableScreen />
+    <EquipmentAboutScreen class="border-b border-dark/20" />
+    <EquipmentFeaturesScreen class="border-b border-dark/20" />
+    <EquipmentTableScreen class="border-b border-dark/20" />
+    <EquipmentFeedbackScreen />
   </div>
 </template>

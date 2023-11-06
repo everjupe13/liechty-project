@@ -1,9 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section
-    class="border-b border-dark/20 pb-[140px] pt-70 xl:py-80 lg:py-60 md:py-40"
-  >
+  <section class="pb-[140px] pt-70 xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
         <h2 class="section-title">Features</h2>
@@ -16,7 +14,7 @@
           title="Wired & wireless control units"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
+            class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/1.svg"
@@ -37,7 +35,7 @@
           title="Double RO purification"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
+            class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/2.svg"
@@ -58,7 +56,7 @@
           title="Noiseless operation"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
+            class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/3.svg"
@@ -79,7 +77,7 @@
           title="Water circulation with UV re-sterilization"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
+            class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/4.svg"
@@ -100,7 +98,7 @@
           title="Volumetric UV sterilization"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
+            class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/5.svg"
@@ -121,7 +119,7 @@
           title="Service at place of use"
         >
           <div
-            class="transiton-all mb-15 flex aspect-square w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
+            class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
           >
             <img
               src="/images/equipment/6.svg"

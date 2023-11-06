@@ -22,9 +22,9 @@ useHead({
         class="mb-30 mt-30 md:mb-15"
       />
     </div>
-    <SystemDiagramScreen />
+    <SystemDiagramScreen class="border-b border-dark/20" />
     <SystemFeaturesScreen />
-    <SystemDownloadScreen />
+    <SystemDownloadScreen class="border-b border-dark/20" />
     <SystemFeedbackScreen />
   </div>
 </template>

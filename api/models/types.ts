@@ -41,7 +41,7 @@ export type ModelType = {
   scheme: number
   technical_data: {
     id: number
-    title: string
-    text: string
+    label: string
+    value: string
   }[]
 }

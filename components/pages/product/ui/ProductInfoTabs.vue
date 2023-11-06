@@ -12,14 +12,15 @@ type Props = {
   }[]
   technicalData?: {
     id: number
-    title: string
-    text: string
+    label: string
+    value: string
   }[]
   scheme?: number
 }
 const props = withDefaults(defineProps<Props>(), {
   tabs: () => [],
-  technicalData: () => []
+  technicalData: () => [],
+  scheme: undefined
 })
 
 const DefaultTabs = [
@@ -62,21 +63,21 @@ const handleActiveIdChange = (id: number) => {
         v-html="props.tabs.find(tab => tab.id === activeTabId)?.description"
       />
       <template v-if="DefaultTabs[0].id === activeTabId">
-        <div>
+        <div class="max-w-[600px]">
           <ul class="flex flex-col overflow-hidden rounded-[8px]">
             <li
               v-for="data in props.technicalData"
               :key="data.id"
               class="flex h-22 items-center justify-between bg-gray px-12 leading-none text-16 odd:bg-white md:text-14"
             >
-              <p>{{ data.title }}</p>
-              <p>{{ data.text }}</p>
+              <p>{{ data.label }}</p>
+              <p>{{ data.value }}</p>
             </li>
           </ul>
         </div>
       </template>
       <DiagramConfig
-        v-else-if="DefaultTabs[1].id === activeTabId"
+        v-else-if="DefaultTabs[1].id === activeTabId && props.scheme"
         :diagram-type="props.scheme"
       />
     </div>

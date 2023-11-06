@@ -8,7 +8,8 @@ import {
   HomeFeedbackScreen,
   HomeHowWorksInfoScreen,
   HomeHumidificationInfoScreen,
-  HomeTopBannerScreen
+  HomeTopBannerScreen,
+  HomeVideoPlayerScreen
 } from '@/components/pages/home'
 
 useHead({
@@ -19,10 +20,11 @@ useHead({
 <template>
   <div>
     <HomeTopBannerScreen />
-    <HomeHumidificationInfoScreen />
+    <HomeHumidificationInfoScreen class="border-b border-dark/20" />
     <HomeApplicationsInfoScreen />
     <HomeHowWorksInfoScreen />
-    <HomeDownloadScreen />
+    <HomeVideoPlayerScreen />
+    <HomeDownloadScreen class="border-b border-dark/20" />
     <HomeFAQScreen />
     <HomeFeedbackScreen />
   </div>

@@ -3,9 +3,7 @@ import { DownloadCard } from '@/components/features/download-card'
 </script>
 
 <template>
-  <section
-    class="border-b border-dark/20 pb-[140px] pt-70 xl:py-80 lg:py-60 md:py-40"
-  >
+  <section class="pb-[140px] pt-70 xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
         <h2 class="section-title">Downloads</h2>

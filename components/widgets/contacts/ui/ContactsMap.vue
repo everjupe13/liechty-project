@@ -1,5 +1,7 @@
 <template>
-  <div class="flex aspect-[calc(1360/520)] items-center justify-center">
+  <div
+    class="flex aspect-[calc(1360/520)] items-center justify-center md:aspect-[calc(1020/480)]"
+  >
     <img
       src="/images/about/map.jpg"
       class="pointer-events-none block h-full select-none object-cover"

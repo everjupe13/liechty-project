@@ -3,10 +3,12 @@ import { ContactsArticle, ContactsMap } from '@/components/widgets/contacts'
 </script>
 
 <template>
-  <section class="py-[140px] xl:py-80 lg:py-60 md:py-40">
+  <section class="pb-[140px] pt-0 xl:pb-80 lg:pb-60 md:pb-40">
     <div class="container">
+      <ContactsMap class="mb-85 md:mb-40" />
+
       <div
-        class="mb-85 grid grid-cols-3 gap-x-60 lg:grid-cols-2 lg:gap-30 md:mb-40 md:grid-cols-1 md:gap-0"
+        class="grid grid-cols-3 gap-x-60 lg:grid-cols-2 lg:gap-30 md:grid-cols-1 md:gap-0"
       >
         <div class="lg:col-span-2 md:col-span-1 md:mb-10">
           <h2 class="section-title md:mb-30">Contacts</h2>
@@ -34,8 +36,6 @@ import { ContactsArticle, ContactsMap } from '@/components/widgets/contacts'
           </ContactsArticle>
         </div>
       </div>
-
-      <ContactsMap />
     </div>
   </section>
 </template>

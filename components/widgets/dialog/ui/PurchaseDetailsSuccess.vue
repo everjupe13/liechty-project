@@ -42,7 +42,7 @@ const handleFormSubmit = () => {
         theme="blue"
         @click="handleFormSubmit"
       >
-        Go to Homepage
+        {{ $route.path.includes('/equipment') ? 'Go to Homepage' : 'Close' }}
       </AppButton>
     </div>
   </div>

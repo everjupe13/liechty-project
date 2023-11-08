@@ -20,7 +20,12 @@ import { NavMenu } from '@/components/shared/nav-menu'
           <p class="leading-none text-dark/60 text-14">
             © Liechty 2023. All rights reserved
           </p>
-          <p class="leading-none text-dark/60 text-14">Privacy policy</p>
+          <NuxtLink
+            href="/privacy-policy"
+            class="leading-none text-dark/60 text-14"
+          >
+            Privacy policy
+          </NuxtLink>
         </div>
       </div>
     </div>

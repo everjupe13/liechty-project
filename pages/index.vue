@@ -24,7 +24,7 @@ useHead({
     <HomeApplicationsInfoScreen />
     <HomeHowWorksInfoScreen />
     <HomeVideoPlayerScreen />
-    <HomeDownloadScreen class="border-b border-dark/20" />
+    <HomeDownloadScreen />
     <HomeFAQScreen />
     <HomeFeedbackScreen />
   </div>

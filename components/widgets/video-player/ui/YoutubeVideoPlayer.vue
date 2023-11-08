@@ -8,16 +8,16 @@ defineProps({
 </script>
 
 <template>
-  <article class="flex items-center justify-center">
-    <iframe
-      class="block aspect-[calc(1440/640)] w-full"
-      width="full"
-      height="640"
-      :src="videoSrc"
-      title="Youtube play Liechty video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>
+  <article class="flex w-full items-center justify-center">
+    <div class="aspect-[calc(1440/640)] h-full w-full md:aspect-video">
+      <iframe
+        class="block h-full w-full"
+        :src="videoSrc"
+        title="Youtube play Liechty video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
   </article>
 </template>

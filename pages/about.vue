@@ -6,7 +6,6 @@ import {
   AboutEmployeesScreen,
   AboutFeedbackScreen,
   AboutInfoScreen,
-  AboutOurBrandScreen,
   AboutTopBannerScreen
 } from '@/components/pages/about'
 import { BreadCrumbs } from '@/components/widgets/bread-crumbs'
@@ -24,7 +23,6 @@ useHead({
     <AboutTopBannerScreen />
     <AboutInfoScreen class="border-b border-dark/20" />
     <AboutEmployeesScreen />
-    <AboutOurBrandScreen />
     <AboutContactsScreen id="contacts-screen" class="border-t border-dark/20" />
     <AboutFeedbackScreen />
   </div>

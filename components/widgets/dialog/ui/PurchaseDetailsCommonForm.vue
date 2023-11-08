@@ -75,7 +75,7 @@ const handleFormSubmit = () => {
             v-model="v$.typePlace.$model"
             v-bind="inputPropsMapper(v$.typePlace)"
             class="mb-15"
-            placeholder="Type of place for humidification*"
+            placeholder="Type of place for humidification"
           />
           <AppInput
             v-model="v$.roomsNumber.$model"

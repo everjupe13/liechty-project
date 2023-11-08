@@ -103,7 +103,7 @@ const handleFormSubmit = () => {
             v-model="v$.email.$model"
             v-bind="inputPropsMapper(v$.email)"
             class="mb-15"
-            placeholder="Email"
+            placeholder="Email*"
           />
         </div>
         <div>

@@ -32,7 +32,7 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
 
 <template>
   <article
-    class="group relative min-h-[420px] overflow-hidden rounded-[20px] p-20 transition-all lg:min-h-[320px]"
+    class="group relative min-h-[390px] overflow-hidden rounded-[20px] p-20 transition-all lg:min-h-[280px]"
     :class="designTypeStyles"
   >
     <div class="relative z-[1] flex h-full flex-col">
@@ -65,6 +65,13 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
           {{ props.fileSize }}
         </div>
       </div>
+      <a
+        href="/plug-pdf.pdf"
+        download
+        class="absolute inset-0 z-[3] select-none text-transparent"
+      >
+        download the file
+      </a>
     </div>
     <div
       v-if="props.filledCard"
@@ -83,7 +90,7 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
       <a
         href="/plug-pdf.pdf"
         download
-        class="absolute inset-0 z-[3] select-none text-transparent"
+        class="pointer-events-none absolute inset-0 z-[3] select-none text-transparent"
       >
         download the file
       </a>

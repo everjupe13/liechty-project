@@ -4,7 +4,7 @@ import { AppButton } from '@/components/shared/button'
 
 <template>
   <section
-    class="relative overflow-hidden bg-gray pb-[140px] pt-80 before:absolute before:-inset-90 before:z-[1] before:block before:bg-[url('@/assets/img/bg-mesh.svg')] before:bg-cover xl:pb-80 xl:pt-60 lg:pb-60 lg:pt-40 md:py-40"
+    class="relative overflow-hidden bg-gray pb-[140px] pt-80 before:absolute before:inset-[-100px] before:z-[1] before:block before:bg-[url('@/assets/img/bg-mesh.svg')] before:bg-cover xl:pb-80 xl:pt-60 lg:pb-60 lg:pt-40 md:py-40"
   >
     <div class="container z-[2]">
       <div

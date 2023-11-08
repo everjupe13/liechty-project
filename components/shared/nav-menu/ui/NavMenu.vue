@@ -10,21 +10,20 @@ const DEFAULT_LINKS = [
     label: 'Main'
   },
   {
-    toLink: '/equipment',
-    label: 'Equipment'
-  },
-  {
     toLink: '/about',
     label: 'About'
+  },
+  {
+    toLink: '/equipment',
+    label: 'Equipment'
   },
   {
     toLink: '/system',
     label: 'How it works'
   },
   {
-    toLink: '/about#contacts-screen',
-    label: 'Contacts',
-    linkClasses: 'router-link-active_not-styled'
+    toLink: '/contacts',
+    label: 'Contacts'
   }
 ]
 
@@ -44,7 +43,6 @@ const computedLinks = computed(() =>
       :key="link.label"
       :label="link.label"
       :to-link="link.toLink"
-      :link-classes="link?.linkClasses"
     />
   </ul>
 </template>

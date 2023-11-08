@@ -18,10 +18,7 @@ useHead({
 <template>
   <div>
     <div class="container">
-      <BreadCrumbs
-        :crumbs="[{ label: 'Equipment' }, { label: 'CL Series' }]"
-        class="mb-30 mt-30"
-      />
+      <BreadCrumbs :crumbs="[{ label: 'Equipment' }]" class="mb-30 mt-30" />
     </div>
 
     <EquipmentTopBannerScreen />

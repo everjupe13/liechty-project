@@ -39,9 +39,9 @@ const { models } = useModels()
                 Classic line Series
               </th>
               <th scope="col" class="border-r border-gray px-24 py-18">
-                CL Manitoba 12
+                CL Manitoba 6 / 12 / 18
               </th>
-              <th scope="col" class="px-24 py-18">CL Playgreen 6</th>
+              <th scope="col" class="px-24 py-18">CL Playgreen 6 / 18</th>
             </tr>
           </thead>
           <tbody class="bg-white">
@@ -67,7 +67,7 @@ const { models } = useModels()
                 Maximum service area, sq.ft
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                6.500
+                3.200 / 6.400 / 9.600
               </td>
               <td class="px-24 py-18 text-dark/70">3.250</td>
             </tr>
@@ -90,7 +90,9 @@ const { models } = useModels()
               >
                 Number of independent humidification zones
               </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">12</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                6 / 12 / 12
+              </td>
               <td class="px-24 py-18 text-dark/70">2</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -100,7 +102,9 @@ const { models } = useModels()
               >
                 Capacity, l/h
               </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">12</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                6 / 12 / 18
+              </td>
               <td class="px-24 py-18 text-dark/70">6</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -110,7 +114,9 @@ const { models } = useModels()
               >
                 Maximum number of nozzles (65 µm)
               </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">12</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                6 / 12 / 18
+              </td>
               <td class="px-24 py-18 text-dark/70">6</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -133,9 +139,9 @@ const { models } = useModels()
                 LCD diagonal, inches
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                4,3”
+                4,3” / 4,3” / 6,8”
               </td>
-              <td class="px-24 py-18 text-dark/70">4,3”</td>
+              <td class="px-24 py-18 text-dark/70">4,3” / 4,3”</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -156,8 +162,10 @@ const { models } = useModels()
               >
                 Power consumption, W
               </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">330</td>
-              <td class="px-24 py-18 text-dark/70">240</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                270 / 330 / 360
+              </td>
+              <td class="px-24 py-18 text-dark/70">240 / 300</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th

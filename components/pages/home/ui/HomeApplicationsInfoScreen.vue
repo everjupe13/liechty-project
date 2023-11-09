@@ -7,26 +7,28 @@ const ApplicationCards = [
     id: 0,
     title: 'Houses',
     description:
-      'Protect & prolong lifetime of surfaces and furniture made of wood',
+      'Our systems are designed to keep relative humidity in the optimum range at your house to protect and prolong the lifetime of surfaces and furniture made of wood.',
     image: '/images/home/applications/1.jpg'
   },
   {
     id: 1,
     title: 'Apartments',
-    description: 'Take care about your skin & immune system indoors',
+    description:
+      'Liechty systems help to create an optimum microclimate in your apartment, take care of your skin and mucous membranes, and support your immune system.',
     image: '/images/home/applications/2.jpg'
   },
   {
     id: 2,
     title: 'Offices',
     description:
-      'Protect & prolong lifetime of surfaces and furniture made of wood',
+      'Protect and prolong the lifetime of computers, laptops, printers, server room equipment, and reduce the risk of respiratory diseases among staff.',
     image: '/images/home/applications/3.jpg'
   },
   {
     id: 3,
     title: 'Industry',
-    description: 'Increase quality & lifetime of manufactured products',
+    description:
+      'Increase the quality and lifetime of raw materials and finished products, and improve the manufacturing process generally.',
     image: '/images/home/applications/4.jpg'
   }
 ]

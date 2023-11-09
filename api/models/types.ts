@@ -39,6 +39,7 @@ export type ModelType = {
   description: string
   short_description: string
   scheme: number
+  price: string
   technical_data: {
     id: number
     label: string

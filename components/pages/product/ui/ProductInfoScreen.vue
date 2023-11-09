@@ -45,7 +45,9 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
                   class="leading-none text-24"
                   :class="{ 'h-26 animate-pulse bg-gray-light': !props.data }"
                 >
-                  <template v-if="props.data">$ 12 000,00</template>
+                  <template v-if="props.data">
+                    {{ `$ ${props.data.price}` }}
+                  </template>
                 </p>
                 <template v-if="props.data">
                   <span

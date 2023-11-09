@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="pb-[140px] pt-70 xl:py-80 lg:py-60 md:py-40">
+  <section class="py-[140px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
         <h2 class="section-title">Features</h2>
@@ -10,7 +10,7 @@
         class="grid grid-cols-6 gap-x-20 xl:gap-x-10 md:grid-cols-2 md:gap-10"
       >
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
+          class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
           title="Wired & wireless control units"
         >
           <div
@@ -31,7 +31,7 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
+          class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
           title="Double RO purification"
         >
           <div
@@ -52,7 +52,7 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
+          class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
           title="Noiseless operation"
         >
           <div
@@ -73,7 +73,7 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
+          class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
           title="Water circulation with UV re-sterilization"
         >
           <div
@@ -94,7 +94,7 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
+          class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
           title="Volumetric UV sterilization"
         >
           <div
@@ -115,7 +115,7 @@
           </div>
         </article>
         <article
-          class="group relative min-h-[370px] overflow-hidden rounded-[20px] p-20 xl:min-h-[320px] xl:p-15 lg:min-h-[200px] md:min-h-[100px]"
+          class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
           title="Service at place of use"
         >
           <div

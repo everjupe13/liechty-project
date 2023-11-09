@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, getCurrentInstance, ref } from 'vue'
+import { computed, ref } from 'vue'
 
+// import { getCurrentInstance } from 'vue'
 import { DIAGRAMS, DIAGRAMS_TYPES } from '../model/constants'
 import DiagramCanvas from './DiagramCanvas.vue'
 import DiagramControls from './DiagramControls.vue'
@@ -14,14 +15,14 @@ const props = withDefaults(defineProps<Props>(), {
   diagramType: DIAGRAMS_TYPES.FIRST
 })
 
-const instance = getCurrentInstance()
+// const instance = getCurrentInstance()
 
 watch(
   () => props.diagramType,
   () => {
     if (props.diagramType) {
       currentTabId.value = usedDiagramData.value[0]?.id
-      instance?.proxy?.$forceUpdate()
+      // instance?.proxy?.$forceUpdate()
     }
   }
 )

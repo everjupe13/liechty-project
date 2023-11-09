@@ -13,11 +13,11 @@ import { ContactsArticle, ContactsMap } from '@/components/widgets/contacts'
         </div>
         <div class="flex flex-col gap-y-40 md:mb-20 md:gap-y-20">
           <ContactsArticle>
-            <template #title>Central office</template>
+            <template #title>Telephone</template>
             <template #content>+ 1 204-800-1014</template>
           </ContactsArticle>
           <ContactsArticle>
-            <template #title>Contact mail</template>
+            <template #title>Contact e-mail</template>
             <template #content>info@liechty.li</template>
           </ContactsArticle>
         </div>

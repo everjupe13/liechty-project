@@ -1,7 +1,7 @@
 import { ref, watch } from 'vue'
 import { useModal } from 'vue-final-modal'
 
-import PurchaseSuccess from '../ui/PurchaseSuccess.vue'
+import FeedbackSuccess from '../ui/FeedbackSuccess.vue'
 
 export const useSuccessModal = () => {
   const drawerOpened = ref(false)
@@ -21,7 +21,7 @@ export const useSuccessModal = () => {
   })
 
   const { open: openModal, close: closeModal } = useModal({
-    component: PurchaseSuccess,
+    component: FeedbackSuccess,
     attrs: {
       onConfirm: () => confirmModalMenu(),
       onClosed: () => closeModalMenu()

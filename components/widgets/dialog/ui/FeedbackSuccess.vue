@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { VueFinalModal } from 'vue-final-modal'
 
+import FeedbackSuccessDocument from './FeedbackSuccessDocument.vue'
 import PurchaseDetailsCloseButton from './PurchaseDetailsCloseButton.vue'
-import PurchaseDetailsSuccess from './PurchaseDetailsSuccess.vue'
 
 const emit = defineEmits<{
   (e: 'confirm'): void
@@ -33,7 +33,7 @@ const handleCloseForm = () => {
           class="absolute right-25 top-25"
           @click="handleCloseForm"
         />
-        <PurchaseDetailsSuccess @submit="handleFormSubmit" />
+        <FeedbackSuccessDocument @submit="handleFormSubmit" />
       </div>
     </form>
   </VueFinalModal>

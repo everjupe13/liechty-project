@@ -68,7 +68,7 @@ const handleActiveIdChange = (id: number) => {
             <li
               v-for="data in props.technicalData"
               :key="data.id"
-              class="flex h-22 items-center justify-between bg-gray px-12 leading-none text-16 odd:bg-white md:text-14"
+              class="flex h-35 flex-shrink-0 items-center justify-between bg-gray px-12 leading-tight text-18 even:bg-white lg:text-16 md:h-28 md:text-14"
             >
               <p>{{ data.label }}</p>
               <p>{{ data.value }}</p>

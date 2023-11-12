@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ModalsContainer } from 'vue-final-modal'
 
+import { CookieBanner } from '@/components/widgets/cookie-banner'
 import { AppFooter } from '@/components/widgets/footer'
 import { AppHeader } from '@/components/widgets/header'
 
@@ -34,4 +35,5 @@ if (process.client) {
   </main>
   <AppFooter />
   <ModalsContainer />
+  <CookieBanner />
 </template>

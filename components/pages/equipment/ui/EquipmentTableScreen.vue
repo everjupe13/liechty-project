@@ -31,7 +31,7 @@ const { models } = useModels()
         class="scroll-x-hidden rounded-[20px] border border-gray px-40 py-20 md:overflow-x-scroll md:px-10 md:py-5"
       >
         <table
-          class="w-full table-fixed border-collapse overflow-hidden rounded-[20px] text-left text-18 md:w-[200%]"
+          class="w-full table-fixed border-collapse overflow-hidden rounded-[20px] text-left text-16 md:w-[200%]"
         >
           <thead class="border-b border-gray font-bold">
             <tr>
@@ -52,10 +52,10 @@ const { models } = useModels()
               >
                 Areas of application
               </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">
-                house / apartment / office
-              </td>
-              <td class="px-24 py-18 text-dark/70">
+              <td
+                colspan="2"
+                class="border-gray px-24 py-18 text-center text-dark/70"
+              >
                 house / apartment / office
               </td>
             </tr>
@@ -69,7 +69,7 @@ const { models } = useModels()
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 3.200 / 6.400 / 9.600
               </td>
-              <td class="px-24 py-18 text-dark/70">3.250</td>
+              <td class="px-24 py-18 text-dark/70">3.250 / 9.600</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -105,7 +105,7 @@ const { models } = useModels()
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 6 / 12 / 18
               </td>
-              <td class="px-24 py-18 text-dark/70">6</td>
+              <td class="px-24 py-18 text-dark/70">6 / 18</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -117,7 +117,7 @@ const { models } = useModels()
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 6 / 12 / 18
               </td>
-              <td class="px-24 py-18 text-dark/70">6</td>
+              <td class="px-24 py-18 text-dark/70">6 / 18</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th

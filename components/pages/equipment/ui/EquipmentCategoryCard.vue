@@ -40,7 +40,7 @@ const handleClick = () => {
           >
             {{ props.name }}
           </h3>
-          <div class="prose text-18 md:text-16" v-html="props.description" />
+          <div class="prose text-16 md:text-16" v-html="props.description" />
         </div>
         <div>
           <AppButton outlined class="gap-x-4" @click="handleClick">

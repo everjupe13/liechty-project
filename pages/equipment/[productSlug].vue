@@ -3,6 +3,7 @@ import { useHead } from 'nuxt/app'
 
 import { useModels } from '@/api/models'
 import {
+  ProductDownloadScreen,
   ProductFAQScreen,
   ProductInfoScreen,
   ProductModelsSwiperScreen
@@ -31,6 +32,7 @@ const { data } = fetchModelBySlug(route.params.productSlug as string)
     </div>
     <ProductInfoScreen :data="data" />
     <ProductModelsSwiperScreen :data="data" />
+    <ProductDownloadScreen />
     <ProductFAQScreen />
   </div>
 </template>

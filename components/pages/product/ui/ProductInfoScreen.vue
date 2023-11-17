@@ -28,7 +28,7 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
           <ProductGalleryView v-if="props.data" :gallery="props.data.images" />
         </div>
         <div>
-          <div class="mb-75 flex h-full flex-col">
+          <div class="flex h-full flex-col">
             <div class="flex-grow-0">
               <h2
                 class="mb-20 font-bold leading-tight text-48 lg:text-28"
@@ -65,9 +65,7 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
                 </template>
               </div>
             </div>
-            <div
-              class="flex-grow rounded-[14px] border border-dark/20 p-24 md:p-15"
-            >
+            <div class="rounded-[14px] border border-dark/20 p-24 md:p-15">
               <div
                 v-if="props.data"
                 class="prosed leading-normal text-16 md:text-14"

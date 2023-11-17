@@ -77,7 +77,7 @@ const props = defineProps<Props>()
           <li
             v-for="feature in props.features"
             :key="feature.id"
-            class="flex h-22 items-center justify-between bg-gray px-12 leading-none text-12 odd:bg-white"
+            class="min-h-22 flex items-center justify-between bg-gray px-12 leading-none text-12 odd:bg-white"
           >
             <p>{{ feature.label }}</p>
             <p>{{ feature.value }}</p>

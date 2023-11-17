@@ -23,19 +23,21 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const designTypeStyles = computed(() =>
-  props.designType === 'default'
-    ? 'download-card_default'
-    : 'download-card_white'
+  !props.filledCard
+    ? props.designType === 'default'
+      ? 'download-card_default'
+      : 'download-card_white'
+    : ''
 )
 const isDownloadIconHovered = computed(() => props.designType === 'white')
 </script>
 
 <template>
   <article
-    class="group relative min-h-[390px] overflow-hidden rounded-[20px] p-20 transition-all lg:min-h-[280px]"
+    class="group relative min-h-[320px] overflow-hidden rounded-[20px] p-20 transition-all lg:min-h-[280px]"
     :class="designTypeStyles"
   >
-    <div class="relative z-[1] flex h-full flex-col">
+    <div v-if="!props.filledCard" class="relative z-[1] flex h-full flex-col">
       <div>
         <h3
           class="download-card__title mb-8 leading-normal transition-all text-20 lg:text-18"
@@ -75,10 +77,10 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
     </div>
     <div
       v-if="props.filledCard"
-      class="absolute left-0 right-0 top-0 z-[2] h-full rounded-[20px] bg-blue p-30 text-white transition-all"
+      class="absolute left-0 right-0 top-0 z-[2] h-full rounded-[20px] bg-transparent p-30 text-dark transition-all"
     >
       <img
-        class="pointer-events-none absolute bottom-0 left-0 z-[1] block select-none"
+        class="pointer-events-none absolute bottom-0 left-0 z-[1] hidden select-none"
         src="@/assets/img/icons/home/downloads-card-bg-pattern.svg"
       />
       <div class="z-2 relative">
@@ -90,7 +92,7 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
       <a
         href="/plug-pdf.pdf"
         download
-        class="pointer-events-none absolute inset-0 z-[3] select-none text-transparent"
+        class="pointer-events-none absolute inset-0 z-[3] select-none bg-transparent text-transparent"
       >
         download the file
       </a>

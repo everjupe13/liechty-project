@@ -7,7 +7,7 @@ export const useModalMenu = () => {
     component: ModalMenu,
     attrs: {
       onConfirm() {
-        close()
+        closeModalMenu()
       }
     }
   })

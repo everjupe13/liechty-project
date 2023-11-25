@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <article
-    class="group relative aspect-square overflow-hidden rounded-[20px] bg-gray-light p-20"
+    class="group relative flex aspect-square flex-col overflow-hidden rounded-[20px] bg-gray-light p-20"
     :title="props.title"
   >
     <div
@@ -21,7 +21,7 @@ const props = defineProps({
         class="relative z-[1] block h-full w-full object-cover"
       />
     </div>
-    <div class="relative z-[2] flex h-full flex-col justify-between">
+    <div class="relative z-[2] flex flex-grow flex-col justify-between">
       <header>
         <div
           class="flex h-30 w-30 items-center justify-center rounded-full border-[2px] border-dark font-medium leading-none transition-all duration-300 text-18 group-hover:border-white group-hover:text-white"

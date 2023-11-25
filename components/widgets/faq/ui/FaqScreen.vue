@@ -50,9 +50,7 @@ const mappedFaq = computed(() =>
 </script>
 
 <template>
-  <section
-    class="border-b border-dark/20 py-[140px] xl:py-80 lg:py-60 md:py-40"
-  >
+  <section class="py-[140px] will-change-[height] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
         <h2 class="section-title">FAQ</h2>

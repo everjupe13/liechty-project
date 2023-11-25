@@ -29,7 +29,7 @@ const handleDropdownItemClick = (index: number) => {
     <article
       v-for="(state, idx) in dropdownData"
       :key="idx"
-      class="group border-b border-dark/20 transition-all hover:border-blue"
+      class="group border-b border-dark/20 transition-all will-change-[height] hover:border-blue"
     >
       <div
         class="dropdown__label flex cursor-pointer items-center justify-between gap-x-10 py-30 xl:py-20"

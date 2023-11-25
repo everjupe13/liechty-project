@@ -9,6 +9,7 @@ import PurchaseDetailsSuccess from './PurchaseDetailsSuccess.vue'
 
 const emit = defineEmits<{
   (e: 'confirm'): void
+  (e: 'close'): void
 }>()
 
 const currentFormId = ref(0)
@@ -29,11 +30,12 @@ const handleBackForm = () => {
 <template>
   <VueFinalModal
     class="flex"
-    content-class="overflow-y-scroll h-full w-full flex justify-center pointer-events-none"
+    content-class="overflow-y-scroll h-full w-full flex justify-center pointer-events-auto"
   >
     <form
       class="overflow-y-scrollmd:mx-16 md:my-00 pointer-events-auto my-40 flex w-[1000px] flex-col items-center"
       @submit.prevent
+      @click.prevent
     >
       <div
         class="relative w-full rounded-[20px] bg-white px-100 py-100 md:rounded-[14px] md:px-20 md:py-50"
@@ -41,7 +43,7 @@ const handleBackForm = () => {
         <template v-if="currentFormId !== 2">
           <PurchaseDetailsCloseButton
             class="absolute right-25 top-25"
-            @click="emit('confirm')"
+            @click="emit('close')"
           />
           <PurchaseDetailsPreorderHeader class="mb-50" />
 

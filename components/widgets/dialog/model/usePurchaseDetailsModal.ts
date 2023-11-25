@@ -10,13 +10,16 @@ export const usePurchaseDetailsModal = () => {
 
   watch(drawerOpened, () => {
     const html = document.querySelector('html')
+    const body = document.querySelector('body')
 
     if (drawerOpened.value) {
       html?.style.setProperty('overflow', 'hidden')
       html?.style.setProperty('padding-right', '8px')
+      body?.style.setProperty('pointer-events', 'none')
     } else {
       html?.style.removeProperty('overflow')
       html?.style.removeProperty('padding-right')
+      body?.style.removeProperty('pointer-events')
     }
   })
 
@@ -24,7 +27,8 @@ export const usePurchaseDetailsModal = () => {
     component: PurchaseDetails,
     attrs: {
       onConfirm: () => confirmModalMenu(),
-      onClosed: () => closeModalMenu()
+      onClosed: () => closeModalMenu(),
+      onClose: () => closeModalMenu()
     }
   })
 

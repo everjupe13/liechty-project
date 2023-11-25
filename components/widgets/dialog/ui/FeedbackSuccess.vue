@@ -20,7 +20,7 @@ const handleCloseForm = () => {
 <template>
   <VueFinalModal
     class="flex"
-    content-class="overflow-y-scroll h-full w-full flex justify-center pointer-events-none"
+    content-class="overflow-y-scroll h-full w-full flex justify-center pointer-events-auto"
   >
     <form
       class="overflow-y-scrollmd:mx-16 md:my-00 pointer-events-auto my-40 flex w-[1000px] flex-col items-center"

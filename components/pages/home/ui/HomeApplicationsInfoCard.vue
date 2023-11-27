@@ -9,16 +9,16 @@ const props = defineProps({
 
 <template>
   <article
-    class="group relative flex aspect-square flex-col overflow-hidden rounded-[20px] bg-gray-light p-20"
+    class="group relative flex aspect-square flex-col overflow-hidden p-20"
     :title="props.title"
   >
     <div
-      class="absolute inset-0 z-[1] h-full w-full after:absolute after:inset-0 after:z-[2] after:block after:bg-gray-light after:opacity-90 after:transition-all after:duration-300 group-hover:after:bg-blue group-hover:after:opacity-40"
+      class="absolute inset-0 z-[1] h-full w-full after:absolute after:inset-0 after:z-[2] after:block after:rounded-[19px] after:bg-gray-light after:opacity-90 after:transition-all after:duration-300 group-hover:after:bg-blue group-hover:after:opacity-40"
     >
       <img
         :src="props.image"
         alt=""
-        class="relative z-[1] block h-full w-full object-cover"
+        class="relative z-[1] block h-full w-full rounded-[20px] object-cover"
       />
     </div>
     <div class="relative z-[2] flex flex-grow flex-col justify-between">

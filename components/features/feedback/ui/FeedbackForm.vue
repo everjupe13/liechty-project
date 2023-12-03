@@ -58,19 +58,19 @@ const handleSubmitForm = () => {
       v-model="v$.name.$model"
       v-bind="inputPropsMapper(v$.name)"
       class="mb-15"
-      placeholder="Your name"
+      :placeholder="$t('feedbackForm.placeholder.name')"
     />
     <AppInput
       v-model="v$.phone.$model"
       v-bind="inputPropsMapper(v$.phone)"
       class="mb-15"
-      placeholder="Phone number"
+      :placeholder="$t('feedbackForm.placeholder.phone')"
     />
     <AppInput
       v-model="v$.email.$model"
       v-bind="inputPropsMapper(v$.email)"
       class="mb-15"
-      placeholder="Your e-mail"
+      :placeholder="$t('feedbackForm.placeholder.email')"
     />
 
     <AppButton theme="blue" outlined>Send message</AppButton>

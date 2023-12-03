@@ -6,7 +6,7 @@ import FeedbackForm from './FeedbackForm.vue'
   <section class="relative bg-gray-light py-[160px] xl:py-80 lg:py-60 md:py-40">
     <div class="container z-[2]">
       <div class="mb-40">
-        <h2 class="section-title">Any questions? Write us</h2>
+        <h2 class="section-title">{{ $t('feedbackForm.title') }}</h2>
       </div>
       <div class="max-w-[750px] xl:max-w-[57%] md:max-w-full">
         <FeedbackForm />

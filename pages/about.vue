@@ -2,7 +2,6 @@
 import { useHead } from 'nuxt/app'
 
 import {
-  AboutContactsScreen,
   AboutEmployeesScreen,
   AboutFeedbackScreen,
   AboutInfoScreen,
@@ -22,8 +21,7 @@ useHead({
     </div>
     <AboutTopBannerScreen />
     <AboutInfoScreen class="border-b border-dark/20" />
-    <AboutEmployeesScreen />
-    <AboutContactsScreen id="contacts-screen" class="border-t border-dark/20" />
+    <AboutEmployeesScreen class="border-b border-dark/20" />
     <AboutFeedbackScreen />
   </div>
 </template>

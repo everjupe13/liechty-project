@@ -4,14 +4,14 @@
   <section class="py-[140px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
-        <h2 class="section-title">Features</h2>
+        <h2 class="section-title">{{ $t('equipment.features.title') }}</h2>
       </div>
       <div
         class="grid grid-cols-6 gap-x-20 xl:gap-x-10 md:grid-cols-2 md:gap-10"
       >
         <article
           class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
-          title="Wired & wireless control units"
+          :title="$t('equipment.features.cards[0]')"
         >
           <div
             class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
@@ -26,13 +26,13 @@
             <h3
               class="text-center leading-tight text-dark/80 transition-all duration-300 text-16 group-hover:text-blue"
             >
-              Wired & wireless control units
+              {{ $t('equipment.features.cards[0]') }}
             </h3>
           </div>
         </article>
         <article
           class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
-          title="Double RO purification"
+          :title="$t('equipment.features.cards[1]')"
         >
           <div
             class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
@@ -47,13 +47,13 @@
             <h3
               class="text-center leading-tight text-dark/80 transition-all duration-300 text-16 group-hover:text-blue"
             >
-              Double RO purification
+              {{ $t('equipment.features.cards[1]') }}
             </h3>
           </div>
         </article>
         <article
           class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
-          title="Noiseless operation"
+          :title="$t('equipment.features.cards[2]')"
         >
           <div
             class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
@@ -68,13 +68,13 @@
             <h3
               class="text-center leading-tight text-dark/80 transition-all duration-300 text-16 group-hover:text-blue"
             >
-              Noiseless operation
+              {{ $t('equipment.features.cards[2]') }}
             </h3>
           </div>
         </article>
         <article
           class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
-          title="Water circulation with UV re-sterilization"
+          :title="$t('equipment.features.cards[3]')"
         >
           <div
             class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
@@ -89,13 +89,13 @@
             <h3
               class="text-center leading-tight text-dark/80 transition-all duration-300 text-16 group-hover:text-blue"
             >
-              Water circulation with UV re-sterilization
+              {{ $t('equipment.features.cards[3]') }}
             </h3>
           </div>
         </article>
         <article
           class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
-          title="Volumetric UV sterilization"
+          :title="$t('equipment.features.cards[4]')"
         >
           <div
             class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
@@ -110,13 +110,13 @@
             <h3
               class="text-center leading-tight text-dark/80 transition-all duration-300 text-16 group-hover:text-blue"
             >
-              Volumetric UV sterilization
+              {{ $t('equipment.features.cards[4]') }}
             </h3>
           </div>
         </article>
         <article
           class="group relative overflow-hidden rounded-[20px] p-20 xl:p-15"
-          title="Service at place of use"
+          :title="$t('equipment.features.cards[5]')"
         >
           <div
             class="transiton-all mx-auto mb-15 flex aspect-square w-full max-w-[180px] items-center justify-center rounded-full border border-dark/20 bg-white duration-300 hover:border-blue xl:mb-25 md:w-full"
@@ -131,7 +131,7 @@
             <h3
               class="text-center leading-tight text-dark/80 transition-all duration-300 text-16 group-hover:text-blue"
             >
-              Service at place of use
+              {{ $t('equipment.features.cards[5]') }}
             </h3>
           </div>
         </article>

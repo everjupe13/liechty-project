@@ -1,20 +1,22 @@
 <script lang="ts" setup>
 import { computed, onMounted, type Ref, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-type LanguageState = 'en-US' | 'de-DE' | null
+type LanguageState = 'en' | 'de' | null
 
 const LOCAL_STORAGE_LANG_KEY = 'selected-language'
+const i18n = useI18n({ useScope: 'global' })
 
 const Languages = [
   {
     id: 0,
     title: 'en',
-    value: 'en-US'
+    value: 'en'
   },
   {
     id: 1,
     title: 'de',
-    value: 'de-DE'
+    value: 'de'
   }
 ]
 
@@ -29,11 +31,12 @@ const handleActiveLanguageId = () => {
   )
   const nextActiveIndex =
     currentIndex < Languages.length - 1 ? currentIndex + 1 : 0
-  const activeLanguage = Languages.find(lang => lang.id === nextActiveIndex)
+  const _activeLanguage = Languages.find(lang => lang.id === nextActiveIndex)
 
-  if (window && window instanceof Object && activeLanguage) {
-    localStorage.setItem(LOCAL_STORAGE_LANG_KEY, activeLanguage.value)
-    window.location.reload()
+  if (window && window instanceof Object && _activeLanguage) {
+    localStorage.setItem(LOCAL_STORAGE_LANG_KEY, _activeLanguage.value)
+    activeLanguageId.value = _activeLanguage.id
+    i18n.locale.value = _activeLanguage.value
   }
 }
 
@@ -49,6 +52,8 @@ onMounted(() => {
       activeLanguageId.value =
         Languages.find(lang => savedLanguage.value === lang.value)?.id ??
         Languages[0].id
+
+      i18n.locale.value = savedLanguage.value
     }
   }
 })

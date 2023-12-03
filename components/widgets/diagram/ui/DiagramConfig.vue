@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 // import { getCurrentInstance } from 'vue'
 import { DIAGRAMS, DIAGRAMS_TYPES } from '../model/constants'
 import DiagramCanvas from './DiagramCanvas.vue'
 import DiagramControls from './DiagramControls.vue'
 import DiagramDescription from './DiagramDescription.vue'
+
+const { locale } = useI18n({ useScope: 'global' })
 
 type Props = {
   diagramType?: keyof typeof DIAGRAMS
@@ -33,7 +36,10 @@ const currentTab = computed(
   () =>
     usedDiagramData.value.find(data => data.id === currentTabId.value) || {
       title: '',
-      description: '',
+      description: {
+        en: '<p></p>',
+        de: '<p></p>'
+      },
       image: ''
     }
 )
@@ -58,7 +64,7 @@ const handleTabChange = (id: number) => {
     </div>
     <DiagramDescription
       :title="currentTab.title"
-      :description="currentTab.description"
+      :description="currentTab.description[locale as 'en' | 'de']"
     />
   </div>
 </template>

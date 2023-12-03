@@ -6,7 +6,7 @@ const EmployeesData = [
     id: 0,
     image: '/images/about/employees/1.jpg',
     name: 'George Gilbert',
-    position: 'Chief Development Officer '
+    position: 'Chief Development Officer'
   },
   {
     id: 1,
@@ -27,6 +27,27 @@ const EmployeesData = [
     position: 'Chief Technical Director'
   }
 ]
+
+const LiechtensteinEmployeesData = [
+  {
+    id: 0,
+    image: '/images/about/employees/liechtenstein/AlexanderGutman.jpg',
+    name: 'Alexander Gutman',
+    position: 'CEO of Liechtenstein branch'
+  },
+  {
+    id: 1,
+    image: '/images/about/employees/liechtenstein/Arnold-Becker.jpg',
+    name: 'Arnold Becker',
+    position: 'Head of R&D department'
+  },
+  {
+    id: 2,
+    image: '/images/about/employees/liechtenstein/Erik-Sprenger.png',
+    name: 'Erik Sprenger',
+    position: 'Head of Manufacturing department'
+  }
+]
 </script>
 
 <template>
@@ -38,6 +59,22 @@ const EmployeesData = [
       <div class="grid grid-cols-4 gap-20 md:grid-cols-1 md:gap-40">
         <AboutEmployeesCard
           v-for="employee in EmployeesData"
+          :key="employee.id"
+          :image="employee.image"
+          :name="employee.name"
+          :position="employee.position"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="pb-[80px] pt-[140px] xl:py-80 lg:py-60 md:py-40">
+    <div class="container">
+      <div class="mb-40 md:mb-30">
+        <h2 class="section-title text-blue">Liechtenstein branch</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-20 md:grid-cols-1 md:gap-40">
+        <AboutEmployeesCard
+          v-for="employee in LiechtensteinEmployeesData"
           :key="employee.id"
           :image="employee.image"
           :name="employee.name"

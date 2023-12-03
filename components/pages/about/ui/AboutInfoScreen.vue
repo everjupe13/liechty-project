@@ -4,7 +4,7 @@
   <section class="pb-[80px] pt-[140px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="flex justify-between gap-x-30 pb-40 md:flex-col md:gap-y-20">
-        <h2 class="section-title">In number</h2>
+        <h2 class="section-title">In numbers</h2>
 
         <div class="grid grid-cols-3 gap-x-40 md:grid-cols-1 md:gap-y-20">
           <div class="max-w-[350px]">
@@ -18,8 +18,7 @@
               of experience in air humidification
             </div>
             <div class="text-dark/60 text-16 md:text-14">
-              We have gathered all of our experience to be applied in the
-              development of our humidification systems.
+              {{ $t('about.info[0].desc') }}
             </div>
           </div>
           <div class="max-w-[350px]">
@@ -31,8 +30,7 @@
             </div>
             <div class="mb-5 text-20 lg:text-18 md:text-16">of presence</div>
             <div class="text-dark/60 text-16 md:text-14">
-              We have opened two head offices in Europe and Canada, where air
-              humidification indoors is a real issue.
+              {{ $t('about.info[1].desc') }}
             </div>
           </div>
           <div class="max-w-[350px]">
@@ -46,8 +44,7 @@
               all over the world
             </div>
             <div class="text-dark/60 text-16 md:text-14">
-              We are focused on expanding our network of partners & support all
-              around the world.
+              {{ $t('about.info[2].desc') }}
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
-<script lang="ts" setup></script>
-
+<!-- DEPRECATED not in use -->
 <template>
   <section class="py-80 pb-[140px] xl:py-60 lg:py-40 md:py-30">
     <div class="container">

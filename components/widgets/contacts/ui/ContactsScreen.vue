@@ -1,5 +1,10 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+
 import { ContactsArticle, ContactsMap } from '@/components/widgets/contacts'
+
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 </script>
 
 <template>
@@ -19,20 +24,34 @@ import { ContactsArticle, ContactsMap } from '@/components/widgets/contacts'
             <template #content>+ 1 204-800-1014</template>
           </ContactsArticle>
           <ContactsArticle>
-            <template #title>Contact e-mail</template>
-            <template #content>info@liechty.li</template>
+            <template #title>
+              {{ isEN ? 'Contact e-mail' : 'Kontakt E-mail:' }}
+            </template>
+            <template #content>
+              {{ isEN ? 'info@liechty-humidity.com' : 'info@liechty.li' }}
+            </template>
           </ContactsArticle>
         </div>
         <div class="flex flex-col gap-y-40 md:gap-y-20">
           <ContactsArticle>
-            <template #title>Office</template>
+            <template #title>
+              {{ isEN ? 'Office' : 'Forschung & Entwicklung Büro:' }}
+            </template>
             <template #content>
-              1260 Clarence Avenue, Winnipeg, Manitoba R3T 1T2
+              {{
+                isEN
+                  ? '1260 Clarence Avenue, Winnipeg, Manitoba R3T 1T2'
+                  : 'Im alten Riet 153, 9494 Schaan, Liechtenstein'
+              }}
             </template>
           </ContactsArticle>
           <ContactsArticle>
-            <template #title>Work schedule</template>
-            <template #content>9am to 5pm</template>
+            <template #title>
+              {{ isEN ? 'Work schedule' : 'Öffnungszeit:' }}
+            </template>
+            <template #content>
+              {{ isEN ? '9am to 5pm' : 'Montag - Freitag 10.00-17.00 Uhr' }}
+            </template>
           </ContactsArticle>
         </div>
       </div>

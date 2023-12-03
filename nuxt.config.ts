@@ -1,11 +1,10 @@
+import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+
+import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // imports: {
-  //   autoImport: false
-  // },
-
   app: {
     head: {
       link: [{ rel: 'icon', type: 'image/svg', href: '/favicon.svg' }]
@@ -28,8 +27,8 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/eslint-module', '@pinia/nuxt'],
 
+  // an empty array is disabling auto-importing
   components: [
-    // disabled auto-importing
     // {
     //   path: '~/components',
     //   pathPrefix: false
@@ -56,21 +55,34 @@ export default defineNuxtConfig({
     '~/assets/scss/custom-scrollbar.scss',
     '~/assets/scss/vue-transition-animations.scss'
   ],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
       cssnano: {}
     }
-  }
+  },
 
-  // vite: {
-  //   css: {
-  //     preprocessorOptions: {
-  //       scss: {
-  //         additionalData: '@use "~/assets/scss/core.scss" as *;'
-  //       }
-  //     }
-  //   }
-  // }
+  build: {
+    transpile: ['vue-i18n']
+  },
+
+  vite: {
+    //   css: {
+    //     preprocessorOptions: {
+    //       scss: {
+    //         additionalData: '@use "~/assets/scss/core.scss" as *;'
+    //       }
+    //     }
+    //   }
+    plugins: [
+      VueI18nVitePlugin({
+        strictMessage: false,
+        include: [
+          resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json')
+        ]
+      })
+    ]
+  }
 })

@@ -1,0 +1,82 @@
+{
+  "home": {
+    "title": "Luftbefeuchtungssysteme",
+    "subtitle": "Entwickelt zur Verbesserung des Mikroklimas in Ihrem Haus, Ihrer Wohnung oder Ihrem Büro",
+    "humidification": {
+      "title": "Warum ist Luftbefeuchtung wichtig?",
+      "list": [
+        "Verhindert die Verbreitung von luftübertragenen Infektionen",
+        "Macht unsere Haut und Augen gesünder",
+        "Unterstützt unser Immunsystem",
+        "Schützt Möbel und Innenausstattung aus Holz"
+      ],
+      "info": "Wir spüren den Unterschied zwischen Außen- und Innentemperaturen, wenn wir zum Beispiel ein Gebäude betreten. Leider sind unsere Sinne nicht sensibel genug, um Feuchtigkeit zu spüren.<br /><br />Zahlreiche wissenschaftliche Studien bestätigen, dass die optimale Luftfeuchtigkeit in Innenräumen zwischen 40% und 60% relativer Luftfeuchtigkeit (RH) liegt.<br /><br />Die Einhaltung der Luftfeuchtigkeit im idealen Bereich kann unsere Gesundheit und unser Wohlbefinden verbessern, die Ausbreitung der Grippe verhindern und Innenausstattung aus Holz schützen."
+    },
+    "applications": {
+      "title": "Einsatzbereiche",
+      "banner": {
+        "subtitle": "Die Luftbefeuchtungssysteme von Liechty vereinen die neuesten Innovationen im Bereich der zerstäubten Luftbefeuchtung mit einem bewussten Schwerpunkt auf höchste Hygiene und Anwendersicherheit."
+      }
+    },
+    "howWorks": {
+      "content": [
+        "Das Zulaufwasser durchläuft eine mehrstufige Filtration, einschließlich eines zweistufigen RO-Systems und einer volumetrischen UV-Sterilisation. Wir eliminieren 99,9% der Härtesalze.",
+        "Unsere Geräte sind speziell für den Einsatz in Wohngebäuden konzipiert, weshalb unsere Pumpen und Ventile geräuschlos arbeiten. Außerdem können unsere Module leicht vor Ort instand gehalten werden.",
+        "Unsere Schläuche haben eine Innenschicht aus PTFE mit einer Umflechtung aus Edelstahl. Unsere Schlauchleitung ist speziell so konzipiert, dass sie hohe Hygiene- und Sicherheitsstandards erfüllt.",
+        "Miniaturdüsen werden in der Regel in Luftverteilern, Wänden oder Decken installiert, wo sie gereinigtes Wasser direkt in die Räumlichkeiten sprühen.",
+        "Das System wird von hochpräzisen Hygrostaten gesteuert, die das Luftfeuchtigkeitsniveau in den Räumlichkeiten messen und überwachen, um sicherzustellen, dass es dem eingestellten Niveau entspricht."
+      ]
+    }
+  },
+  "about": {
+    "tagline": "“Wir machen die Luft sauberer und süßer und Ihre Lungen gesünder”",
+    "brand": {
+      "content": [
+        "Unsere Marke stellt innovative Befeuchtungssysteme für Häuser, Wohnungen, Büros und andere gewerbliche Räume dar.",
+        "Die Mission der Marke Liechty ist es, qualitativ hochwertige, effiziente und sichere Luftbefeuchtungssysteme für private und gewerbliche Anwendungen zu liefern, zu installieren und zu warten.",
+        "Die Ausrüstung von Liechty erfüllt die höchsten Hygienestandards, wobei der Schwerpunkt auf der Sauberkeit des während des Befeuchtungsprozesses zerstäubten Wassers liegt."
+      ]
+    },
+    "info": [
+      {
+        "desc": "Wir haben all unsere Erfahrungen gesammelt, um sie in der Entwicklung unserer Befeuchtungssysteme anzuwenden."
+      },
+      {
+        "desc": "Wir haben zwei Hauptniederlassungen in Europa und Kanada eröffnet, wo die Luftbefeuchtung in Innenräumen ein echtes Problem darstellt."
+      },
+      {
+        "desc": "Wir konzentrieren uns auf den Ausbau unseres Partner- und Unterstützungsnetzes in der ganzen Welt."
+      }
+    ]
+  },
+  "equipment": {
+    "about": {
+      "leftArticle": "Allen Liechty-Systemen ist gemeinsam, dass sie eine optimale Wasserfiltration erreichen, bevor sie das Wasser in Wohn-, Gewerbe- oder Industrieräumen zerstäuben. Jedes Modell der zentralen Module verfügt über ein zweistufig Umkehrosmosesystem, einen Tank für die volumetrische UV-Sterilisation und eine Hochdruck-Schlauchleitung für die Reinigung mit erneuter Sterilisation. Dieser mehrstufige Reinigungsprozess führt dazu, dass das Wasser zu 99,5% frei von Salzen wird, wodurch das Risiko der Bildung von weißem Kalk effektiv behoben wird. <br /><br />Die Module von Liechty sind mit einzigartigen, geräuschlos funktionierenden Pumpen ausgestattet, die eine hohe Leistung und eine lange Lebensdauer gewährleisten. <br /><br /> Hochpräzise Feuchtigkeitssensoren überwachen die Luftfeuchtigkeit in den Räumen und leiten diese Informationen an das Zentralmodul und die Düsen weiter, so dass eine Befeuchtung möglich ist, bei der die Aufrechterhaltung der Hygiene und die Sicherheit der Benutzer im Mittelpunkt stehen.",
+      "rightArticle": "Die Classic Line Serie bietet Düsenbefeuchtungssysteme mit einzigartigen Lösungen für Ihr Haus, Ihre Wohnung oder Ihr Büro. <br /><br /> mehrstufiges Reinigungssystem gereinigt und dann durch Miniaturdüsen direkt in die Räumlichkeiten zerstäubt, wodurch die Luftfeuchtigkeit sofort erhöht und Frische entsteht. Das Liechty-System kann mit Standard-Steuergeräten gesteuert werden, die entweder kabelgebunden oder drahtlos sein können und über eingebaute hochpräzise Feuchtigkeitssensoren verfügen. <br /><br /> Je nach Modell kann das System entweder mit zwei Zonen (CL Playgreen) oder mit mehreren Zonen (CL Manitoba) ausgestattet sein."
+    },
+    "features": {
+      "title": "Eigenschaften",
+      "cards": [
+        "Kabelgebundene und drahtlose Steuergeräte",
+        "Doppelte RO-Reinigung",
+        "Geräuschloser Betrieb",
+        "Wasserkreislauf mit erneuter UV-Sterilisation",
+        "Volumetrische UV-Sterilisation",
+        "Bedienung am Ort der Nutzung"
+      ]
+    }
+  },
+  "system": {
+    "features": {
+      "title": "Eigenschaften"
+    }
+  },
+  "feedbackForm": {
+    "title": "Haben Sie noch Fragen? Schreiben Sie uns",
+    "placeholder": {
+      "name": "Ihr Name",
+      "phone": "Telefonnummer",
+      "email": "Ihre E-Mail"
+    }
+  }
+}

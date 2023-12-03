@@ -1,0 +1,82 @@
+{
+  "home": {
+    "title": "Air humidification<br /> systems",
+    "subtitle": "Designed to improve microclimate in your <br/>house, apartment or office",
+    "humidification": {
+      "title": "Why air humidification matters?",
+      "list": [
+        "Prevents spreading of airborne infections",
+        "Makes our skin and eyes healthier",
+        "Supports our immune system",
+        "Protects furniture and interior made of wood"
+      ],
+      "info": "We notice the difference in outdoor and indoor temperatures, for example, when we enter a building. Unfortunately, our senses are not finely tuned enough to detect humidity.<br /><br />Numerous scientific studies confirm that the optimal indoor humiditylevel falls within the range of 40% to 60% relative humidity (RH).<br /><br />Maintaining the ideal humidity range can enhance our health and well-being, prevent the spread of the flu, and protect wooden interiors."
+    },
+    "applications": {
+      "title": "Applications",
+      "banner": {
+        "subtitle": "Liechty humidification systems combine the latest innovations in atomized humidification with a conscious focus on superior hygiene and user safety."
+      }
+    },
+    "howWorks": {
+      "content": [
+        "Inlet water goes through multi-stage filtration, including a double-stage RO system and volumetric UV sterilization. We eliminate 99.9% of hardness salts.",
+        "Our equipment is specifically designed for use in residential premises, which is why our pumps and valves operate silently. Furthermore, our modules can be easily maintained on-site.",
+        "Our hoses have an inner layer made of PTFE with stainless steel braiding. Our hoseline is specifically designed to meet high hygiene and safety standards.",
+        "Miniature nozzles are typically installed in vent diffusers, walls, or ceilings, where they spray purified water directly into the premises.",
+        "The system is controlled by highly precise hygrostats that measure and monitor RH levels in the premises, ensuring it remains at the set humidity level."
+      ]
+    }
+  },
+  "about": {
+    "tagline": "“We improve air quality, making it fresher and healthier”",
+    "brand": {
+      "content": [
+        "Our brand represents innovative humidification systems for homes, apartments, offices, and other commercial spaces.",
+        "The mission of Liechty brand is to supply, install, and maintain high-quality, efficient, and safe humidification systems for residential and commercial applications.",
+        "Liechty equipment meets the highest hygiene standards, with a strong emphasis on the cleanliness of the water atomized during the humidification process."
+      ]
+    },
+    "info": [
+      {
+        "desc": "We have gathered all of our experience to be applied in the development of our humidification systems."
+      },
+      {
+        "desc": "We have opened two head offices in Europe and Canada, where air humidification indoors is a real issue."
+      },
+      {
+        "desc": "We are focused on expanding our network of partners & support all around the world."
+      }
+    ]
+  },
+  "equipment": {
+    "about": {
+      "leftArticle": "All Liechty systems share a common commitment to achieving optimal water filtration before atomizing it into residential, commercial, or industrial premises. Each model of the central modules features a double reverse osmosis system, a tank for volumetric UV sterilization, and a high-pressure hoseline for washing with re-sterilization. This multi-stage purification process results in water that is 99.5% free of salts, effectively eliminating the risk of white scale formation. <br /><br /> Liechty modules are equipped with unique pumps that operate silently, ensuring high performance and a long lifespan. <br /><br /> High-precision humidity sensors monitor the RH level in the rooms and relay this information to the central module and nozzles, thus allowing for humidification with a strong emphasis on maintaining high hygiene and user safety.",
+      "rightArticle": "The Classic Line series offers high pressure nozzle humidification systems with unique solutions for your home, apartment or office. <br /><br /> In this system, water is first purified by a unique multi-stage purification system and then atomized by miniature nozzles directly into the premises, instantly increasing the RH level and providing freshness. The Liechty system can be controlled using standard control units, which can be either wired or wireless and feature built-in high-accuracy humidity sensors. <br /><br /> Depending on the model, the system can be either dual-zone (CL Playgreen) or multi-zone (CL Manitoba)."
+    },
+    "features": {
+      "title": "Features",
+      "cards": [
+        "Wired & wireless control units",
+        "Double RO purification",
+        "Noiseless operation",
+        "Water circulation with UV re-sterilization",
+        "Volumetric UV sterilization",
+        "Service at place of use"
+      ]
+    }
+  },
+  "system": {
+    "features": {
+      "title": "Features"
+    }
+  },
+  "feedbackForm": {
+    "title": "Any questions? Write us",
+    "placeholder": {
+      "name": "Your name",
+      "phone": "Phone number",
+      "email": "Your e-mail"
+    }
+  }
+}

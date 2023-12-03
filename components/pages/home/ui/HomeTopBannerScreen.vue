@@ -1,5 +1,10 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+
 import { AppButton } from '@/components/shared/button'
+
+const { locale } = useI18n({ useScope: 'global' })
+const isDE = computed(() => locale.value === 'de')
 </script>
 
 <template>
@@ -11,22 +16,19 @@ import { AppButton } from '@/components/shared/button'
         class="relative z-[2] mb-[230px] max-w-[940px] xl:mb-[160px] md:mb-[120px]"
       >
         <h1
-          class="font-bold leading-none text-96 xl:text-82 lg:text-60 md:text-40"
-        >
-          Air humidification
-          <br />
-          system
-        </h1>
+          :class="[
+            'font-bold leading-none text-96 xl:text-82 lg:text-60 md:text-40',
+            { 'break-all': isDE }
+          ]"
+          v-html="$t('home.title')"
+        ></h1>
       </div>
 
       <div class="relative z-[2] max-w-[500px]">
         <p
           class="mb-40 leading-snug text-24 xl:text-20 lg:text-18 md:mb-20 md:text-16"
-        >
-          Designed to improve microclimate in your
-          <br />
-          house, apartment or office
-        </p>
+          v-html="$t('home.subtitle')"
+        ></p>
         <AppButton outlined class="bg-gray" @click="$router.push('/system')">
           See How it Works
         </AppButton>

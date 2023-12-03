@@ -38,7 +38,7 @@ const ApplicationCards = [
   <section class="pb-70 pt-[140px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-75 lg:mb-50 md:mb-30">
-        <h2 class="section-title">Applications</h2>
+        <h2 class="section-title">{{ $t('home.applications.title') }}</h2>
       </div>
       <div
         class="mb-[140px] grid grid-cols-4 gap-x-20 lg:grid-cols-2 lg:gap-40 md:gap-20 sm:grid-cols-1"

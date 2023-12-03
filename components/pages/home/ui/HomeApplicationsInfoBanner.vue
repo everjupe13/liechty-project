@@ -12,9 +12,7 @@ import { AppButton } from '@/components/shared/button'
       </div>
       <div class="mb-40">
         <p class="leading-normal text-24 xl:text-18 md:text-18">
-          Liechty humidification systems combine the latest innovations in
-          atomized humidification with a conscious focus on superior hygiene and
-          user safety.
+          {{ $t('home.applications.banner.subtitle') }}
         </p>
       </div>
       <AppButton outlined @click="$router.push('/equipment')">

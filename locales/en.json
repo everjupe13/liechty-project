@@ -2,6 +2,7 @@
   "home": {
     "title": "Air humidification<br /> systems",
     "subtitle": "Designed to improve microclimate in your <br/>house, apartment or office",
+    "button": "See how it works",
     "humidification": {
       "title": "Why air humidification matters?",
       "list": [
@@ -15,7 +16,8 @@
     "applications": {
       "title": "Applications",
       "banner": {
-        "subtitle": "Liechty humidification systems combine the latest innovations in atomized humidification with a conscious focus on superior hygiene and user safety."
+        "subtitle": "Liechty humidification systems combine the latest innovations in atomized humidification with a conscious focus on superior hygiene and user safety.",
+        "button": "Explore"
       }
     },
     "howWorks": {
@@ -30,27 +32,39 @@
   },
   "about": {
     "tagline": "“We improve air quality, making it fresher and healthier”",
+    "button": "Discover",
     "brand": {
+      "title": "Our Brand",
       "content": [
         "Our brand represents innovative humidification systems for homes, apartments, offices, and other commercial spaces.",
         "The mission of Liechty brand is to supply, install, and maintain high-quality, efficient, and safe humidification systems for residential and commercial applications.",
         "Liechty equipment meets the highest hygiene standards, with a strong emphasis on the cleanliness of the water atomized during the humidification process."
       ]
     },
-    "info": [
-      {
-        "desc": "We have gathered all of our experience to be applied in the development of our humidification systems."
-      },
-      {
-        "desc": "We have opened two head offices in Europe and Canada, where air humidification indoors is a real issue."
-      },
-      {
-        "desc": "We are focused on expanding our network of partners & support all around the world."
-      }
-    ]
+    "info": {
+      "title": "In numbers",
+      "content": [
+        {
+          "title": ">15<span class=\"text-34 md:text-20\">years</span>",
+          "subtitle": "of experience in air humidification",
+          "desc": "We have gathered all of our experience to be applied in the development of our humidification systems."
+        },
+        {
+          "title": "2<span class=\"text-34 md:text-20\">continents</span>",
+          "subtitle": "of presence",
+          "desc": "We have opened two head offices in Europe and Canada, where air humidification indoors is a real issue."
+        },
+        {
+          "title": ">20<span class=\"text-34 md:text-20\">partners</span>",
+          "subtitle": "all over the world",
+          "desc": "We are focused on expanding our network of partners & support all around the world."
+        }
+      ]
+    }
   },
   "equipment": {
     "about": {
+      "title": "About",
       "leftArticle": "All Liechty systems share a common commitment to achieving optimal water filtration before atomizing it into residential, commercial, or industrial premises. Each model of the central modules features a double reverse osmosis system, a tank for volumetric UV sterilization, and a high-pressure hoseline for washing with re-sterilization. This multi-stage purification process results in water that is 99.5% free of salts, effectively eliminating the risk of white scale formation. <br /><br /> Liechty modules are equipped with unique pumps that operate silently, ensuring high performance and a long lifespan. <br /><br /> High-precision humidity sensors monitor the RH level in the rooms and relay this information to the central module and nozzles, thus allowing for humidification with a strong emphasis on maintaining high hygiene and user safety.",
       "rightArticle": "The Classic Line series offers high pressure nozzle humidification systems with unique solutions for your home, apartment or office. <br /><br /> In this system, water is first purified by a unique multi-stage purification system and then atomized by miniature nozzles directly into the premises, instantly increasing the RH level and providing freshness. The Liechty system can be controlled using standard control units, which can be either wired or wireless and feature built-in high-accuracy humidity sensors. <br /><br /> Depending on the model, the system can be either dual-zone (CL Playgreen) or multi-zone (CL Manitoba)."
     },
@@ -64,19 +78,45 @@
         "Volumetric UV sterilization",
         "Service at place of use"
       ]
+    },
+    "models": {
+      "title": "Model line"
     }
   },
   "system": {
+    "diagram": {
+      "title": "Structural diagram"
+    },
     "features": {
       "title": "Features"
     }
   },
+  "downloads": {
+    "promt": {
+      "title": "Download the files",
+      "body": "To request all other documentation about our products, please contact us using the contact details or leave a request in the form below."
+    }
+  }, 
   "feedbackForm": {
     "title": "Any questions? Write us",
     "placeholder": {
       "name": "Your name",
       "phone": "Phone number",
       "email": "Your e-mail"
+    },
+    "button": "Send message"
+  },
+  "footer": {
+    "copyright": "© Liechty 2023. All rights reserved",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "header": {
+    "nav": {
+      "main": "Main",
+      "about": "About",
+      "equipment": "Equipment",
+      "howWorks": "How it works",
+      "contacts": "Contacts"
     }
   }
 }

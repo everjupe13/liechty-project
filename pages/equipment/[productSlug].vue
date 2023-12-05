@@ -24,7 +24,7 @@ const { data } = fetchModelBySlug(route.params.productSlug as string)
     <div class="container">
       <BreadCrumbs
         :crumbs="[
-          { label: 'Equipment', toLink: '/equipment' },
+          { label: $t('header.nav.equipment'), toLink: '/equipment' },
           { label: data?.name || '' }
         ]"
         class="mb-30 mt-30"

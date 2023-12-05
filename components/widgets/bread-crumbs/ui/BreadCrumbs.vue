@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { defineNuxtLink } from 'nuxt/app'
-import { computed } from 'vue'
+import { computed, type Ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { RouteLocationRaw } from 'vue-router'
 
 interface IAppBreadcrumbLink {
@@ -12,17 +13,18 @@ interface IAppBreadcrumbsComponent {
   crumbs?: IAppBreadcrumbLink[]
 }
 
-const baseBreadcrumb: IAppBreadcrumbLink = {
-  label: 'Main',
+const { t } = useI18n({ useScope: 'global' })
+const baseBreadcrumb: Ref<IAppBreadcrumbLink> = computed(() => ({
+  label: t('header.nav.main'),
   toLink: '/'
-}
+}))
 
 const props = withDefaults(defineProps<IAppBreadcrumbsComponent>(), {
   crumbs: () => []
 })
 
 const breads = computed<IAppBreadcrumbLink[]>(() => {
-  return [baseBreadcrumb, ...props.crumbs]
+  return [baseBreadcrumb.value, ...props.crumbs]
 })
 
 const isLastCrumb = (index: number) => {

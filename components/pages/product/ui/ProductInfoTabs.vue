@@ -7,13 +7,13 @@ import { DiagramConfig } from '@/components/widgets/diagram'
 type Props = {
   tabs?: {
     id: number
-    label: string
-    description: string
+    label: string | null
+    description: string | null
   }[]
   technicalData?: {
     id: number
-    label: string
-    value: string
+    label: string | null
+    value: string | null
   }[]
   scheme?: number
 }

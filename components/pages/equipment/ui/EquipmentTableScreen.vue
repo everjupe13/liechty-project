@@ -15,7 +15,7 @@ const { models } = useModels()
   <section class="pb-[140px] pt-[120px] xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
-        <h2 class="section-title">Models</h2>
+        <h2 class="section-title">{{ $t('equipment.models.title') }}</h2>
       </div>
 
       <div class="mb-80 grid grid-cols-2 gap-20 lg:grid-cols-1 md:mb-40">
@@ -26,9 +26,11 @@ const { models } = useModels()
             model?.images.find(image => image.is_main)?.image ||
             model?.images[0]?.image
           "
-          :name="model?.name"
+          :name="isEN ? model?.name : model?.name_alt"
           :slug="model?.slug"
-          :description="model?.short_description"
+          :description="
+            isEN ? model?.short_description : model?.short_description_alt
+          "
         />
       </div>
 

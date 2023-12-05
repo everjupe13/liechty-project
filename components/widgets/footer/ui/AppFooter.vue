@@ -18,13 +18,13 @@ import { NavMenu } from '@/components/shared/nav-menu'
       <div class="container">
         <div class="flex items-center justify-between md:flex-col md:gap-y-5">
           <p class="leading-none text-dark/60 text-14">
-            © Liechty 2023. All rights reserved
+            {{ $t('footer.copyright') }}
           </p>
           <NuxtLink
             href="/privacy-policy"
             class="leading-none text-dark/60 text-14"
           >
-            Privacy policy
+            {{ $t('footer.privacyPolicy') }}
           </NuxtLink>
         </div>
       </div>

@@ -18,7 +18,7 @@ useHead({
   <div>
     <div class="container">
       <BreadCrumbs
-        :crumbs="[{ label: 'How it works' }]"
+        :crumbs="[{ label: $t('header.nav.howWorks') }]"
         class="mb-30 mt-30 md:mb-15"
       />
     </div>

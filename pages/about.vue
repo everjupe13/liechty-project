@@ -17,11 +17,14 @@ useHead({
 <template>
   <div>
     <div class="container">
-      <BreadCrumbs :crumbs="[{ label: 'About Us' }]" class="mb-60 mt-30" />
+      <BreadCrumbs
+        :crumbs="[{ label: $t('header.nav.about') }]"
+        class="mb-60 mt-30"
+      />
     </div>
     <AboutTopBannerScreen />
     <AboutInfoScreen class="border-b border-dark/20" />
-    <AboutEmployeesScreen class="border-b border-dark/20" />
+    <AboutEmployeesScreen />
     <AboutFeedbackScreen />
   </div>
 </template>

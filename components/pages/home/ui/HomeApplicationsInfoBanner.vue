@@ -16,7 +16,7 @@ import { AppButton } from '@/components/shared/button'
         </p>
       </div>
       <AppButton outlined @click="$router.push('/equipment')">
-        Explore
+        {{ $t('home.applications.banner.button') }}
       </AppButton>
     </div>
     <div

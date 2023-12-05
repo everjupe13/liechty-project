@@ -13,7 +13,7 @@ useHead({
   <div>
     <div class="container">
       <BreadCrumbs
-        :crumbs="[{ label: 'Privacy Policy' }]"
+        :crumbs="[{ label: $t('footer.privacyPolicy') }]"
         class="mb-30 mt-30 md:mb-15"
       />
     </div>

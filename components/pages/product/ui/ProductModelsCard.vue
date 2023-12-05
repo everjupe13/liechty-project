@@ -3,6 +3,7 @@ import type { Swiper as ISwiper } from 'swiper'
 import { FreeMode, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { provide, type Ref, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const modules = [FreeMode, Pagination]
 
@@ -29,16 +30,22 @@ const swiperActiveIndex = ref(0)
 type Props = {
   image?: string
   name?: string
+  name_alt?: string | null
   vendor_code?: string
   description?: string
+  description_alt?: string
   features?: {
     id: number
     label: string
+    label_alt: string | null
     value: string
+    value_alt: string | null
     product: number
   }[]
 }
 const props = defineProps<Props>()
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 </script>
 
 <template>
@@ -63,14 +70,17 @@ const props = defineProps<Props>()
     <div>
       <div class="mb-20">
         <h2 class="mb-10 font-bold leading-tight text-18">
-          {{ props.name }}
+          {{ isEN ? props.name : props.name_alt }}
         </h2>
         <p class="font-medium leading-none text-blue text-12">
           {{ props.vendor_code }}
         </p>
       </div>
       <div class="mb-20">
-        <p class="leading-snug text-14" v-html="props.description"></p>
+        <p
+          class="leading-snug text-14"
+          v-html="isEN ? props.description : props.description_alt"
+        ></p>
       </div>
       <div>
         <ul class="flex flex-col overflow-hidden rounded-[8px]">
@@ -79,8 +89,8 @@ const props = defineProps<Props>()
             :key="feature.id"
             class="min-h-22 flex items-center justify-between bg-gray px-12 py-5 leading-none text-12 odd:bg-white"
           >
-            <p>{{ feature.label }}</p>
-            <p>{{ feature.value }}</p>
+            <p>{{ isEN ? feature.label : feature.label_alt }}</p>
+            <p>{{ isEN ? feature.value : feature.value_alt }}</p>
           </li>
         </ul>
       </div>

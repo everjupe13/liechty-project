@@ -4,6 +4,7 @@ import type { Swiper as ISwiper } from 'swiper'
 import { FreeMode } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { computed, provide, type Ref, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { useWidthBreakpoints } from '@/composables/useWidthBreakpoints'
 
@@ -61,6 +62,9 @@ const computeModels = (products: CategoryType['products']) => {
 
   return newProducts
 }
+
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 </script>
 
 <template>
@@ -79,7 +83,9 @@ const computeModels = (products: CategoryType['products']) => {
       <div
         class="mb-40 flex items-center justify-between md:flex-col md:gap-y-20"
       >
-        <h2 class="section-title">{{ props.category.name }}</h2>
+        <h2 class="section-title">
+          {{ isEN ? props.category.name : props.category.name_alt }}
+        </h2>
         <template v-if="!swiperRef?.isLocked || true">
           <ProductModelsSwiperControls />
         </template>

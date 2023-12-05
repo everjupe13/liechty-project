@@ -73,6 +73,6 @@ const handleSubmitForm = () => {
       :placeholder="$t('feedbackForm.placeholder.email')"
     />
 
-    <AppButton theme="blue" outlined>Send message</AppButton>
+    <AppButton theme="blue" outlined>{{ $t('feedbackForm.button') }}</AppButton>
   </form>
 </template>

@@ -32,7 +32,7 @@ import { AppButton } from '@/components/shared/button'
               class="bg-gray"
               @click="$router.push('/system')"
             >
-              See How it Works
+              {{ $t('home.button') }}
             </AppButton>
           </div>
 

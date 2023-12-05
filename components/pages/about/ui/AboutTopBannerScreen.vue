@@ -15,14 +15,16 @@ import { AppLogo } from '@/components/shared/logo'
             {{ $t('about.tagline') }}
           </h1>
           <AppButton outlined @click="$router.push('/equipment')">
-            Discover
+            {{ $t('about.button') }}
           </AppButton>
         </div>
       </div>
       <div
         class="grid grid-cols-4 gap-x-30 pb-60 lg:grid-cols-2 lg:gap-30 md:grid-cols-1 md:pb-40"
       >
-        <div><h2 class="section-title">Our Brand</h2></div>
+        <div>
+          <h2 class="section-title">{{ $t('about.brand.title') }}</h2>
+        </div>
         <div class="col-span-3">
           <div>
             <p

@@ -51,7 +51,9 @@ const LiechtensteinEmployeesData = [
 </script>
 
 <template>
-  <section class="pb-[80px] pt-[140px] xl:py-80 lg:py-60 md:py-40">
+  <section
+    class="pb-40 pt-[140px] xl:py-80 xl:pb-30 lg:py-60 lg:pb-20 md:py-40"
+  >
     <div class="container">
       <div class="mb-40 md:mb-30">
         <h2 class="section-title text-blue">Board of directors</h2>
@@ -67,7 +69,7 @@ const LiechtensteinEmployeesData = [
       </div>
     </div>
   </section>
-  <section class="pb-[80px] pt-[140px] xl:py-80 lg:py-60 md:py-40">
+  <section class="pb-[80px] pt-40 xl:py-80 xl:pt-30 lg:py-60 lg:pt-20 md:py-40">
     <div class="container">
       <div class="mb-40 md:mb-30">
         <h2 class="section-title text-blue">Liechtenstein branch</h2>

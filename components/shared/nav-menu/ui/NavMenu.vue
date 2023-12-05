@@ -1,38 +1,41 @@
 <script lang="ts" setup>
 import { PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import type { NavMenuItemType } from './NavMenuItem.types'
 import NavMenuItem from './NavMenuItem.vue'
 
-const DEFAULT_LINKS = [
+const { t } = useI18n({ useScope: 'global' })
+
+const DEFAULT_LINKS = computed(() => [
   {
     toLink: '/',
-    label: 'Main'
+    label: t('header.nav.main')
   },
   {
     toLink: '/about',
-    label: 'About'
+    label: t('header.nav.about')
   },
   {
     toLink: '/equipment',
-    label: 'Equipment'
+    label: t('header.nav.equipment')
   },
   {
     toLink: '/system',
-    label: 'How it works'
+    label: t('header.nav.howWorks')
   },
   {
     toLink: '/contacts',
-    label: 'Contacts'
+    label: t('header.nav.contacts')
   }
-]
+])
 
 const props = defineProps({
   links: { type: Array as PropType<NavMenuItemType[]>, default: () => [] }
 })
 
 const computedLinks = computed(() =>
-  props.links.length > 0 ? props.links : DEFAULT_LINKS
+  props.links.length > 0 ? props.links : DEFAULT_LINKS.value
 )
 </script>
 

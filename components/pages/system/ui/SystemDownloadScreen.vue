@@ -67,7 +67,7 @@ import { DownloadCard } from '@/components/features/download-card'
           filled-card
           title="Booklet"
           excerpt="Dignissim aliquet ne."
-          description="To request all other documentation about our products, please contact us using the contact details or leave a request in the form below."
+          :description="$t('downloads.promt.body')"
           file-size="162 KB"
         />
       </div>

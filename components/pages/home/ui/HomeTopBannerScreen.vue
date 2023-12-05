@@ -30,7 +30,7 @@ const isDE = computed(() => locale.value === 'de')
           v-html="$t('home.subtitle')"
         ></p>
         <AppButton outlined class="bg-gray" @click="$router.push('/system')">
-          See How it Works
+          {{ $t('home.button') }}
         </AppButton>
       </div>
 

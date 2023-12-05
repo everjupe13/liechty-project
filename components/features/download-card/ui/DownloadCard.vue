@@ -84,7 +84,9 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
         src="@/assets/img/icons/home/downloads-card-bg-pattern.svg"
       />
       <div class="z-2 relative">
-        <p class="mb-15 text-20 lg:text-18">Download the files</p>
+        <p class="mb-15 text-20 lg:text-18">
+          {{ $t('downloads.promt.title') }}
+        </p>
         <div class="max-w-[300px]">
           <p class="text-16 md:text-14">{{ props.description }}</p>
         </div>

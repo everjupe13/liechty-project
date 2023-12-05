@@ -4,9 +4,9 @@ import { ChevronRightArrowIcon } from '@/components/shared/icons'
 
 type Props = {
   image?: string
-  name?: string
+  name?: string | null
   slug?: string
-  description?: string
+  description?: string | null
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -44,7 +44,7 @@ const handleClick = () => {
         </div>
         <div>
           <AppButton outlined class="gap-x-4" @click="handleClick">
-            <span>Discover</span>
+            <span>{{ $t('home.applications.banner.button') }}</span>
             <ChevronRightArrowIcon />
           </AppButton>
         </div>

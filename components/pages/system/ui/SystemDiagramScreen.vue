@@ -34,7 +34,7 @@ const handleDiagramTypeChange = (id: DigramTogglerItem['id']) => {
         <div
           class="flex items-center justify-between md:flex-col md:items-start md:gap-y-30"
         >
-          <h2 class="section-title">Structural diagram</h2>
+          <h2 class="section-title">{{ $t('system.diagram.title') }}</h2>
           <div class="flex items-center gap-x-20">
             <button
               v-for="toggler in DiagramToggler"

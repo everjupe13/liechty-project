@@ -1,16 +1,21 @@
 <script lang="ts" setup>
+// import { formatToCost } from '@/utils/cost'
+import { useI18n } from 'vue-i18n'
+
 import { ModelType } from '@/api/models/types'
 import { AppButton } from '@/components/shared/button'
 import { usePurchaseDetailsModal } from '@/components/widgets/dialog'
 
 import ProductGalleryView from './ProductGalleryView.vue'
 import ProductInfoTabs from './ProductInfoTabs.vue'
-// import { formatToCost } from '@/utils/cost'
 
 type Props = {
   data: ModelType | null
 }
 const props = defineProps<Props>()
+
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 
 const { open: openFeedbackModal } = usePurchaseDetailsModal()
 </script>
@@ -37,7 +42,7 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
                 }"
               >
                 <template v-if="props.data">
-                  {{ props.data.name }}
+                  {{ isEN ? props.data.name : props.data.name_alt }}
                 </template>
               </h2>
               <div class="mb-20 flex items-center gap-x-15">
@@ -46,7 +51,11 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
                   :class="{ 'h-26 animate-pulse bg-gray-light': !props.data }"
                 >
                   <template v-if="props.data">
-                    {{ `$ ${props.data.price}` }}
+                    {{
+                      `$ ${
+                        isEN ? props.data.price : props.data.price_alt || ''
+                      }`
+                    }}
                   </template>
                 </p>
                 <template v-if="props.data">
@@ -69,7 +78,9 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
               <div
                 v-if="props.data"
                 class="prosed leading-normal text-16 md:text-14"
-                v-html="props.data.description"
+                v-html="
+                  isEN ? props.data.description : props.data.description_alt
+                "
               ></div>
             </div>
           </div>
@@ -84,11 +95,17 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
             :tabs="
               props.data.tabs.map(tab => ({
                 id: tab.id,
-                label: tab.label,
-                description: tab.text
+                label: isEN ? tab.label : tab.label_alt,
+                description: isEN ? tab.text : tab.text_alt
               }))
             "
-            :technical-data="props.data.technical_data"
+            :technical-data="
+              props.data.technical_data.map(data => ({
+                id: data.id,
+                label: isEN ? data.label : data.label_alt,
+                value: isEN ? data.value : data.value_alt
+              }))
+            "
             :scheme="props.data.scheme"
           />
         </template>

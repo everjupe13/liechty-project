@@ -45,17 +45,17 @@
       "title": "In numbers",
       "content": [
         {
-          "title": ">15<span class=\"text-34 md:text-20\">years</span>",
+          "title": ">15<span class=\"about-list-subtitles\">years</span>",
           "subtitle": "of experience in air humidification",
           "desc": "We have gathered all of our experience to be applied in the development of our humidification systems."
         },
         {
-          "title": "2<span class=\"text-34 md:text-20\">continents</span>",
+          "title": "2<span class=\"about-list-subtitles\">continents</span>",
           "subtitle": "of presence",
           "desc": "We have opened two head offices in Europe and Canada, where air humidification indoors is a real issue."
         },
         {
-          "title": ">20<span class=\"text-34 md:text-20\">partners</span>",
+          "title": ">20<span class=\"about-list-subtitles\">partners</span>",
           "subtitle": "all over the world",
           "desc": "We are focused on expanding our network of partners & support all around the world."
         }

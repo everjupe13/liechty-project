@@ -17,3 +17,7 @@
     @apply text-yellow underline decoration-yellow decoration-solid decoration-from-font  underline-offset-2 transition-all hover:underline-offset-4;
   }
 }
+
+.about-list-subtitles {
+  @apply text-34 md:text-20
+}

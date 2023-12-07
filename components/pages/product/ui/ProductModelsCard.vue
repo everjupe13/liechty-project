@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import { provide, type Ref, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import { ProductType } from '@/api/categories/types'
+
 const modules = [FreeMode, Pagination]
 
 const isSwiperEnd = ref(false)
@@ -27,22 +29,8 @@ const onSwiper = (swiper: typeof ISwiper) => {
 const swiperRef: Ref<typeof ISwiper | null> = ref(null)
 const swiperActiveIndex = ref(0)
 
-type Props = {
-  image?: string
-  name?: string
-  name_alt?: string | null
-  vendor_code?: string
-  description?: string
-  description_alt?: string
-  features?: {
-    id: number
-    label: string
-    label_alt: string | null
-    value: string
-    value_alt: string | null
-    product: number
-  }[]
-}
+type Props = Partial<ProductType>
+
 const props = defineProps<Props>()
 const { locale } = useI18n({ useScope: 'global' })
 const isEN = computed(() => locale.value === 'en')
@@ -50,19 +38,24 @@ const isEN = computed(() => locale.value === 'en')
 
 <template>
   <article class="flex gap-20 bg-gray p-30 lg:flex-col lg:p-20">
-    <div class="aspect-square w-[280px] flex-shrink-0 lg:w-full">
+    <div class="aspect-square w-[280px] flex-shrink-0 xl:w-[200px] lg:w-full">
       <Swiper
         :space-between="24"
         :modules="modules"
         :slides-per-view="1"
         :slides-per-group="1"
         :pagination="true"
+        class="h-full w-full"
         @swiper="onSwiper"
         @slide-change="onSlideChange"
       >
-        <SwiperSlide v-for="(imageUrl, index) in [props.image]" :key="index">
+        <SwiperSlide
+          v-for="(imageUrl, index) in [props?.image]"
+          :key="index"
+          class="!h-full !w-full"
+        >
           <div class="h-full w-full">
-            <img :src="imageUrl" />
+            <img :src="imageUrl" class="block h-auto w-full" />
           </div>
         </SwiperSlide>
       </Swiper>

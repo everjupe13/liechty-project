@@ -10,16 +10,23 @@ import { FaqItemType } from '../model/types'
 const { locale } = useI18n({ useScope: 'global' })
 const isEN = computed(() => locale.value === 'en')
 
+const rerenderComponentFlag = ref(true)
+watch(locale, async () => {
+  rerenderComponentFlag.value = false
+  await nextTick()
+  rerenderComponentFlag.value = true
+})
+
 const { faq } = useFaq()
-const mappedFaq = computed(() =>
-  faq.value && faq.value.length > 0
+const mappedFaq = computed(() => {
+  return faq.value && faq.value.length > 0
     ? faq.value.map((faqItem: FaqItemType) => ({
         opened: false,
         label: isEN.value ? faqItem.title : faqItem.title_alt || '',
         body: isEN.value ? faqItem.description : faqItem.description_alt || ''
       }))
     : []
-)
+})
 </script>
 
 <template>
@@ -29,7 +36,10 @@ const mappedFaq = computed(() =>
         <h2 class="section-title">FAQ</h2>
       </div>
       <div v-if="faq && faq.length > 0">
-        <DropdownLinkedList :dropdown-data="mappedFaq" />
+        <DropdownLinkedList
+          v-if="rerenderComponentFlag"
+          :dropdown-data="mappedFaq"
+        />
       </div>
     </div>
   </section>

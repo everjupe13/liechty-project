@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { getCurrentInstance, watch } from 'vue'
 
 import AppCollapsable from './AppCollapsable.vue'
 
@@ -11,16 +11,22 @@ interface IAppDropdown {
   }[]
 }
 const props = defineProps<IAppDropdown>()
+const instance = getCurrentInstance()
 
-const dropdownData = reactive(props.dropdownData)
+const dropdownData = ref(props.dropdownData)
+watch(
+  () => props.dropdownData,
+  () => {
+    dropdownData.value = props.dropdownData
+    instance?.proxy?.$forceUpdate?.()
+  }
+)
+
 const handleDropdownItemClick = (index: number) => {
-  dropdownData.forEach((state, idx) => {
-    state.opened = !state.opened
-
-    if (idx !== index && state.opened) {
-      state.opened = false
-    }
-  })
+  dropdownData.value = dropdownData.value.map((state, idx) => ({
+    ...state,
+    opened: idx === index ? !state.opened : false
+  }))
 }
 </script>
 

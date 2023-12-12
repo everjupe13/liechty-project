@@ -5,6 +5,7 @@ import {
   EquipmentAboutScreen,
   EquipmentFeaturesScreen,
   EquipmentFeedbackScreen,
+  EquipmentProductsScreen,
   EquipmentTableScreen,
   EquipmentTopBannerScreen
 } from '@/components/pages/equipment'
@@ -28,6 +29,7 @@ useHead({
     <EquipmentAboutScreen class="border-b border-dark/20" />
     <EquipmentFeaturesScreen class="border-b border-dark/20" />
     <EquipmentTableScreen class="border-b border-dark/20" />
+    <EquipmentProductsScreen />
     <EquipmentFeedbackScreen />
   </div>
 </template>

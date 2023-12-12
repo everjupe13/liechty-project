@@ -46,27 +46,27 @@ import { DownloadCard } from '@/components/features/download-card'
   <section class="bg-[#F8F9FC] pb-[140px] pt-70 xl:py-80 lg:py-60 md:py-40">
     <div class="container">
       <div class="mb-40">
-        <h2 class="section-title">Downloads</h2>
+        <h2 class="section-title">{{ $t('downloads.title') }}</h2>
       </div>
       <div class="grid grid-cols-3 gap-x-20 md:grid-cols-1 md:gap-10">
         <DownloadCard
           design-type="white"
-          title="Main catalogue"
-          excerpt="Here you may find all technical information & description for Liechty products."
-          description="Here you may find all technical information & description for Liechty products."
+          :title="$t('downloads.content[0].title')"
+          :excerpt="$t('downloads.content[0].description')"
+          :description="$t('downloads.content[0].description')"
           file-size="162 KB"
         />
         <DownloadCard
           design-type="white"
-          title="Booklet"
-          excerpt="Our booklet for an overview of Liechty developments."
-          description="Our booklet for an overview of Liechty developments."
+          :title="$t('downloads.content[1].title')"
+          :excerpt="$t('downloads.content[1].description')"
+          :description="$t('downloads.content[1].description')"
           file-size="162 KB"
         />
         <DownloadCard
           filled-card
-          title="Booklet"
-          excerpt="Dignissim aliquet ne."
+          :title="$t('downloads.promt.title')"
+          :excerpt="$t('downloads.promt.body')"
           :description="$t('downloads.promt.body')"
           file-size="162 KB"
         />

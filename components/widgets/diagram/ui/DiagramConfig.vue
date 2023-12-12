@@ -35,7 +35,7 @@ const currentTabId = ref(usedDiagramData.value[0]?.id || -1)
 const currentTab = computed(
   () =>
     usedDiagramData.value.find(data => data.id === currentTabId.value) || {
-      title: '',
+      title: '<p></p>',
       description: {
         en: '<p></p>',
         de: '<p></p>'
@@ -54,7 +54,12 @@ const handleTabChange = (id: number) => {
   >
     <div class="lg:row-start-2 lg:row-end-3 lg:-mx-16">
       <DiagramControls
-        :items="usedDiagramData.map(data => ({ name: data.name, id: data.id }))"
+        :items="
+          usedDiagramData.map(data => ({
+            name: data.name[locale as 'en' | 'de'],
+            id: data.id
+          }))
+        "
         :active-id="currentTabId"
         @change="handleTabChange"
       />

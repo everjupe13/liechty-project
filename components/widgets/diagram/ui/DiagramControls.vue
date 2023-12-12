@@ -40,7 +40,7 @@ const handleTabClick = (id: number) => {
           >
             {{ idx + 1 }}
           </span>
-          <span class="flex select-none items-center leading-none text-14">
+          <span class="flex select-none items-center leading-tight text-14">
             {{ tab.name }}
           </span>
         </li>

@@ -15,18 +15,52 @@
     },
     "applications": {
       "title": "Applications",
+      "content": {
+        "houses": {
+          "title": "Houses",
+          "description": "Our systems are designed to keep relative humidity in the optimum range at your house to protect and prolong the lifetime of surfaces and furniture made of wood."
+        },
+        "apartments": {
+          "title": "Apartments",
+          "description": "Liechty systems help to create an optimum microclimate in your apartment, take care of your skin and mucous membranes, and support your immune system."
+        },
+        "offices": {
+          "title": "Offices",
+          "description": "Protect and prolong the lifetime of computers, laptops, printers, server room equipment, and reduce the risk of respiratory diseases among staff."
+        },
+        "industry": {
+          "title": "Industry",
+          "description": "Increase the quality and lifetime of raw materials and finished products, and improve the manufacturing process generally."
+        }
+      },
       "banner": {
         "subtitle": "Liechty humidification systems combine the latest innovations in atomized humidification with a conscious focus on superior hygiene and user safety.",
         "button": "Explore"
       }
     },
     "howWorks": {
+      "title": "How it works",
       "content": [
-        "Inlet water goes through multi-stage filtration, including a double-stage RO system and volumetric UV sterilization. We eliminate 99.9% of hardness salts.",
-        "Our equipment is specifically designed for use in residential premises, which is why our pumps and valves operate silently. Furthermore, our modules can be easily maintained on-site.",
-        "Our hoses have an inner layer made of PTFE with stainless steel braiding. Our hoseline is specifically designed to meet high hygiene and safety standards.",
-        "Miniature nozzles are typically installed in vent diffusers, walls, or ceilings, where they spray purified water directly into the premises.",
-        "The system is controlled by highly precise hygrostats that measure and monitor RH levels in the premises, ensuring it remains at the set humidity level."
+        {
+          "title": "Total purification",
+          "description": "Inlet water goes through multi-stage filtration, including a double-stage RO system and volumetric UV sterilization. We eliminate 99.9% of hardness salts."
+        },
+        {
+          "title": "Central equipment",
+          "description": "Our equipment is specifically designed for use in residential premises, which is why our pumps and valves operate silently. Furthermore, our modules can be easily maintained on-site."
+        },
+        {
+          "title": "HD-Schlauchleitung",
+          "description": "Our hoses have an inner layer made of PTFE with stainless steel braiding. Our hoseline is specifically designed to meet high hygiene and safety standards."
+        },
+        {
+          "title": "Nozzles",
+          "description": "Miniature nozzles are typically installed in vent diffusers, walls, or ceilings, where they spray purified water directly into the premises."
+        },
+        {
+          "title": "Hygrostats",
+          "description": "The system is controlled by highly precise hygrostats that measure and monitor RH levels in the premises, ensuring it remains at the set humidity level."
+        }
       ]
     }
   },
@@ -92,6 +126,17 @@
     }
   },
   "downloads": {
+    "title": "Downloads",
+    "content": [
+      {
+        "title": "Main catalogue",
+        "description": "Here you may find all technical information & description for Liechty products."
+      },
+      {
+        "title": "Booklet",
+        "description": "Our booklet for an overview of Liechty developments."
+      }
+    ],
     "promt": {
       "title": "Download the files",
       "body": "To request all other documentation about our products, please contact us using the contact details or leave a request in the form below."

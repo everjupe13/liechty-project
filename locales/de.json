@@ -15,18 +15,52 @@
     },
     "applications": {
       "title": "Einsatzbereiche",
+      "content": {
+        "houses": {
+          "title": "Häuser",
+          "description": "Unsere Systeme sind darauf ausgelegt, die relative Luftfeuchtigkeit in Ihrem Haus im optimalen Bereich zu halten, um Oberflächen und Möbel aus Holz zu schützen und ihre Lebensdauer zu verlängern."
+        },
+        "apartments": {
+          "title": "Wohnungen",
+          "description": "Liechty-Systeme helfen, ein optimales Mikroklima in Ihrer Wohnung zu schaffen, pflegen Ihre Haut und Schleimhäute und unterstützen Ihr Immunsystem."
+        },
+        "offices": {
+          "title": "Büros",
+          "description": "Schutz und Verlängerung der Lebensdauer von Computern, Laptops, Druckern und Serverraumgeräten sowie Verringerung des Risikos von Atemwegserkrankungen beim Personal."
+        },
+        "industry": {
+          "title": "Industrie",
+          "description": "Erhöhung der Qualität und Lebensdauer von Rohstoffen und Fertigerzeugnissen sowie Verbesserung des Herstellungsprozesses im Allgemeinen."
+        }
+      },
       "banner": {
         "subtitle": "Die Luftbefeuchtungssysteme von Liechty vereinen die neuesten Innovationen im Bereich der zerstäubten Luftbefeuchtung mit einem bewussten Schwerpunkt auf höchste Hygiene und Anwendersicherheit.",
         "button": "Erkunden"
       }
     },
     "howWorks": {
+      "title": "Wie es funktioniert",
       "content": [
-        "Das Zulaufwasser durchläuft eine mehrstufige Filtration, einschließlich eines zweistufigen RO-Systems und einer volumetrischen UV-Sterilisation. Wir eliminieren 99,9% der Härtesalze.",
-        "Unsere Geräte sind speziell für den Einsatz in Wohngebäuden konzipiert, weshalb unsere Pumpen und Ventile geräuschlos arbeiten. Außerdem können unsere Module leicht vor Ort instand gehalten werden.",
-        "Unsere Schläuche haben eine Innenschicht aus PTFE mit einer Umflechtung aus Edelstahl. Unsere Schlauchleitung ist speziell so konzipiert, dass sie hohe Hygiene- und Sicherheitsstandards erfüllt.",
-        "Miniaturdüsen werden in der Regel in Luftverteilern, Wänden oder Decken installiert, wo sie gereinigtes Wasser direkt in die Räumlichkeiten sprühen.",
-        "Das System wird von hochpräzisen Hygrostaten gesteuert, die das Luftfeuchtigkeitsniveau in den Räumlichkeiten messen und überwachen, um sicherzustellen, dass es dem eingestellten Niveau entspricht."
+        {
+          "title": "Totale Reinigung",
+          "description": "Das Zulaufwasser durchläuft eine mehrstufige Filtration, einschließlich eines zweistufigen RO-Systems und einer volumetrischen UV-Sterilisation. Wir eliminieren 99,9% der Härtesalze."
+        },
+        {
+          "title": "Zentrale Ausrüstung",
+          "description": "Unsere Geräte sind speziell für den Einsatz in Wohngebäuden konzipiert, weshalb unsere Pumpen und Ventile geräuschlos arbeiten. Außerdem können unsere Module leicht vor Ort instand gehalten werden."
+        },
+        {
+          "title": "HD-Schlauchleitung",
+          "description": "Unsere Schläuche haben eine Innenschicht aus PTFE mit einer Umflechtung aus Edelstahl. Unsere Schlauchleitung ist speziell so konzipiert, dass sie hohe Hygiene- und Sicherheitsstandards erfüllt."
+        },
+        {
+          "title": "Düsen",
+          "description": "Miniaturdüsen werden in der Regel in Luftverteilern, Wänden oder Decken installiert, wo sie gereinigtes Wasser direkt in die Räumlichkeiten sprühen."
+        },
+        {
+          "title": "Hygrostaten",
+          "description": "Das System wird von hochpräzisen Hygrostaten gesteuert, die das Luftfeuchtigkeitsniveau in den Räumlichkeiten messen und überwachen, um sicherzustellen, dass es dem eingestellten Niveau entspricht."
+        }        
       ]
     }
   },
@@ -92,6 +126,17 @@
     }
   },
   "downloads": {
+    "title": "Herunterladen",
+    "content": [
+      {
+        "title": "Hauptkatalog",
+        "description": "Hier finden Sie alle technischen Informationen und Beschreibungen für Liechty-Produkte."
+      },
+      {
+        "title": "Broschüre",
+        "description": "Unsere Broschüre gibt Ihnen einen Überblick über die Entwicklungen in Liechty."
+      }
+    ],
     "promt": {
       "title": "Herunterladen der Dateien",
       "body": "Um weitere Unterlagen über unsere Produkte anzufordern, bitte kontaktieren Sie uns oder senden Sie uns eine Anfrage über das unten stehende Formular."

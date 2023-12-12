@@ -1,37 +1,37 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 import HomeApplicationsInfoBanner from './HomeApplicationsInfoBanner.vue'
 import HomeApplicationsInfoCard from './HomeApplicationsInfoCard.vue'
 
-const ApplicationCards = [
+const { t } = useI18n({ useScope: 'global' })
+
+const ApplicationCards = computed(() => [
   {
     id: 0,
-    title: 'Houses',
-    description:
-      'Our systems are designed to keep relative humidity in the optimum range at your house to protect and prolong the lifetime of surfaces and furniture made of wood.',
+    title: t('home.applications.content.houses.title'),
+    description: t('home.applications.content.houses.description'),
     image: '/images/home/applications/1.jpg'
   },
   {
     id: 1,
-    title: 'Apartments',
-    description:
-      'Liechty systems help to create an optimum microclimate in your apartment, take care of your skin and mucous membranes, and support your immune system.',
+    title: t('home.applications.content.apartments.title'),
+    description: t('home.applications.content.apartments.description'),
     image: '/images/home/applications/2.jpg'
   },
   {
     id: 2,
-    title: 'Offices',
-    description:
-      'Protect and prolong the lifetime of computers, laptops, printers, server room equipment, and reduce the risk of respiratory diseases among staff.',
+    title: t('home.applications.content.offices.title'),
+    description: t('home.applications.content.offices.description'),
     image: '/images/home/applications/3.jpg'
   },
   {
     id: 3,
-    title: 'Industry',
-    description:
-      'Increase the quality and lifetime of raw materials and finished products, and improve the manufacturing process generally.',
+    title: t('home.applications.content.industry.title'),
+    description: t('home.applications.content.industry.description'),
     image: '/images/home/applications/4.jpg'
   }
-]
+])
 </script>
 
 <template>

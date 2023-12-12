@@ -4,10 +4,10 @@ import { useHttpRequest } from '@/api/shared/http'
 export const useCategories = () => {
   const categories = ref<CategoryType[]>([])
 
-  const fetchCategories = () => {
+  const fetchCategories = async () => {
     try {
       const { data, error } =
-        useHttpRequest<CategoryType[]>(`/api/data/categories`)
+        await useHttpRequest<CategoryType[]>(`/api/data/categories`)
 
       if (!error.value) {
         categories.value = data.value || []

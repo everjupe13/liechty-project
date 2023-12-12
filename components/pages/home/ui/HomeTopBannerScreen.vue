@@ -17,8 +17,10 @@ const isDE = computed(() => locale.value === 'de')
       >
         <h1
           :class="[
-            'font-bold leading-none text-96 xl:text-82 lg:text-60 md:text-40',
-            { 'break-all': isDE }
+            'font-bold leading-none',
+            isDE
+              ? 'h-[calc(96px*2)] break-all text-64 xl:h-[calc(82px*2)] xl:text-58 lg:h-[calc(60px*2)] lg:text-52 md:h-[calc(40px*2)] md:text-28'
+              : 'text-96 xl:text-82 lg:text-60 md:text-40'
           ]"
           v-html="$t('home.title')"
         ></h1>

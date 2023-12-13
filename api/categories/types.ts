@@ -22,6 +22,7 @@ export type ProductType = {
 export type CategoryType = {
   id: number
   products: ProductType[]
+  show_at_equipment: boolean
   name: string
   name_alt: string | null
   slug: string

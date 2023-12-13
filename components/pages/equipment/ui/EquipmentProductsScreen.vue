@@ -11,6 +11,10 @@ const isVisible = computed(
     categories.value &&
     categories.value.some(category => category.products?.length > 0)
 )
+
+const visibleCategories = computed(() =>
+  categories.value.filter(category => category.show_at_equipment)
+)
 </script>
 
 <template>
@@ -20,7 +24,7 @@ const isVisible = computed(
   >
     <div class="container">
       <div
-        v-for="category in categories"
+        v-for="category in visibleCategories"
         :key="category.id"
         class="mb-60 last:mb-0"
       >

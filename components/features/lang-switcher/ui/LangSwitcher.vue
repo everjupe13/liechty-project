@@ -1,60 +1,7 @@
 <script lang="ts" setup>
-import { onMounted, type Ref, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { Languages, useLanguage } from '@/composables/useLanguage'
 
-type LanguageState = 'en' | 'de' | null
-
-const LOCAL_STORAGE_LANG_KEY = 'selected-language'
-const i18n = useI18n({ useScope: 'global' })
-
-const Languages = [
-  {
-    id: 0,
-    title: 'en',
-    value: 'en'
-  },
-  {
-    id: 1,
-    title: 'de',
-    value: 'de'
-  }
-]
-
-const savedLanguage: Ref<LanguageState | null> = ref(null)
-const activeLanguageId = ref(Languages[0].id)
-
-const handleActiveLanguage = (id: number) => {
-  const clickedLanguage = Languages.find(lang => lang.id === id)
-
-  if (
-    window &&
-    window instanceof Object &&
-    activeLanguageId.value !== clickedLanguage?.id &&
-    clickedLanguage
-  ) {
-    localStorage.setItem(LOCAL_STORAGE_LANG_KEY, clickedLanguage.value)
-    activeLanguageId.value = clickedLanguage.id
-    i18n.locale.value = clickedLanguage.value
-  }
-}
-
-onMounted(() => {
-  if (window && window instanceof Object) {
-    const langFromState: LanguageState | null = localStorage.getItem(
-      LOCAL_STORAGE_LANG_KEY
-    ) as LanguageState | null
-
-    if (langFromState) {
-      savedLanguage.value = langFromState
-
-      activeLanguageId.value =
-        Languages.find(lang => savedLanguage.value === lang.value)?.id ??
-        Languages[0].id
-
-      i18n.locale.value = savedLanguage.value
-    }
-  }
-})
+const { activeLanguageId, handleActiveLanguage } = useLanguage()
 </script>
 
 <template>

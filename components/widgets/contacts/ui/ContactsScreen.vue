@@ -40,7 +40,7 @@ const isEN = computed(() => locale.value === 'en')
             <template #content>
               {{
                 isEN
-                  ? '1260 Clarence Avenue, Winnipeg, Manitoba R3T 1T2'
+                  ? 'Im alten Riet 153, 9494 Schaan, Liechtenstein'
                   : 'Im alten Riet 153, 9494 Schaan, Liechtenstein'
               }}
             </template>

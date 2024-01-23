@@ -46,7 +46,7 @@ const { models } = useModels()
                 {{ isEN ? 'Classic line Series' : 'Classic Line Serien' }}
               </th>
               <th scope="col" class="border-r border-gray px-24 py-18">
-                CL Manitoba 6 / 12 / 18
+                CL Manitoba 6 / 12
               </th>
               <th scope="col" class="px-24 py-18">CL Playgreen 6 / 18</th>
             </tr>
@@ -80,7 +80,7 @@ const { models } = useModels()
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                3.000 / 6.000 / 9.000
+                3.000 / 6.000
               </td>
               <td class="px-24 py-18 text-dark/70">3.000 / 10.000</td>
             </tr>
@@ -114,7 +114,7 @@ const { models } = useModels()
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                6 / 12 / 12
+                6 / 12
               </td>
               <td class="px-24 py-18 text-dark/70">2</td>
             </tr>
@@ -126,7 +126,7 @@ const { models } = useModels()
                 {{ isEN ? 'Capacity, l/h' : 'Kapazität, l/h' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                6 / 12 / 18
+                6 / 12
               </td>
               <td class="px-24 py-18 text-dark/70">6 / 18</td>
             </tr>
@@ -142,7 +142,7 @@ const { models } = useModels()
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                6 / 12 / 18
+                6 / 12
               </td>
               <td class="px-24 py-18 text-dark/70">6 / 18</td>
             </tr>
@@ -168,9 +168,9 @@ const { models } = useModels()
                 {{ isEN ? 'LCD diagonal, inches' : 'LCD-Diagonale, Zoll' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                4,3” / 4,3” / 6,8”
+                4,3”
               </td>
-              <td class="px-24 py-18 text-dark/70">4,3” / 4,3”</td>
+              <td class="px-24 py-18 text-dark/70">4,3”</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -180,10 +180,10 @@ const { models } = useModels()
                 {{ isEN ? 'Housing' : 'Gehäuse' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                {{ isEN ? 'blue metal' : 'Blaumetall' }}
+                {{ isEN ? 'dark indigo (dark violet)' : 'Blaumetall' }}
               </td>
               <td class="px-24 py-18 text-dark/70">
-                {{ isEN ? 'silver metal' : 'Silbermetall' }}
+                {{ isEN ? 'silver' : 'Silbermetall' }}
               </td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -194,7 +194,7 @@ const { models } = useModels()
                 {{ isEN ? 'Power consumption, W' : 'Stromverbrauch, W' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                270 / 330 / 360
+                270 / 330
               </td>
               <td class="px-24 py-18 text-dark/70">240 / 300</td>
             </tr>

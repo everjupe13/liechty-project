@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <article class="flex w-full items-center justify-center">
-    <div class="aspect-[calc(1440/640)] h-full w-full md:aspect-video">
+    <div class="aspect-[calc(1440/780)] h-full w-full md:aspect-video">
       <iframe
         class="block h-full w-full"
         :src="videoSrc"

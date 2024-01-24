@@ -21,14 +21,23 @@ const isEN = computed(() => locale.value === 'en')
         <div class="flex flex-col gap-y-40 md:mb-20 md:gap-y-20">
           <ContactsArticle>
             <template #title>Telephone</template>
-            <template #content>+ 1 204-800-1014</template>
+            <template #content>
+              <a href="tel:+12048001014">+ 1 204-800-1014</a>
+            </template>
           </ContactsArticle>
           <ContactsArticle>
             <template #title>
               {{ isEN ? 'Contact e-mail' : 'Kontakt E-mail:' }}
             </template>
             <template #content>
-              {{ isEN ? 'info@liechty-humidity.com' : 'info@liechty.li' }}
+              <template v-if="isEN">
+                <a href="mailto:info@liechty-humidity.com">
+                  info@liechty-humidity.com
+                </a>
+              </template>
+              <template v-else>
+                <a href="mailto:info@liechty.li">info@liechty.li</a>
+              </template>
             </template>
           </ContactsArticle>
         </div>
@@ -50,7 +59,7 @@ const isEN = computed(() => locale.value === 'en')
               {{ isEN ? 'Work schedule' : 'Öffnungszeit:' }}
             </template>
             <template #content>
-              {{ isEN ? '9am to 5pm' : 'Montag - Freitag 10.00-17.00 Uhr' }}
+              {{ isEN ? '9am to 5pm' : 'Montag - Freitag 9.00-17.00 Uhr' }}
             </template>
           </ContactsArticle>
         </div>

@@ -1,10 +1,15 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+
 const props = defineProps({
   index: { type: [Number, String], default: '' },
   image: { type: String, default: '/images/home/applications/1.jpg' },
   title: { type: String, default: '' },
   description: { type: String, default: '' }
 })
+
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 </script>
 
 <template>
@@ -29,7 +34,7 @@ const props = defineProps({
           {{ props.index }}
         </div>
       </header>
-      <div>
+      <div :class="['card', isEN ? 'en' : 'de']">
         <h3
           class="mb-5 leading-normal transition-all duration-300 text-20 group-hover:text-white"
         >
@@ -44,3 +49,31 @@ const props = defineProps({
     </div>
   </article>
 </template>
+
+<style lang="scss" scoped>
+.card {
+  &.en {
+    height: 155px;
+
+    @media (max-width: 1529px) {
+      height: 179px;
+    }
+
+    @media (max-width: 1199px) {
+      height: auto;
+    }
+  }
+
+  &.de {
+    height: 203px;
+
+    @media (max-width: 1529px) {
+      height: 203px;
+    }
+
+    @media (max-width: 1199px) {
+      height: auto;
+    }
+  }
+}
+</style>

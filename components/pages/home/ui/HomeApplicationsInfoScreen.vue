@@ -41,7 +41,7 @@ const ApplicationCards = computed(() => [
         <h2 class="section-title">{{ $t('home.applications.title') }}</h2>
       </div>
       <div
-        class="mb-[140px] grid grid-cols-4 gap-x-20 lg:grid-cols-2 lg:gap-40 md:gap-20 sm:grid-cols-1"
+        class="mb-[140px] grid grid-cols-4 gap-x-20 xl:gap-x-15 lg:grid-cols-2 lg:gap-40 md:gap-20 sm:grid-cols-1"
       >
         <HomeApplicationsInfoCard
           v-for="(card, index) in ApplicationCards"

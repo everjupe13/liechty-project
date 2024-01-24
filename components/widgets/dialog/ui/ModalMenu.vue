@@ -24,7 +24,7 @@ watch(
   >
     <div class="relative flex h-full flex-col items-center justify-center p-16">
       <button
-        class="absolute right-16 top-4 hidden items-center justify-center p-5 md:flex"
+        class="absolute right-16 top-40 hidden items-center justify-center p-5 md:flex"
       >
         <img
           src="@/assets/img/burger-icon-opened.svg"

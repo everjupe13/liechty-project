@@ -97,8 +97,8 @@ export const DiagramFirstData = [
       de: 'Kabel zum kabelgebundenen Steuerungssystem'
     },
     description: {
-      en: '<p></p>',
-      de: '<p></p>'
+      en: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>',
+      de: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>'
     },
     title: '<h3></h3>',
     image: '/images/system/diagram1-8.png'
@@ -191,8 +191,8 @@ export const DiagramSecondData = [
       de: 'Kabel zum kabelgebundenen Steuerungssystem'
     },
     description: {
-      en: '<p></p>',
-      de: '<p></p>'
+      en: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>',
+      de: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>'
     },
     title: '<h3></h3>',
     image: '/images/system/diagram2-7.png'

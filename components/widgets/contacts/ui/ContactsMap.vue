@@ -2,7 +2,6 @@
   <div
     class="flex aspect-[calc(1360/520)] items-center justify-center md:aspect-[calc(1020/480)]"
   >
-
     <iframe
       class="block h-full w-full grayscale-[0.3]"
       frameborder="0"

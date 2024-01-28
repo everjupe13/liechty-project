@@ -70,7 +70,6 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
                 <template v-if="props.data">
                   <AppButton theme="blue" outlined @click="openFeedbackModal">
                     {{ isEN ? 'Pre-order' : 'Vorbestellung' }}
-
                   </AppButton>
                 </template>
               </div>

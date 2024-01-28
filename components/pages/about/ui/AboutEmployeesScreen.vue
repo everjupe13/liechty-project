@@ -1,6 +1,8 @@
 <script lang="ts" setup>
-import AboutEmployeesCard from './AboutEmployeesCard.vue'
 import { useI18n } from 'vue-i18n'
+
+import AboutEmployeesCard from './AboutEmployeesCard.vue'
+
 const { locale } = useI18n({ useScope: 'global' })
 const isEN = computed(() => locale.value === 'en')
 
@@ -59,7 +61,9 @@ const LiechtensteinEmployeesData = [
   >
     <div class="container">
       <div class="mb-40 md:mb-30">
-        <h2 class="section-title text-blue">{{ isEN ? 'Board of directors' : 'Verwaltungsrat' }}</h2>
+        <h2 class="section-title text-blue">
+          {{ isEN ? 'Board of directors' : 'Verwaltungsrat' }}
+        </h2>
       </div>
       <div class="grid grid-cols-4 gap-20 md:grid-cols-1 md:gap-40">
         <AboutEmployeesCard
@@ -75,7 +79,9 @@ const LiechtensteinEmployeesData = [
   <section class="pb-[80px] pt-40 xl:py-80 xl:pt-30 lg:py-60 lg:pt-20 md:py-40">
     <div class="container">
       <div class="mb-40 md:mb-30">
-        <h2 class="section-title text-blue">{{ isEN ? 'Liechtenstein branch' : 'R&D Büro' }}</h2>
+        <h2 class="section-title text-blue">
+          {{ isEN ? 'Liechtenstein branch' : 'R&D Büro' }}
+        </h2>
       </div>
       <div class="grid grid-cols-3 gap-20 md:grid-cols-1 md:gap-40">
         <AboutEmployeesCard

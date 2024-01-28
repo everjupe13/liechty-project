@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 import { DownloadArrowIcon } from '@/components/shared/icons'
 
 type Props = {
@@ -68,10 +70,11 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
         </div>
       </div>
       <a
-        href="/plug-pdf.pdf"
+        :href="isEN ? '/Liechty_EN_Catalogue.pdf' : '/Liechty_DE_Catalogue.pdf'"
         download
         class="absolute inset-0 z-[3] select-none text-transparent"
       >
+
         download the file
       </a>
     </div>

@@ -19,7 +19,7 @@ const isEN = computed(() => locale.value === 'en')
           <h2 class="section-title md:mb-30">Contacts</h2>
         </div>
         <div class="flex flex-col gap-y-40 md:mb-20 md:gap-y-20">
-          <ContactsArticle>
+          <ContactsArticle v-if="isEN">
             <template #title>Telephone</template>
             <template #content>
               <a href="tel:+12048001014">+ 1 204-800-1014</a>

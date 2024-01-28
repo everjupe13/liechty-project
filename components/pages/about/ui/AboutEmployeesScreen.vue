@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import AboutEmployeesCard from './AboutEmployeesCard.vue'
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 
 const EmployeesData = [
   {
@@ -43,7 +46,7 @@ const LiechtensteinEmployeesData = [
   },
   {
     id: 2,
-    image: '/images/about/employees/liechtenstein/Erik-Sprenger.png',
+    image: '/images/about/employees/liechtenstein/Erik-Sprenger.jpg',
     name: 'Erik Sprenger',
     position: 'Head of Manufacturing department'
   }
@@ -56,7 +59,7 @@ const LiechtensteinEmployeesData = [
   >
     <div class="container">
       <div class="mb-40 md:mb-30">
-        <h2 class="section-title text-blue">Board of directors</h2>
+        <h2 class="section-title text-blue">{{ isEN ? 'Board of directors' : 'Verwaltungsrat' }}</h2>
       </div>
       <div class="grid grid-cols-4 gap-20 md:grid-cols-1 md:gap-40">
         <AboutEmployeesCard
@@ -72,7 +75,7 @@ const LiechtensteinEmployeesData = [
   <section class="pb-[80px] pt-40 xl:py-80 xl:pt-30 lg:py-60 lg:pt-20 md:py-40">
     <div class="container">
       <div class="mb-40 md:mb-30">
-        <h2 class="section-title text-blue">Liechtenstein branch</h2>
+        <h2 class="section-title text-blue">{{ isEN ? 'Liechtenstein branch' : 'R&D Büro' }}</h2>
       </div>
       <div class="grid grid-cols-3 gap-20 md:grid-cols-1 md:gap-40">
         <AboutEmployeesCard

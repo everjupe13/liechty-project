@@ -69,7 +69,8 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
               <div class="mb-40 flex gap-x-10 md:mb-20">
                 <template v-if="props.data">
                   <AppButton theme="blue" outlined @click="openFeedbackModal">
-                    Pre-order
+                    {{ isEN ? 'Pre-order' : 'Vorbestellung' }}
+
                   </AppButton>
                 </template>
               </div>

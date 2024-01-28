@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-const { locale } = useI18n({ useScope: 'global' })
-const isEN = computed(() => locale.value === 'en')
+
 import { DownloadArrowIcon } from '@/components/shared/icons'
 
 type Props = {
@@ -16,7 +14,7 @@ type Props = {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  fileLink: '',
+  fileLink: '/plug-pdf.pdf',
   fileSize: '0 КБ',
   title: '',
   description: '',
@@ -49,7 +47,7 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
         <p class="leading-normal text-16 md:text-14">{{ props.excerpt }}</p>
       </div>
       <div class="mt-auto flex cursor-pointer items-center gap-x-10">
-        <a href="/plug-pdf.pdf" download class="flex items-center gap-x-10">
+        <a :href="props.fileLink" download class="flex items-center gap-x-10">
           <span class="inline-flex items-center justify-center">
             <DownloadArrowIcon
               :svg-classes="`block transition-all${
@@ -70,11 +68,10 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
         </div>
       </div>
       <a
-        :href="isEN ? '/Liechty_EN_Catalogue.pdf' : '/Liechty_DE_Catalogue.pdf'"
+        :href="props.fileLink"
         download
         class="absolute inset-0 z-[3] select-none text-transparent"
       >
-
         download the file
       </a>
     </div>

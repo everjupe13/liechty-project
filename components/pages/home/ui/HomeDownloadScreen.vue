@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { DownloadCard } from '@/components/features/download-card'
+import { useCompanyFilesDownload } from '@/composables/useCompanyFilesDownload'
+
+const { fileUrl } = useCompanyFilesDownload()
 </script>
 
 <template>
@@ -14,6 +17,7 @@ import { DownloadCard } from '@/components/features/download-card'
           :title="$t('downloads.content[0].title')"
           :excerpt="$t('downloads.content[0].description')"
           :description="$t('downloads.content[0].description')"
+          :file-link="fileUrl"
           file-size="162 KB"
         />
         <DownloadCard
@@ -21,6 +25,7 @@ import { DownloadCard } from '@/components/features/download-card'
           :title="$t('downloads.content[1].title')"
           :excerpt="$t('downloads.content[1].description')"
           :description="$t('downloads.content[1].description')"
+          :file-link="fileUrl"
           file-size="162 KB"
         />
         <DownloadCard
@@ -28,6 +33,7 @@ import { DownloadCard } from '@/components/features/download-card'
           :title="$t('downloads.promt.title')"
           :excerpt="$t('downloads.promt.body')"
           :description="$t('downloads.promt.body')"
+          :file-link="fileUrl"
           file-size="162 KB"
         />
       </div>

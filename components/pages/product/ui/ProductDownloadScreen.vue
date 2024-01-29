@@ -18,7 +18,7 @@ const { fileUrl } = useCompanyFilesDownload()
           :excerpt="$t('downloads.content[0].description')"
           :description="$t('downloads.content[0].description')"
           :file-link="fileUrl"
-          file-size="162 KB"
+          file-size="4.2 MB"
         />
         <DownloadCard
           design-type="white"
@@ -26,7 +26,7 @@ const { fileUrl } = useCompanyFilesDownload()
           :excerpt="$t('downloads.content[1].description')"
           :description="$t('downloads.content[1].description')"
           :file-link="fileUrl"
-          file-size="162 KB"
+          file-size="4.2 MB"
         />
         <DownloadCard
           filled-card
@@ -34,7 +34,7 @@ const { fileUrl } = useCompanyFilesDownload()
           :excerpt="$t('downloads.promt.body')"
           :description="$t('downloads.promt.body')"
           :file-link="fileUrl"
-          file-size="162 KB"
+          file-size="4.2 MB"
         />
       </div>
     </div>

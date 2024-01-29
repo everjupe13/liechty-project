@@ -92,7 +92,7 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
         </div>
       </div>
       <a
-        href="/plug-pdf.pdf"
+        :href="props.fileLink"
         download
         class="pointer-events-none absolute inset-0 z-[3] select-none bg-transparent text-transparent"
       >

@@ -50,7 +50,7 @@
           "description": "Unsere Geräte sind speziell für den Einsatz in Wohngebäuden konzipiert, weshalb unsere Pumpen und Ventile geräuschlos arbeiten. Außerdem können unsere Module leicht vor Ort instand gehalten werden."
         },
         {
-          "title": "HD-Schlauchleitung",
+          "title": "HP-Schlauchleitung",
           "description": "Unsere Schläuche haben eine Innenschicht aus PTFE mit einer Umflechtung aus Edelstahl. Unsere Schlauchleitung ist speziell so konzipiert, dass sie hohe Hygiene- und Sicherheitsstandards erfüllt."
         },
         {
@@ -94,6 +94,15 @@
           "desc": "Wir konzentrieren uns auf den Ausbau unseres Partner- und Unterstützungsnetzes in der ganzen Welt."
         }
       ]
+    },
+    "position": {
+      "cdo": "Chief Development Officer",
+      "ceo": "Geschäftsführer",
+      "cfo": "Finanzvorstand",
+      "ctd": "Technischer Chefdirektor",
+      "ceo_lb": "CEO der Niederlassung Liechtenstein",
+      "head_rd_depart": "Leiter der Forschungs- und Entwicklungsabteilung",
+      "head_md_depart": "Leiter der Fertigungsabteilung"
     }
   },
   "equipment": {

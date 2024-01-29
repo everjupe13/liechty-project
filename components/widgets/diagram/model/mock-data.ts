@@ -98,7 +98,7 @@ export const DiagramFirstData = [
     },
     description: {
       en: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>',
-      de: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>'
+      de: '<p>Verdrahtete Steuergeräte sollten über ein Niederspannungskabel mit dem Zentralmodul verbunden werden.</p>'
     },
     title: '<h3></h3>',
     image: '/images/system/diagram1-8.png'
@@ -192,7 +192,7 @@ export const DiagramSecondData = [
     },
     description: {
       en: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>',
-      de: '<p>Wired control units should be connected with the central module by a low-voltage cable</p>'
+      de: '<p>Verdrahtete Steuergeräte sollten über ein Niederspannungskabel mit dem Zentralmodul verbunden werden.</p>'
     },
     title: '<h3></h3>',
     image: '/images/system/diagram2-7.png'

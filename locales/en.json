@@ -50,7 +50,7 @@
           "description": "Our equipment is specifically designed for use in residential premises, which is why our pumps and valves operate silently. Furthermore, our modules can be easily maintained on-site."
         },
         {
-          "title": "HD-Schlauchleitung",
+          "title": "HP hoseline",
           "description": "Our hoses have an inner layer made of PTFE with stainless steel braiding. Our hoseline is specifically designed to meet high hygiene and safety standards."
         },
         {
@@ -94,6 +94,15 @@
           "desc": "We are focused on expanding our network of partners & support all around the world."
         }
       ]
+    },
+    "position": {
+      "cdo": "Chief Development Officer",
+      "ceo": "Chief Executive Officer",
+      "cfo": "Chief Financial Officer",
+      "ctd": "Chief Technical Director",
+      "ceo_lb": "CEO of Liechtenstein branch",
+      "head_rd_depart": "Head of R&D department",
+      "head_md_depart": "Head of Manufacturing department"
     }
   },
   "equipment": {

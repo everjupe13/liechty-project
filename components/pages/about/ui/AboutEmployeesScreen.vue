@@ -1,58 +1,59 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import AboutEmployeesCard from './AboutEmployeesCard.vue'
 
-const { locale } = useI18n({ useScope: 'global' })
+const { locale, t } = useI18n({ useScope: 'global' })
 const isEN = computed(() => locale.value === 'en')
 
-const EmployeesData = [
+const EmployeesData = computed(() => [
   {
     id: 0,
     image: '/images/about/employees/1.jpg',
     name: 'George Gilbert',
-    position: 'Chief Development Officer'
+    position: t('about.position.cdo')
   },
   {
     id: 1,
     image: '/images/about/employees/2.jpg',
     name: 'Aaron Stirling',
-    position: 'Chief Executive Officer'
+    position: t('about.position.ceo')
   },
   {
     id: 2,
     image: '/images/about/employees/3.jpg',
     name: 'Elizabeth StoneJeff',
-    position: 'Chief Financial Officer'
+    position: t('about.position.cfo')
   },
   {
     id: 3,
     image: '/images/about/employees/4.jpg',
     name: 'Jeff Part',
-    position: 'Chief Technical Director'
+    position: t('about.position.ctd')
   }
-]
+])
 
-const LiechtensteinEmployeesData = [
+const LiechtensteinEmployeesData = computed(() => [
   {
     id: 0,
     image: '/images/about/employees/liechtenstein/AlexanderGutman.jpg',
     name: 'Alexander Gutman',
-    position: 'CEO of Liechtenstein branch'
+    position: t('about.position.ceo_lb')
   },
   {
     id: 1,
     image: '/images/about/employees/liechtenstein/Arnold-Becker.jpg',
     name: 'Arnold Becker',
-    position: 'Head of R&D department'
+    position: t('about.position.head_rd_depart')
   },
   {
     id: 2,
     image: '/images/about/employees/liechtenstein/Erik-Sprenger.jpg',
     name: 'Erik Sprenger',
-    position: 'Head of Manufacturing department'
+    position: t('about.position.head_md_depart')
   }
-]
+])
 </script>
 
 <template>
@@ -83,7 +84,7 @@ const LiechtensteinEmployeesData = [
           {{ isEN ? 'Liechtenstein branch' : 'R&D Büro' }}
         </h2>
       </div>
-      <div class="grid grid-cols-3 gap-20 md:grid-cols-1 md:gap-40">
+      <div class="grid grid-cols-4 gap-20 md:grid-cols-1 md:gap-40">
         <AboutEmployeesCard
           v-for="employee in LiechtensteinEmployeesData"
           :key="employee.id"

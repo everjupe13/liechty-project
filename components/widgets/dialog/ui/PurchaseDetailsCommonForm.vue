@@ -1,8 +1,12 @@
 <script lang="ts" setup>
 import { useVuelidate } from '@vuelidate/core'
+import { useI18n } from 'vue-i18n'
 
 import { AppButton } from '@/components/shared/button'
 import { AppInput } from '@/components/shared/input'
+
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 
 const emit = defineEmits<{
   (e: 'submit'): void
@@ -67,7 +71,11 @@ const handleFormSubmit = () => {
   <div>
     <div class="mb-70 md:mb-40">
       <h3 class="mb-25 font-bold text-24 md:mb-15 md:text-18">
-        Humidification area information
+        {{
+          isEN
+            ? 'Humidification area information'
+            : 'Informationen zum Befeuchtungsbereich'
+        }}
       </h3>
       <div class="mb-55 grid grid-cols-2 gap-x-20 md:mb-0 md:grid-cols-1">
         <div>
@@ -75,19 +83,23 @@ const handleFormSubmit = () => {
             v-model="v$.typePlace.$model"
             v-bind="inputPropsMapper(v$.typePlace)"
             class="mb-15"
-            placeholder="Type of place for humidification"
+            :placeholder="
+              isEN
+                ? 'Type of place for humidification'
+                : 'Art des Ortes zur Befeuchtung'
+            "
           />
           <AppInput
             v-model="v$.roomsNumber.$model"
             v-bind="inputPropsMapper(v$.roomsNumber)"
             class="mb-15"
-            placeholder="Number of Rooms"
+            :placeholder="isEN ? 'Number of Rooms' : 'Anzahl der Räume'"
           />
           <AppInput
             v-model="v$.floorsNumber.$model"
             v-bind="inputPropsMapper(v$.floorsNumber)"
             class="mb-15"
-            placeholder="Number of floors"
+            :placeholder="isEN ? 'Number of floors' : 'Anzahl der Etagen'"
           />
         </div>
         <div>
@@ -95,13 +107,17 @@ const handleFormSubmit = () => {
             v-model="v$.totalArea.$model"
             v-bind="inputPropsMapper(v$.totalArea)"
             class="mb-15"
-            placeholder="Total area, m2"
+            :placeholder="isEN ? 'Total area, m2' : 'Gesamtfläche, m2'"
           />
           <AppInput
             v-model="v$.humidity.$model"
             v-bind="inputPropsMapper(v$.humidity)"
             class="mb-15"
-            placeholder="Average humidity outside"
+            :placeholder="
+              isEN
+                ? 'Average humidity outside'
+                : 'Durchschnittliche Luftfeuchtigkeit draußen'
+            "
           />
         </div>
       </div>
@@ -111,13 +127,21 @@ const handleFormSubmit = () => {
             v-model="v$.winterHumidity.$model"
             v-bind="inputPropsMapper(v$.winterHumidity)"
             class="mb-15"
-            placeholder="Average outdoor humidity in winter"
+            :placeholder="
+              isEN
+                ? 'Average outdoor humidity in winter'
+                : 'Durchschnittliche Luftfeuchtigkeit im Freien im Winter'
+            "
           />
           <AppInput
             v-model="v$.winterTemperature.$model"
             v-bind="inputPropsMapper(v$.winterTemperature)"
             class="mb-15"
-            placeholder="Average temperature in winter"
+            :placeholder="
+              isEN
+                ? 'Average temperature in winter'
+                : 'Durchschnittstemperatur im Winter'
+            "
           />
         </div>
 
@@ -126,27 +150,39 @@ const handleFormSubmit = () => {
             v-model="v$.summerHumidity.$model"
             v-bind="inputPropsMapper(v$.summerHumidity)"
             class="mb-15"
-            placeholder="Average outdoor humidity in summer"
+            :placeholder="
+              isEN
+                ? 'Average outdoor humidity in summer'
+                : 'Durchschnittliche Luftfeuchtigkeit im Freien im Sommer'
+            "
           />
           <AppInput
             v-model="v$.summerTemperature.$model"
             v-bind="inputPropsMapper(v$.summerTemperature)"
             class="mb-15"
-            placeholder="Average temperature in summer"
+            :placeholder="
+              isEN
+                ? 'Average temperature in summer'
+                : 'Durchschnittstemperatur im Sommer'
+            "
           />
         </div>
       </div>
     </div>
     <div class="mb-[120px] md:mb-60">
       <h3 class="mb-25 font-bold text-24 md:mb-15 md:text-18">
-        Additional information
+        {{ isEN ? 'Additional information' : 'Weitere Informationen' }}
       </h3>
       <div>
         <AppInput
           v-model="v$.comment.$model"
           v-bind="inputPropsMapper(v$.comment)"
           class="mb-15"
-          placeholder="Your comment or questions"
+          :placeholder="
+            isEN
+              ? 'Your comment or questions'
+              : 'Ihr Kommentar oder Ihre Fragen'
+          "
         />
       </div>
     </div>
@@ -159,7 +195,7 @@ const handleFormSubmit = () => {
         theme="blue"
         @click="handleFormSubmit"
       >
-        Submit
+        {{ isEN ? 'Submit' : 'Einreichen' }}
       </AppButton>
     </div>
   </div>

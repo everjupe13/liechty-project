@@ -1,10 +1,16 @@
 <script lang="ts" setup>
 import { useVuelidate } from '@vuelidate/core'
-import { email as emailValidator, required } from '@vuelidate/validators'
+import { helpers } from '@vuelidate/validators'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { AppButton } from '@/components/shared/button'
 import { AppInput } from '@/components/shared/input'
 import { useSuccessModal } from '@/components/widgets/dialog'
+import { emailValidator, requiredValidator } from '@/utils/validators'
+
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
 
 const formData = reactive({
   name: '',
@@ -13,9 +19,28 @@ const formData = reactive({
 })
 
 const rules = {
-  name: { required },
-  phone: { required },
-  email: { required, emailValidator }
+  name: {
+    customRequired: helpers.withMessage(
+      requiredValidator.message.bind(null, isEN.value),
+      requiredValidator.validator
+    )
+  },
+  phone: {
+    customRequired: helpers.withMessage(
+      requiredValidator.message.bind(null, isEN.value),
+      requiredValidator.validator
+    )
+  },
+  email: {
+    customRequired: helpers.withMessage(
+      requiredValidator.message.bind(null, isEN.value),
+      requiredValidator.validator
+    ),
+    customEmailValidator: helpers.withMessage(
+      emailValidator.message.bind(null, isEN.value),
+      emailValidator.validator
+    )
+  }
 }
 
 const v$ = useVuelidate(rules, formData)

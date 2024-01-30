@@ -17,7 +17,7 @@ const EmployeesData = computed(() => [
   {
     id: 1,
     image: '/images/about/employees/3.jpg',
-    name: 'Elizabeth StoneJeff',
+    name: 'Elizabeth Stone',
     position: t('about.position.cfo')
   },
   {

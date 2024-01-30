@@ -10,27 +10,27 @@ const isEN = computed(() => locale.value === 'en')
 const EmployeesData = computed(() => [
   {
     id: 0,
-    image: '/images/about/employees/1.jpg',
-    name: 'George Gilbert',
-    position: t('about.position.cdo')
-  },
-  {
-    id: 1,
     image: '/images/about/employees/2.jpg',
     name: 'Aaron Stirling',
     position: t('about.position.ceo')
   },
   {
-    id: 2,
+    id: 1,
     image: '/images/about/employees/3.jpg',
     name: 'Elizabeth StoneJeff',
     position: t('about.position.cfo')
   },
   {
-    id: 3,
+    id: 2,
     image: '/images/about/employees/4.jpg',
     name: 'Jeff Part',
     position: t('about.position.ctd')
+  },
+  {
+    id: 3,
+    image: '/images/about/employees/1.jpg',
+    name: 'George Gilbert',
+    position: t('about.position.cdo')
   }
 ])
 

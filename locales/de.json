@@ -96,13 +96,13 @@
       ]
     },
     "position": {
-      "cdo": "Chief Development Officer",
+      "cdo": "Entwicklung Direktor",
       "ceo": "Geschäftsführer",
-      "cfo": "Finanzvorstand",
-      "ctd": "Technischer Chefdirektor",
-      "ceo_lb": "CEO der Niederlassung Liechtenstein",
-      "head_rd_depart": "Leiter der Forschungs- und Entwicklungsabteilung",
-      "head_md_depart": "Leiter der Fertigungsabteilung"
+      "cfo": "Finanzvorständin",
+      "ctd": "Technischer Direktor",
+      "ceo_lb": "Geschäftsführer von Liechtenstein Buro",
+      "head_rd_depart": "R&D Leiter",
+      "head_md_depart": "Herstellung Leiter"
     }
   },
   "equipment": {

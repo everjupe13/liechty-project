@@ -6,7 +6,7 @@ export const FeaturesCardsData = [
       de: '100% Hygiene'
     },
     description: {
-      en: 'The unique purification system reduces salt content in spray water by 99.5%, and the volumetric UV sterilization with circulation kills up to 99.99% of microbes.',
+      en: 'The unique purification system reduces salt content in spray water by 99.5%, and the full-volume UV sterilization with circulation kills up to 99.99% of microbes.',
       de: 'Das einzigartige Reinigungssystem reduziert den Salzgehalt im Spritzwasser um 99,5%, und die volumetrische UV-Sterilisation mit Zirkulation tötet bis zu 99,99% der Mikroben ab.'
     },
     image: '/images/system/features/1.svg'

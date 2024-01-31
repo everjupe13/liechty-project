@@ -1,16 +1,34 @@
 import { useI18n } from 'vue-i18n'
 
 const FILE_URLS = {
-  en: '/Liechty_EN_Catalogue.pdf',
-  de: '/Liechty_DE_Catalogue.pdf'
+  en: {
+    booklet: {
+      url: '/liechty-booklet-EN.pdf',
+      size: '4.9 MB'
+    },
+    configs: {
+      url: '/liechty-catalogue-EN.pdf',
+      size: '17.2 MB'
+    }
+  },
+  de: {
+    booklet: {
+      url: '/liechty-booklet-DE.pdf',
+      size: '4.3 MB'
+    },
+    configs: {
+      url: '/liechty-catalogue-DE.pdf',
+      size: '17.4 MB'
+    }
+  }
 }
 
 export const useCompanyFilesDownload = () => {
   const { locale } = useI18n({ useScope: 'global' })
 
-  const fileUrl = computed(
+  const files = computed(
     () => FILE_URLS[locale.value as keyof typeof FILE_URLS]
   )
 
-  return { fileUrl }
+  return { files }
 }

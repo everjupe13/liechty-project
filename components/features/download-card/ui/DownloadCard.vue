@@ -29,7 +29,7 @@ const designTypeStyles = computed(() =>
       : 'download-card_white'
     : ''
 )
-const isDownloadIconHovered = computed(() => props.designType === 'white')
+const isDownloadIconHoverable = computed(() => props.designType === 'white')
 </script>
 
 <template>
@@ -51,7 +51,7 @@ const isDownloadIconHovered = computed(() => props.designType === 'white')
           <span class="inline-flex items-center justify-center">
             <DownloadArrowIcon
               :svg-classes="`block transition-all${
-                isDownloadIconHovered ? ' group-hover:text-blue' : ''
+                isDownloadIconHoverable ? ' group-hover:text-blue' : ''
               }`"
             />
           </span>

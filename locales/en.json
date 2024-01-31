@@ -144,6 +144,10 @@
       {
         "title": "Booklet",
         "description": "Our booklet for an overview of Liechty developments."
+      },
+      {
+        "title": "Hydraulic nozzle assembly schemes",
+        "description": "This chapter presents hydraulic schemes for active and passive nozzle configurations."
       }
     ],
     "promt": {

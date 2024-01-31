@@ -38,11 +38,11 @@ export const FeaturesCardsData = [
   {
     id: 3,
     title: {
-      en: 'Long service lifetime',
+      en: 'Long service interval',
       de: 'Lange Lebensdauer'
     },
     description: {
-      en: 'Due to modern technological solutions, our equipment has an extremely long service interval - only once every two years. The equipment may be maintained at place of use.',
+      en: 'Due to modern technological solutions, our equipment has an extremely long service interval – only once every two years. The equipment may be maintained at place of use.',
       de: 'Dank moderner technologischer Lösungen hat unsere Ausrüstung ein extrem langes Wartungsintervall: nur einmal alle zwei Jahre. Die Ausrüstung kann am Einsatzort gewartet werden.'
     },
     image: '/images/system/features/4.svg'

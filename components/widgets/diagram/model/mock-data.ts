@@ -45,7 +45,7 @@ export const DiagramFirstData = [
       de: 'HD-Schlauchleitung'
     },
     description: {
-      en: '<p>The high-pressure hoseline is designed as a loop. It consists of a double-layer hose (inner layer material made of PTFE, outer layer is a stainless steel braiding), high-pressure fittings and tees. The operational pressure in the system ranges between 35 - 82 bar, while the burst pressure of the hose is 900 bar, in other words, it has a 15 times safety margin. The material of the inner layer is not accidentally chosen, PTFE has exceptional low adhesion and is not a food for bacteria.</p>',
+      en: '<p>The high-pressure hoseline is designed as a loop. It consists of a double-layer hose (inner layer material made of PTFE, outer layer is a stainless steel braiding), high-pressure fittings and tees. The operational pressure in the system ranges between 35 – 82 bar, while the burst pressure of the hose is 900 bar, in other words, it has a 15 times safety margin. The material of the inner layer is not accidentally chosen, PTFE has exceptional low adhesion and is not a food for bacteria.</p>',
       de: '<p>Die Hochdruck-Schlauchleitung ist als Kreislauf ausgeführt. Er besteht aus einem doppelschichtigen Schlauch (Innenschichtmaterial aus PTFE, Außenschicht als Edelstahlumflechtung), Hochdruck-Fittings und T-Stücken. Der Betriebsdruck im System liegt zwischen 35 und 82 bar, während der Berstdruck des Schlauchs 900 bar beträgt, d.h. er hat eine 15-fache Sicherheitsmarge. Das Material der Innenschicht ist nicht zufällig gewählt, PTFE hat eine außergewöhnlich geringe Adhäsion und ist kein Nährboden für Bakterien.</p>'
     },
     title: '<h3></h3>',
@@ -67,8 +67,8 @@ export const DiagramFirstData = [
   {
     id: 6,
     name: {
-      en: 'Steuergeräte',
-      de: 'Signalkabel zu SV-Ventilen'
+      en: 'Control units',
+      de: 'Steuergeräte'
     },
     description: {
       en: '<p>Liechty control units can be either wired or wireless. All control units are equipped with humidity sensor of high accuracy, which measures RH level in the room and gives a command to switch on the nozzles in case the RH level is lower than the set one and vice versa.</p>',
@@ -152,7 +152,7 @@ export const DiagramSecondData = [
       de: 'HD-Schlauchleitung'
     },
     description: {
-      en: '<p>The high-pressure hoseline is designed as a loop. It consists of a double-layer hose (inner layer material made of PTFE, outer layer is a stainless steel braiding), high-pressure fittings and tees. The operational pressure in the system ranges between 35 - 82 bar, while the burst pressure of the hose is 900 bar, in other words, it has a 15 times safety margin. The material of the inner layer is not accidentally chosen, PTFE has exceptional low adhesion and is not a food for bacteria.</p>',
+      en: '<p>The high-pressure hoseline is designed as a loop. It consists of a double-layer hose (inner layer material made of PTFE, outer layer is a stainless steel braiding), high-pressure fittings and tees. The operational pressure in the system ranges between 35 – 82 bar, while the burst pressure of the hose is 900 bar, in other words, it has a 15 times safety margin. The material of the inner layer is not accidentally chosen, PTFE has exceptional low adhesion and is not a food for bacteria.</p>',
       de: '<p>Die Hochdruck-Schlauchleitung ist als Kreislauf ausgeführt. Er besteht aus einem doppelschichtigen Schlauch (Innenschichtmaterial aus PTFE, Außenschicht als Edelstahlumflechtung), Hochdruck-Fittings und T-Stücken. Der Betriebsdruck im System liegt zwischen 35 und 82 bar, während der Berstdruck des Schlauchs 900 bar beträgt, d.h. er hat eine 15-fache Sicherheitsmarge. Das Material der Innenschicht ist nicht zufällig gewählt, PTFE hat eine außergewöhnlich geringe Adhäsion und ist kein Nährboden für Bakterien.</p>'
     },
     title: '<h3></h3>',

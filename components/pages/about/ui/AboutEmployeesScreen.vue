@@ -10,25 +10,25 @@ const isEN = computed(() => locale.value === 'en')
 const EmployeesData = computed(() => [
   {
     id: 0,
-    image: '/images/about/employees/2.jpg',
+    image: '/images/about/employees/Aaron-Stirling.jpg',
     name: 'Aaron Stirling',
     position: t('about.position.ceo')
   },
   {
     id: 1,
-    image: '/images/about/employees/3.jpg',
+    image: '/images/about/employees/Elizabeth-Stone.jpg',
     name: 'Elizabeth Stone',
     position: t('about.position.cfo')
   },
   {
     id: 2,
-    image: '/images/about/employees/4.jpg',
+    image: '/images/about/employees/Jeff-Part.jpg',
     name: 'Jeff Part',
     position: t('about.position.ctd')
   },
   {
     id: 3,
-    image: '/images/about/employees/1.jpg',
+    image: '/images/about/employees/George-Gilbert.jpg',
     name: 'George Gilbert',
     position: t('about.position.cdo')
   }
@@ -37,7 +37,7 @@ const EmployeesData = computed(() => [
 const LiechtensteinEmployeesData = computed(() => [
   {
     id: 0,
-    image: '/images/about/employees/liechtenstein/AlexanderGutman.jpg',
+    image: '/images/about/employees/liechtenstein/Alexander-Gutman.jpg',
     name: 'Alexander Gutman',
     position: t('about.position.ceo_lb')
   },

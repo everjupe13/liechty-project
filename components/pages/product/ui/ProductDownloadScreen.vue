@@ -17,7 +17,7 @@ const { files } = useCompanyFilesDownload()
           :title="$t('downloads.content[0].title')"
           :excerpt="$t('downloads.content[0].description')"
           :description="$t('downloads.content[0].description')"
-          :file-link="files.booklet.url"
+          :file-link="files.catalog.url"
           :file-size="files.booklet.size"
         />
         <DownloadCard

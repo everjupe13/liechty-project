@@ -3,22 +3,30 @@ import { useI18n } from 'vue-i18n'
 const FILE_URLS = {
   en: {
     booklet: {
-      url: '/liechty-booklet-EN.pdf',
-      size: '4.9 MB'
+      url: '/Liechty_EN_Booklet.pdf',
+      size: '5.1 MB'
+    },
+    catalog: {
+      url: '/Liechty_EN_Catalogue.pdf',
+      size: '4.2 MB'
     },
     configs: {
-      url: '/liechty-catalogue-EN.pdf',
-      size: '17.2 MB'
+      url: '/Liechty_EN_Nozzles_configs.pdf',
+      size: '18.0 MB'
     }
   },
   de: {
     booklet: {
-      url: '/liechty-booklet-DE.pdf',
-      size: '4.3 MB'
+      url: '/Liechty_DE_Booklet.pdf',
+      size: '4.2 MB'
+    },
+    catalog: {
+      url: '/Liechty_DE_Catalogue.pdf',
+      size: '4.2 MB'
     },
     configs: {
-      url: '/liechty-catalogue-DE.pdf',
-      size: '17.4 MB'
+      url: '/Liechty_DE_Nozzles_configs.pdf',
+      size: '18.2 MB'
     }
   }
 }

@@ -90,8 +90,8 @@ export const FeaturesCardsData = [
       de: 'Hohe Kapazität'
     },
     description: {
-      en: 'Capacity of one nozzle ranges between 0.6 to 1.2 l/h and can humidify the room of max. 50 sq. meters. Just imagine, that capacity of most whole house humidifiers is under 0.3 l/h.',
-      de: 'Die Kapazität einer Düse liegt zwischen 0,6 und 1,2 l/h und kann einen Raum von maximal 50 Quadratmetern befeuchten. Stellen Sie sich nur vor, dass die Kapazität der meisten Luftbefeuchter für ganze Häuser unter 0,3 l/h liegt.'
+      en: 'Capacity of one nozzle ranges between 0.15 to 0.3 GPH and can humidify the room of max. 500 sq. meters. Just imagine, that capacity of most whole house humidifiers is under 0.07 GPH',
+      de: 'Die Kapazität einer Düse liegt zwischen 0,15 und 0,3 GPH und kann einen Raum von maximal 500 Quadratmetern befeuchten. Stellen Sie sich nur vor, dass die Kapazität der meisten Luftbefeuchter für ganze Häuser unter 0,07 GPH liegt.'
     },
     image: '/images/system/features/8.svg'
   }

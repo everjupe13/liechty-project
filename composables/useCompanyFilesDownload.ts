@@ -21,7 +21,7 @@ const FILE_URLS = {
       size: '4.2 MB'
     },
     catalog: {
-      url: '/Liechty_DE_Catalogue.pdf',
+      url: '/Liechty_DE_Katalog.pdf',
       size: '4.2 MB'
     },
     configs: {

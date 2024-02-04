@@ -76,13 +76,13 @@ const { models } = useModels()
                 {{
                   isEN
                     ? 'Maximum service area, sq.ft'
-                    : 'Maximale Bedienungsfläche, Quadratfuß'
+                    : 'Maximale Bedienungsfläche, Quadrameter'
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                3.000 / 6.000
+                300 / 600
               </td>
-              <td class="px-24 py-18 text-dark/70">3.000 / 10.000</td>
+              <td class="px-24 py-18 text-dark/70">300 / 900</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -180,7 +180,7 @@ const { models } = useModels()
                 {{ isEN ? 'Housing' : 'Gehäuse' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                {{ isEN ? 'dark indigo (dark violet)' : 'Blaumetall' }}
+                {{ isEN ? 'dark indigo (dark violet)' : 'Dunkles Indigo' }}
               </td>
               <td class="px-24 py-18 text-dark/70">
                 {{ isEN ? 'silver' : 'Silbermetall' }}

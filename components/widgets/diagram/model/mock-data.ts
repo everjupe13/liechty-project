@@ -32,7 +32,7 @@ export const DiagramFirstData = [
       de: 'Zentralmodul'
     },
     description: {
-      en: '<p>The heart of the system. Here water is finely purified by a double reverse osmosis and disinfected in full-volume UV sterilization tank. Then purified water is then injected under high pressure by a silent pump into the high-pressure hoseline. In addition, the central module has a controller that coordinates the operation of the nozzles and control units.</p>',
+      en: '<p>The heart of the system. Here water is finely purified by a double reverse osmosis and disinfected in full-volume UV sterilization tank. Then purified water is being injected under high pressure by a silent pump into the high-pressure hoseline. In addition, the central module has a controller that coordinates the operation of the nozzles and control units.</p>',
       de: '<p>Das Herz des Systems Hier wird das Wasser durch eine doppelte Umkehrosmose fein gereinigt und in einem volumetrischen UV-Sterilisationstank desinfiziert. Danach wird das gereinigte Wasser mit einer lautlosen Pumpe unter hohem Druck in die Hochdruck-Schlauchleitung eingespritzt. Darüber hinaus verfügt das Zentralmodul über einen Kontroller, der den Betrieb der Düsen und Steuergeräte koordiniert.</p>'
     },
     title: '<h3></h3>',
@@ -139,7 +139,7 @@ export const DiagramSecondData = [
       de: 'Zentralmodul'
     },
     description: {
-      en: '<p>The heart of the system. Here water is finely purified by a double reverse osmosis and disinfected in full-volume UV sterilization tank. Then purified water is then injected under high pressure by a silent pump into the high-pressure hoseline. In addition, the central module has a controller that coordinates the operation of the nozzles and control units.</p>',
+      en: '<p>The heart of the system. Here water is finely purified by a double reverse osmosis and disinfected in full-volume UV sterilization tank. Then purified water is being injected under high pressure by a silent pump into the high-pressure hoseline. In addition, the central module has a controller that coordinates the operation of the nozzles and control units.</p>',
       de: '<p>Das Herz des Systems Hier wird das Wasser durch eine doppelte Umkehrosmose fein gereinigt und in einem volumetrischen UV-Sterilisationstank desinfiziert. Danach wird das gereinigte Wasser mit einer lautlosen Pumpe unter hohem Druck in die Hochdruck-Schlauchleitung eingespritzt. Darüber hinaus verfügt das Zentralmodul über einen Kontroller, der den Betrieb der Düsen und Steuergeräte koordiniert.</p>'
     },
     title: '<h3></h3>',

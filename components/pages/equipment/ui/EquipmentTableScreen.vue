@@ -125,12 +125,12 @@ const { models } = useModels()
                 scope="row"
                 class="border-r border-gray px-24 py-18 pl-0 font-normal text-dark/50"
               >
-                {{ isEN ? 'Capacity, l/h' : 'Kapazität, l/h' }}
+                {{ isEN ? 'Capacity, GPH' : 'Kapazität, GPH' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                6 / 12
+                1.6 / 3.2
               </td>
-              <td class="px-24 py-18 text-dark/70">6 / 18</td>
+              <td class="px-24 py-18 text-dark/70">1.6 / 4.8</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -207,12 +207,14 @@ const { models } = useModels()
               >
                 {{
                   isEN
-                    ? 'Maximum length of high pressure line, m'
-                    : 'Maximale Länge der Hochdruckleitung, m'
+                    ? 'Maximum length of high pressure line, ft'
+                    : 'Maximale Länge der Hochdruckleitung, ft'
                 }}
               </th>
-              <td class="border-r border-gray px-24 py-18 text-dark/70">400</td>
-              <td class="px-24 py-18 text-dark/70">2 x 200</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                1200
+              </td>
+              <td class="px-24 py-18 text-dark/70">2 x 600</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th

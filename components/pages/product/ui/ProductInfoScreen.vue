@@ -45,7 +45,7 @@ const { open: openFeedbackModal } = usePurchaseDetailsModal()
                   {{ isEN ? props.data.name : props.data.name_alt }}
                 </template>
               </h2>
-              <div class="mb-20 flex items-center gap-x-15">
+              <div v-show="false" class="mb-20 flex items-center gap-x-15">
                 <p
                   class="leading-none text-24"
                   :class="{ 'h-26 animate-pulse bg-gray-light': !props.data }"

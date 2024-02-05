@@ -80,9 +80,11 @@ const { models } = useModels()
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                300 / 600
+                {{ isEN ? '3.000 / 6.000' : '300 / 600' }}
               </td>
-              <td class="px-24 py-18 text-dark/70">300 / 900</td>
+              <td class="px-24 py-18 text-dark/70">
+                {{ isEN ? '3.000 / 10.000' : '300 / 900' }}
+              </td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th

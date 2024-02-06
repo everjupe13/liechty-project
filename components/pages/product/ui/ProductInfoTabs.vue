@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 import { AppButton } from '@/components/shared/button'
 import { DiagramConfig } from '@/components/widgets/diagram'
@@ -23,14 +24,30 @@ const props = withDefaults(defineProps<Props>(), {
   scheme: undefined
 })
 
-const DefaultTabs = [
-  { id: -1, label: 'Technical data', isActive: false, description: 0 },
-  { id: -2, label: 'Diagram', isActive: false, description: 0 }
-]
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
+
+const DefaultTabs = computed(() => [
+  {
+    id: -1,
+    label: isEN.value ? 'Technical data' : 'Technische Daten',
+    isActive: false,
+    description: 0
+  },
+  {
+    id: -2,
+    label: isEN.value ? 'Diagram' : 'Diagramm',
+    isActive: false,
+    description: 0
+  }
+])
+
 const activeTabId = ref(
-  props.tabs && props.tabs.length > 0 ? props.tabs[0].id : DefaultTabs[1].id
+  props.tabs && props.tabs.length > 0
+    ? props.tabs[0].id
+    : DefaultTabs.value[1].id
 )
-const computedTabs = computed(() => [...props.tabs, ...DefaultTabs])
+const computedTabs = computed(() => [...props.tabs, ...DefaultTabs.value])
 const handleActiveIdChange = (id: number) => {
   activeTabId.value = id
 }

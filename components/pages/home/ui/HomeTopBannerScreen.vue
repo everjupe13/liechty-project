@@ -13,7 +13,7 @@ const isDE = computed(() => locale.value === 'de')
   >
     <div class="container z-[2]">
       <div
-        class="relative z-[2] mb-[230px] max-w-[940px] xl:mb-[160px] md:mb-[120px]"
+        class="relative z-[2] mb-[230px] max-w-[940px] xl:mb-[160px] md:mb-[120px] xs:mb-30"
       >
         <h1
           :class="[
@@ -26,7 +26,7 @@ const isDE = computed(() => locale.value === 'de')
         ></h1>
       </div>
 
-      <div class="relative z-[2] max-w-[500px]">
+      <div class="relative z-[2] max-w-[500px] xs:mb-[120px]">
         <p
           class="mb-40 leading-snug text-24 xl:text-20 lg:text-18 md:mb-20 md:text-16"
           v-html="$t('home.subtitle')"
@@ -37,7 +37,7 @@ const isDE = computed(() => locale.value === 'de')
       </div>
 
       <div
-        class="pointer-events-none absolute bottom-[-280px] left-[450px] z-[1] w-[1080px] select-none xl:bottom-[-240px] xl:w-[860px] lg:left-[400px] md:hidden"
+        class="pointer-events-none absolute bottom-[-280px] left-[450px] z-[1] w-[1080px] select-none xl:bottom-[-240px] xl:w-[860px] lg:left-[400px] md:bottom-[-135px] md:left-[300px] md:w-[530px] xs:bottom-[-215px] xs:left-[unset] xs:right-0 xs:w-[331px]"
       >
         <img
           src="/images/home/top-banner.png"

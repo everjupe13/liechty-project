@@ -1,5 +1,16 @@
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n'
+
 import { AppButton } from '@/components/shared/button'
+
+const { locale } = useI18n({ useScope: 'global' })
+const isEN = computed(() => locale.value === 'en')
+
+const subtitleLocaled = computed(() =>
+  isEN.value
+    ? `Designed to improve microclimate in your <br class="md:hidden" />house, apartment or office`
+    : `Entwickelt zur Verbesserung des Mikroklimas in Ihrem <br class="md:hidden" /> Haus, Ihrer Wohnung oder Ihrem Büro`
+)
 </script>
 
 <template>
@@ -22,11 +33,8 @@ import { AppButton } from '@/components/shared/button'
           <div class="relative z-[2] max-w-[500px]">
             <p
               class="mb-40 leading-snug text-24 xl:text-20 lg:mb-20 md:text-16"
-            >
-              Designed to improve microclimate in your
-              <br class="md:hidden" />
-              house, apartment or office
-            </p>
+              v-html="subtitleLocaled"
+            />
             <AppButton
               outlined
               class="bg-gray"

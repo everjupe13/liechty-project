@@ -36,7 +36,7 @@ const LOCALES = {
     `
   },
   de: {
-    title: 'Kekse',
+    title: 'Cookies',
     text: `
       Wir verwenden Cookies, um unsere Website benutzerfreundlicher zu gestalten
       und um Ihr Web-Erlebnis kontinuierlich zu verbessern. Während einige der

@@ -45,10 +45,9 @@ const { models } = useModels()
               <th scope="col" class="border-r border-gray px-24 py-18 pl-0">
                 {{ isEN ? 'Classic line Series' : 'Classic Line Serien' }}
               </th>
-              <th scope="col" class="border-r border-gray px-24 py-18">
-                CL Manitoba 6 / 12
-              </th>
-              <th scope="col" class="px-24 py-18">CL Playgreen 6 / 18</th>
+              <th scope="col" class="border-r border-gray px-24 py-18">CL Manitoba 12</th>
+              <th scope="col" class="border-r border-gray px-24 py-18">CL Playgreen 6 / 18</th>
+              <th scope="col" class="px-24 py-18">CL6 White Energy Mono / Multi</th>
             </tr>
           </thead>
           <tbody class="bg-white">
@@ -60,7 +59,7 @@ const { models } = useModels()
                 {{ isEN ? 'Areas of application' : 'Anwendungsbereiche' }}
               </th>
               <td
-                colspan="2"
+                colspan="3"
                 class="border-gray px-24 py-18 text-center text-dark/70"
               >
                 {{
@@ -80,10 +79,13 @@ const { models } = useModels()
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                {{ isEN ? '3.000 / 6.000' : '300 / 600' }}
+                {{ isEN ? '6.000' : '600' }}
+              </td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                {{ isEN ? '10.000' : '900' }}
               </td>
               <td class="px-24 py-18 text-dark/70">
-                {{ isEN ? '3.000 / 10.000' : '300 / 900' }}
+                {{ isEN ? '3.000' : '300' }}
               </td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -100,8 +102,11 @@ const { models } = useModels()
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 {{ isEN ? '1 active or passive' : '1 aktiv oder passiv' }}
               </td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                {{ isEN ? '2 passive' : '2 passiv' }}
+              </td>
               <td class="px-24 py-18 text-dark/70">
-                {{ isEN ? '2 passive' : '2 passive' }}
+                {{ isEN ? '1 active / 1 passive' : '1 passiv / 1 aktiv' }}
               </td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -116,21 +121,27 @@ const { models } = useModels()
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                6 / 12
+               12
               </td>
-              <td class="px-24 py-18 text-dark/70">2</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                2
+              </td>
+              <td class="px-24 py-18 text-dark/70">1 / 6</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
                 scope="row"
                 class="border-r border-gray px-24 py-18 pl-0 font-normal text-dark/50"
               >
-                {{ isEN ? 'Capacity, GPH' : 'Kapazität, GPH' }}
+                {{ isEN ? 'Capacity, GPH' : 'Kapazität, l/h' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                1.6 / 3.2
+                3.2
               </td>
-              <td class="px-24 py-18 text-dark/70">1.6 / 4.8</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                4.8
+              </td>
+              <td class="px-24 py-18 text-dark/70">1.6</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -144,9 +155,12 @@ const { models } = useModels()
                 }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                6 / 12
+                12
               </td>
-              <td class="px-24 py-18 text-dark/70">6 / 18</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                18
+              </td>
+              <td class="px-24 py-18 text-dark/70">6</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -158,8 +172,11 @@ const { models } = useModels()
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 {{ isEN ? 'double-stage' : 'zweistufig' }}
               </td>
-              <td class="px-24 py-18 text-dark/70">
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
                 {{ isEN ? 'double-stage' : 'zweistufig' }}
+              </td>
+              <td class="px-24 py-18 text-dark/70">
+                {{ isEN ? '1 double-pass / 1 double pass' : '1 doppelpass' }}
               </td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -169,6 +186,9 @@ const { models } = useModels()
               >
                 {{ isEN ? 'LCD diagonal, inches' : 'LCD-Diagonale, Zoll' }}
               </th>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                4,3”
+              </td>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 4,3”
               </td>
@@ -182,10 +202,13 @@ const { models } = useModels()
                 {{ isEN ? 'Housing' : 'Gehäuse' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                {{ isEN ? 'dark indigo (dark violet)' : 'Dunkles Indigo' }}
+                {{ isEN ? 'Dark indigo (dark violet)' : 'Dunkles Indigo' }}
+              </td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                {{ isEN ? 'Silver' : 'Silbermetall' }}
               </td>
               <td class="px-24 py-18 text-dark/70">
-                {{ isEN ? 'silver' : 'Silbermetall' }}
+                {{ isEN ? 'White' : 'Weiß' }}
               </td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
@@ -196,9 +219,12 @@ const { models } = useModels()
                 {{ isEN ? 'Power consumption, W' : 'Stromverbrauch, W' }}
               </th>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
-                270 / 330
+                 330
               </td>
-              <td class="px-24 py-18 text-dark/70">240 / 300</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+               300
+              </td>
+              <td class="px-24 py-18 text-dark/70">200 / 280</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -214,7 +240,10 @@ const { models } = useModels()
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 1200
               </td>
-              <td class="px-24 py-18 text-dark/70">2 x 600</td>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                2 x 600
+              </td>
+              <td class="px-24 py-18 text-dark/70">2 x 400</td>
             </tr>
             <tr class="border-b border-gray last:border-transparent">
               <th
@@ -223,6 +252,13 @@ const { models } = useModels()
               >
                 {{ isEN ? 'Leak protection' : 'Schutz vor Leckagen' }}
               </th>
+              <td class="border-r border-gray px-24 py-18 text-dark/70">
+                {{
+                  isEN
+                    ? 'auto-pressurization and flow'
+                    : 'automatische Druckbeaufschlagung und Durchfluss'
+                }}
+              </td>
               <td class="border-r border-gray px-24 py-18 text-dark/70">
                 {{
                   isEN

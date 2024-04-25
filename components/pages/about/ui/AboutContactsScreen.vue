@@ -9,7 +9,7 @@ const isEN = computed(() => locale.value === 'en')
 </script>
 
 <template>
-  <section class="py-[140px] xl:py-80 lg:py-60 md:py-40">
+  <section class="py-[140px] xl:py-80 lg:py-60 md:py-40 ">
     <div class="container">
       <div
         class="mb-85 grid grid-cols-3 gap-x-60 lg:grid-cols-2 lg:gap-30 md:mb-40 md:grid-cols-1 md:gap-0"
